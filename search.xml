@@ -105,6 +105,19 @@ hexo d
 <p>部署三连</p>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>firebase 托管</th>
+<th><a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>github 托管</td>
+<td><a href="https://zengwenjian123.github.io/" target="_blank" rel="noopener">https://zengwenjian123.github.io/</a></td>
+</tr>
+</tbody></table>
+<p>这两个blog将会同时更新</p>
 ]]></content>
       <tags>
         <tag>博客</tag>
