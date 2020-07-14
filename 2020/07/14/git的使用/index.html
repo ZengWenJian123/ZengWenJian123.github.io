@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://gitee.com/usg1024/imgshow/raw/master/img/20200714152824.png">
 <meta property="og:image" content="https://gitee.com/usg1024/imgshow/raw/master/img/20200714153734.png">
 <meta property="article:published_time" content="2020-07-14T06:58:34.000Z">
-<meta property="article:modified_time" content="2020-07-14T07:57:08.691Z">
+<meta property="article:modified_time" content="2020-07-14T08:17:46.944Z">
 <meta property="article:author" content="usg-cn">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="git">
@@ -236,7 +236,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-14 14:58:34 / 修改时间：15:57:08" itemprop="dateCreated datePublished" datetime="2020-07-14T14:58:34+08:00">2020-07-14</time>
+              <time title="创建时间：2020-07-14 14:58:34 / 修改时间：16:17:46" itemprop="dateCreated datePublished" datetime="2020-07-14T14:58:34+08:00">2020-07-14</time>
             </span>
 
           
@@ -337,14 +337,19 @@
 <h1 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h1><p>设置短命令：</p>
 <p>令在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到github</p>
 <p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"><span class="comment">#把光标移到末尾按’i’键插入一行</span></span><br><span class="line"><span class="built_in">alias</span> gdd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; hexo d'</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>然后按’Esc’后按’:wq’保存退出</p>
+</blockquote>
 <ul>
-<li><pre><code class="sh">vim ~/.bashrc
-<span class="comment">#把光标移到末尾按’i’键插入一行</span>
-<span class="built_in">alias</span> gdd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; hexo d'</span>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  &gt; 然后按’Esc’后按’:<span class="keyword">wq</span>’保存退出</span><br><span class="line">  </span><br><span class="line">+ 最后在终端输入命令生效刚刚的更改就完事了</span><br><span class="line"></span><br><span class="line">  ```<span class="keyword">sh</span></span><br><span class="line">  <span class="keyword">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<li><p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
 
 
-</code></pre>
+
 </li>
 </ul>
 <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714153734.png" alt=""></p>
