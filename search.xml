@@ -70,9 +70,41 @@ hexo d
 </ul>
 <hr>
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>Username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a>: 输入的是github上的邮箱账号, 而不是github中设置的username, 这是个巨坑!!!<br>Password for ‘https://你的github邮箱@github.com’: 输入github的登录密码,点击enter键即可.</p>
-<p>利用下面的代码记住密码</p>
+<p>利用下面的代码记住账户和密码</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
 
+
+
+<hr>
+<h1 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h1><p>设置短命令：</p>
+<ul>
+<li><p>令在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到github</p>
+</li>
+<li><p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<ul>
+<li><pre><code class="sh">vim ~/.bashrc
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 把光标移到末尾按’i’键插入一行</span><br><span class="line"></span><br><span class="line">  ```sh</span><br><span class="line">  alias gdd='hexo clean &amp;&amp; hexo g &amp;&amp; hexo d'</span><br></pre></td></tr></table></figure>
+
+![](https://gitee.com/usg1024/imgshow/raw/master/img/20200714153734.png)
+
+&gt; 然后按’Esc’后按’:wq’保存退出</code></pre>
+</li>
+<li><p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><code>gdd</code>（搞大点）就是短命令名，每当输入<code>gdd</code>将自动执行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署三连</p>
+</li>
+</ul>
 ]]></content>
       <tags>
         <tag>博客</tag>
@@ -276,6 +308,20 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
+<a id="more"></a>
+
+<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客加速</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在hexo博客上添加本地图片</title>
     <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试一下图片</p>
@@ -295,20 +341,6 @@ hexo d
 <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713110117.png" alt=""></p>
 <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112422.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112423.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112424.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112425.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112426.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112427.png" alt=""><br><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112428.png" alt=""></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-<a id="more"></a>
-
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客加速</tag>
-      </tags>
   </entry>
   <entry>
     <title>记录一下Markdown用法</title>
@@ -764,73 +796,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-<a id="more"></a>
-
-
-
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录学习Ubuntu的指令</title>
     <url>/2020/07/03/%E8%AE%B0%E5%BD%95%E5%AD%A6%E4%B9%A0Ubuntu%E7%9A%84%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Linux指令"><a href="#Linux指令" class="headerlink" title="Linux指令"></a>Linux指令</h1><p><img data-src="https://cdn.pixabay.com/photo/2018/04/23/14/43/ubuntu-3344434_960_720.png" alt="Ubuntu, Desktop, Operating System, Computer, Office"></p>
@@ -1244,6 +1209,73 @@ hexo d
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+<a id="more"></a>
+
+
+
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+</blockquote>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
 </search>
