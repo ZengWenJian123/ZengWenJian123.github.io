@@ -225,7 +225,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-14 14:58:34 / 修改时间：15:45:08" itemprop="dateCreated datePublished" datetime="2020-07-14T14:58:34+08:00">2020-07-14</time>
+              <time title="创建时间：2020-07-14 14:58:34 / 修改时间：15:48:58" itemprop="dateCreated datePublished" datetime="2020-07-14T14:58:34+08:00">2020-07-14</time>
             </span>
 
           
@@ -260,105 +260,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>firebase的访问一直不稳定，所以还是在github pagse上面也同步一份博客的内容吧</p>
-<h1 id="git的使用记录"><a href="#git的使用记录" class="headerlink" title="git的使用记录"></a>git的使用记录</h1><p>感谢一下<a href="https://magidrag0n.github.io/" target="_blank" rel="noopener">@magidrag0n</a>大佬的教学</p>
-<ul>
-<li><p>首先在你的github创立一个名叫：<code>你的github用户名</code>+ <code>github.io</code>的仓库</p>
-<ul>
-<li>我的github用户名叫<code>zengwenjian123</code>所以我建立的仓库名叫：<code>zengwenjian123.github.io</code></li>
-</ul>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200714151120.png" alt=""></p>
-</li>
-<li><p>然后命令行进入到博客的文件夹</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo </span><br><span class="line"><span class="comment">#进入博客更目录</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装插件</p>
-<ul>
-<li><pre><code class="sh">npm install --save hexo-deployer-git
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ 打开站点配置文件`<span class="selector-tag">_config</span>`</span><br><span class="line"></span><br><span class="line">  + !<span class="selector-attr">[]</span>(<span class="attribute">https</span>:<span class="comment">//cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200714151700.png)</span></span><br><span class="line"></span><br><span class="line">  + 在最下面添加一个函数</span><br><span class="line"></span><br><span class="line">    <span class="built_in">``</span>`sh</span><br><span class="line">    <span class="attribute">deploy</span>:</span><br><span class="line">      <span class="attribute">type</span>: <span class="string">'git'</span></span><br><span class="line">      <span class="attribute">repo</span>: <span class="string">'https://github.com/ZengWenJian123/ZengWenJian123.github.io'</span></span><br><span class="line">      <span class="attribute">branch</span>: <span class="string">'master'</span></span><br></pre></td></tr></table></figure>
-
-![](https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200714151915.png)
-
-这里填入的是你自己的仓库路径</code></pre>
-</li>
-</ul>
-</li>
-<li><p>运行设置账户名</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">"you@example.com"</span></span><br><span class="line">git config --global user.name <span class="string">"Your Name"</span></span><br></pre></td></tr></table></figure>
-
-<p>来设置您账号的缺省身份标识</p>
-</li>
-<li><p>然后运行hexo三连：</p>
-<ul>
-<li><pre><code class="sh">hexo cl
-hexo g
-hexo d
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ 提示输入username <span class="keyword">for</span> github时输入你的github登录邮箱</span><br><span class="line"></span><br><span class="line">+ 提示输入password <span class="keyword">for</span> github时输入你的github登录密码</span><br><span class="line"></span><br><span class="line">+ 输入指令记住账户和密码（不用每次部署的时候再次输入）</span><br><span class="line"></span><br><span class="line">  ```sh</span><br><span class="line">  git<span class="built_in"> config </span>--global credential.helper store</span><br></pre></td></tr></table></figure></code></pre>
-</li>
-</ul>
-</li>
-<li><p>你的hexo博客下的<code>public</code>文件夹将会上传到github仓库了</p>
-</li>
-</ul>
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714152551.png" alt=""></p>
-<ul>
-<li>现在访问<a href="https://zengwenjian123.github.io/" target="_blank" rel="noopener">https://zengwenjian123.github.io/</a> 将可以访问到你的博客(说好的google firebase真香呢？)</li>
-</ul>
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714152824.png" alt=""></p>
-<ul>
-<li>博客部署github pasges完成</li>
-</ul>
-<hr>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>Username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a>: 输入的是github上的邮箱账号, 而不是github中设置的username, 这是个巨坑!!!<br>Password for ‘https://你的github邮箱@github.com’: 输入github的登录密码,点击enter键即可.</p>
-<p>利用下面的代码记住账户和密码</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h1 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h1><p>设置短命令：</p>
-<ul>
-<li><p>令在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到github</p>
-</li>
-<li><p>首先打开你个人目录下的.bashrc隐藏文件</p>
-<ul>
-<li><pre><code class="sh">vim ~/.bashrc
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ 把光标移到末尾按’i’键插入一行</span><br><span class="line"></span><br><span class="line">  ```sh</span><br><span class="line">  alias gdd='hexo clean &amp;&amp; hexo g &amp;&amp; hexo d'</span><br></pre></td></tr></table></figure>
-
-![](https://gitee.com/usg1024/imgshow/raw/master/img/20200714153734.png)
-
-&gt; 然后按’Esc’后按’:wq’保存退出</code></pre>
-</li>
-<li><p>最后在终端输入命令生效刚刚的更改就完事了</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p><code>gdd</code>（搞大点）就是短命令名，每当输入<code>gdd</code>将自动执行</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>部署三连</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>firebase 托管</th>
-<th><a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>github 托管</td>
-<td><a href="https://zengwenjian123.github.io/" target="_blank" rel="noopener">https://zengwenjian123.github.io/</a></td>
-</tr>
-</tbody></table>
-<p>这两个blog将会同时更新</p>
-
+          <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

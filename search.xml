@@ -20,7 +20,10 @@
   <entry>
     <title>git的使用firebase+github pagse同时提交博客</title>
     <url>/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>firebase的访问一直不稳定，所以还是在github pagse上面也同步一份博客的内容吧</p>
+    <content><![CDATA[<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
+<a id="more"></a>
+
+<p>firebase的访问一直不稳定，所以还是在github pagse上面也同步一份博客的内容吧</p>
 <h1 id="git的使用记录"><a href="#git的使用记录" class="headerlink" title="git的使用记录"></a>git的使用记录</h1><p>感谢一下<a href="https://magidrag0n.github.io/" target="_blank" rel="noopener">@magidrag0n</a>大佬的教学</p>
 <ul>
 <li><p>首先在你的github创立一个名叫：<code>你的github用户名</code>+ <code>github.io</code>的仓库</p>
