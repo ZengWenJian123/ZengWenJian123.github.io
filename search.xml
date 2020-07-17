@@ -375,7 +375,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 </details>
 
 
-
 <hr>
 <h2 id="批量生成aruco标记"><a href="#批量生成aruco标记" class="headerlink" title="批量生成aruco标记"></a>批量生成aruco标记</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>):</span><br><span class="line">    markerImage = cv2.aruco.drawMarker(dictionary, i, <span class="number">200</span>, markerImage, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    firename=<span class="string">'armark/'</span>+str(i)+<span class="string">'.png'</span></span><br><span class="line">    cv2.imwrite(firename, markerImage);</span><br></pre></td></tr></table></figure>
 
