@@ -1,1352 +1,266 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"usg-cn.web.app","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="记录一切">
-<meta property="og:type" content="website">
-<meta property="og:title" content="usg的blog">
-<meta property="og:url" content="https://usg-cn.web.app/index.html">
-<meta property="og:site_name" content="usg的blog">
-<meta property="og:description" content="记录一切">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="usg-cn">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://usg-cn.web.app/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>usg的blog</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171773974-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-171773974-1');
-      }
-    </script>
-
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?c91cf41aa84d1288726c97d941c8cb52";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>usg的blog - 侦查鸡的天空</title><meta name="description" content="记录一切"><meta name="author" content="usg-cn"><meta name="copyright" content="usg-cn"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://usg-cn.web.app/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="usg的blog"><meta property="og:url" content="https://usg-cn.web.app/"><meta property="og:site_name" content="usg的blog"><meta property="og:description" content="记录一切"><meta property="og:image" content="https://usg-cn.web.app/img/avatar.png"><meta property="article:published_time" content="2020-07-17T15:57:19.826Z"><meta property="article:modified_time" content="2020-07-17T15:57:19.826Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
   }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">usg的blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">侦查鸡的天空</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/15/python-aruco/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/15/python-aruco/" class="post-title-link" itemprop="url">python下使用aruco标记进进行三维定位</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-15 08:51:43" itemprop="dateCreated datePublished" datetime="2020-07-15T08:51:43+08:00">2020-07-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-17 14:25:36" itemprop="dateModified" datetime="2020-07-17T14:25:36+08:00">2020-07-17</time>
-              </span>
-
-          
-            <span id="/2020/07/15/python-aruco/" class="post-meta-item leancloud_visitors" data-flag-title="python下使用aruco标记进进行三维定位" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/15/python-aruco/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/15/python-aruco/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715114612.png" alt=""></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/15/python-aruco/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">git的使用firebase+github pagse同时提交博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-07-14 14:58:34 / 修改时间：16:17:46" itemprop="dateCreated datePublished" datetime="2020-07-14T14:58:34+08:00">2020-07-14</time>
-            </span>
-
-          
-            <span id="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="git的使用firebase+github pagse同时提交博客" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/13/google/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/google/" class="post-title-link" itemprop="url">Hexo博客收录百度和谷歌2020.7.14更新</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-13 22:36:25" itemprop="dateCreated datePublished" datetime="2020-07-13T22:36:25+08:00">2020-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-14 08:40:17" itemprop="dateModified" datetime="2020-07-14T08:40:17+08:00">2020-07-14</time>
-              </span>
-
-          
-            <span id="/2020/07/13/google/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo博客收录百度和谷歌2020.7.14更新" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/13/google/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/13/google/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/13/google/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" class="post-title-link" itemprop="url">博客加速</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-07-13 13:52:02 / 修改时间：15:19:24" itemprop="dateCreated datePublished" datetime="2020-07-13T13:52:02+08:00">2020-07-13</time>
-            </span>
-
-          
-            <span id="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" class="post-meta-item leancloud_visitors" data-flag-title="博客加速" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/13/qrde/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/qrde/" class="post-title-link" itemprop="url">基于opencv4.0 pyzbar和python实现二维码实时检测+定位</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-07-13 09:53:35 / 修改时间：14:48:30" itemprop="dateCreated datePublished" datetime="2020-07-13T09:53:35+08:00">2020-07-13</time>
-            </span>
-
-          
-            <span id="/2020/07/13/qrde/" class="post-meta-item leancloud_visitors" data-flag-title="基于opencv4.0 pyzbar和python实现二维码实时检测+定位" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/13/qrde/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/13/qrde/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
-<p><img data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/13/qrde/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/13/eason/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/13/eason/" class="post-title-link" itemprop="url">感谢永远有歌，把心境道破</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-07-13 09:36:49 / 修改时间：10:15:42" itemprop="dateCreated datePublished" datetime="2020-07-13T09:36:49+08:00">2020-07-13</time>
-            </span>
-
-          
-            <span id="/2020/07/13/eason/" class="post-meta-item leancloud_visitors" data-flag-title="感谢永远有歌，把心境道破" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/13/eason/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/13/eason/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/13/eason/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/10/hexo-pic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/10/hexo-pic/" class="post-title-link" itemprop="url">Hexo优雅地使用图床</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-10 09:35:48" itemprop="dateCreated datePublished" datetime="2020-07-10T09:35:48+08:00">2020-07-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-13 21:34:13" itemprop="dateModified" datetime="2020-07-13T21:34:13+08:00">2020-07-13</time>
-              </span>
-
-          
-            <span id="/2020/07/10/hexo-pic/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo优雅地使用图床" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/10/hexo-pic/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/10/hexo-pic/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……</p>
-<p>等到了工作的时候，来到东阳光刚刚入职那会师姐就发来一个用Markdown写的教程文档，我眼前一亮，居然文档可以那么优美简洁，加上学生时代早有接触我打起了重拾Markdown的信心，随后便疯狂地爱上了这种<strong>“轻量级标记语言”</strong>。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/10/hexo-pic/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-title-link" itemprop="url">阿里云Ubuntu18.04搭建seafile服务器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-09 08:57:07" itemprop="dateCreated datePublished" datetime="2020-07-09T08:57:07+08:00">2020-07-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-17 23:28:39" itemprop="dateModified" datetime="2020-07-17T23:28:39+08:00">2020-07-17</time>
-              </span>
-
-          
-            <span id="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-meta-item leancloud_visitors" data-flag-title="阿里云Ubuntu18.04搭建seafile服务器" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/" class="post-title-link" itemprop="url">记录一下Markdown用法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-07 08:47:48" itemprop="dateCreated datePublished" datetime="2020-07-07T08:47:48+08:00">2020-07-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-14 09:42:39" itemprop="dateModified" datetime="2020-07-14T09:42:39+08:00">2020-07-14</time>
-              </span>
-
-          
-            <span id="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="记录一下Markdown用法" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://usg-cn.web.app/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-      <meta itemprop="name" content="usg-cn">
-      <meta itemprop="description" content="记录一切">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="usg的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">在hexo博客上添加本地图片</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-06 16:00:52" itemprop="dateCreated datePublished" datetime="2020-07-06T16:00:52+08:00">2020-07-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-17 23:27:37" itemprop="dateModified" datetime="2020-07-17T23:27:37+08:00">2020-07-17</time>
-              </span>
-
-          
-            <span id="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" class="post-meta-item leancloud_visitors" data-flag-title="在hexo博客上添加本地图片" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>测试一下图片</p>
-<p>本站使用了GitHub+gitee作为图库</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
   }
-</script>
+}
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">usg的blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">usg的blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/15/python-aruco/" title="python下使用aruco标记进进行三维定位">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python下使用aruco标记进进行三维定位"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/15/python-aruco/" title="python下使用aruco标记进进行三维定位">python下使用aruco标记进进行三维定位</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-15 08:51:43"><i class="far fa-calendar-alt"></i>2020-07-15</time></div><div class="content">
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="usg-cn"
-      src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp">
-  <p class="site-author-name" itemprop="name">usg-cn</p>
-  <div class="site-description" itemprop="description">记录一切</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">12</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">18</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/zengwenjian123" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zengwenjian123" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:usg1024cn@gmail.com" title="E-Mail → mailto:usg1024cn@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
+ArUco标记
+首先什么是aruco标记呢？
+aruco标记是可用于摄像机姿态估计的二进制方形基准标记。它的主要优点是检测简单、快速，并且具有很强的鲁棒性。ArUco 标记是由宽黑色边框和确定其标识符（id）的内部二进制矩阵组成的正方形标记。aruco标记的黑色边框有助于其在图像中的快速检测，内部二进制编码用于识别标记和提供错误检测和纠正。aruco标记尺寸的大小决定内部矩阵的大小，例如尺寸为 4x4 的标记由 16 位二进制数组成。
+通俗地说，aruco标记其实就是一种编码，就和我们日常生活中的二维码是相似的，只不过由于编码方式的不同，导致它们存储信息的方式、容量等等有所差异，所以在应用层次上也会有所不同。由于单个aruco标记就可以提供足够的对应关系，例如有四个明显的角点及内部的二进制编码，所以aruco标记被广泛用来增加从二维世界映射到三维世界时的信息量，便于发现二维世界与三维世界之间的投影关系，从而实现姿态估计、相机矫正等等应用。
+OpenCV中的ArUco模块包括了对aruco标记的创建和检测，以及将aruco标记用于姿势估计和相机矫正等应用的相关API，同时还提供了标 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git的使用firebase+github pagse同时提交博客">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git的使用firebase+github pagse同时提交博客"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git的使用firebase+github pagse同时提交博客">git的使用firebase+github pagse同时提交博客</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-14 14:58:34"><i class="far fa-calendar-alt"></i>2020-07-14</time></div><div class="content">
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      友情链接
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://magidrag0n.github.io/" title="https:&#x2F;&#x2F;magidrag0n.github.io&#x2F;" rel="noopener" target="_blank">magidrag0n</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.iots.vip/" title="https:&#x2F;&#x2F;www.iots.vip&#x2F;" rel="noopener" target="_blank">Alliot</a>
-        </li>
-    </ul>
-  </div>
+firebase的访问一直不稳定，所以还是在github pagse上面也同步一份博客的内容吧
+git的使用记录感谢一下@magidrag0n大佬的教学
 
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
+首先在你的github创立一个名叫：你的github用户名+ github.io的仓库
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">usg-cn</span>
-</div>
-
-  <div class="powered-by">
-  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-  </span>
-  </div>
-
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://firebase.google.com/" rel="noopener" target="_blank">谷歌firebase托管</a> 强力驱动
-  </div>
-
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.6k字</span>
-</div>
-
-</div>
-  <div class=BbeiAn-info">
-  粤ICP备 -
-  <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="noopener">20062375号-1</a>
-  </a>
-</div>
-        
+我的github用户名叫zengwenjian123所以我建立的仓库名叫：zengwenjian123.github.io
 
 
 
+然后命令行进入到博客的文件夹
+12cd hexo #进入博客更目录
+
+安装插件
+1npm install --save hexo-deployer-git
+
+打开站点配置文件_config
 
 
+在最下面添加一个函数
+1234deploy:  type: 'git'  repo: 'https://github.com/ZengWenJian123/ZengWenJian123.github.io'  branch: 'master'
 
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js"></script>
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+这里填入的是你自己的仓库路径
 
 
 
 
   
 
-  
+运行设置账户名
+12git config --global user.email "you@example.com"git conf ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/13/google/" title="Hexo博客收录百度和谷歌2020.7.14更新">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo博客收录百度和谷歌2020.7.14更新"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/13/google/" title="Hexo博客收录百度和谷歌2020.7.14更新">Hexo博客收录百度和谷歌2020.7.14更新</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-13 22:36:25"><i class="far fa-calendar-alt"></i>2020-07-13</time></div><div class="content">博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : true,
-      appId      : 'lUhjt59cx7jdvUgjIQqTps0M-gzGzoHsz',
-      appKey     : 'E2dYqBHfWKeVOdoB37SckJ48',
-      placeholder: "兄der~来发评论吗？",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : true,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
-</body>
-</html>
+首先确认站点是否已经被收录了我的博客地址为：usg-cn.web.app所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。
+1site:usg-cn.web.app/
+
+
+百度的没有，谷歌已经收录了
+
+研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。
+
+站点还没有被收录就继续下列步骤
+安装扩展插件
+站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。
+
+在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件
+12npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save
+
+在博客目 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" title="博客加速">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="博客加速"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" title="博客加速">博客加速</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-13 13:52:02"><i class="far fa-calendar-alt"></i>2020-07-13</time></div><div class="content">博客加速
+利用cdn进行博客加速（TODO）
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/13/qrde/" title="基于opencv4.0 pyzbar和python实现二维码实时检测+定位">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于opencv4.0 pyzbar和python实现二维码实时检测+定位"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/13/qrde/" title="基于opencv4.0 pyzbar和python实现二维码实时检测+定位">基于opencv4.0 pyzbar和python实现二维码实时检测+定位</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-13 09:53:35"><i class="far fa-calendar-alt"></i>2020-07-13</time></div><div class="content">项目启动这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。
+
+
+
+（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）
+前期准备opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码
+环境准备：
+
+opencv4.0（3.0）
+python3任意版本
+pyzbar
+
+详情可以查看我的csdn里面的内容也差不多
+初步效果
+
+
+这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用matplotlib显示图像。正确信息可以从控制台查看。
+
+code1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950import cv2from pyzbar imp ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/13/eason/" title="感谢永远有歌，把心境道破">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="感谢永远有歌，把心境道破"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/13/eason/" title="感谢永远有歌，把心境道破">感谢永远有歌，把心境道破</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-13 09:36:49"><i class="far fa-calendar-alt"></i>2020-07-13</time></div><div class="content">7.11Eason Live is so much better with Music有 了 音 乐 生 活 更 美 好 ，Eason.
+
+
+youtube地址：
+
+> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
+
+
+致敬这场疫情中默默奉献的那些人
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/10/hexo-pic/" title="Hexo优雅地使用图床">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo优雅地使用图床"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/10/hexo-pic/" title="Hexo优雅地使用图床">Hexo优雅地使用图床</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-10 09:35:48"><i class="far fa-calendar-alt"></i>2020-07-10</time></div><div class="content">其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……
+等到了工作的时候，来到东阳光刚刚入职那会师姐就发来一个用Markdown写的教程文档，我眼前一亮，居然文档可以那么优美简洁，加上学生时代早有接触我打起了重拾Markdown的信心，随后便疯狂地爱上了这种“轻量级标记语言”。
+
+
+
+那么怎么解决图片的问题呢？经过简单的查找之后我找到了PicGo+Github(cdn)的强强组合，这样的组合即简单易用又稳定可靠访问速度还比较快，不用担心图片会被删掉。
+PicGoPicGo的主页：https://github.com/Molunerfinn/PicGo
+PicGo：一个有用的快速上传图片并获取图片URL链接的工具
+PicGo本体支持如下图床：
+
+七牛图床 v1.0
+腾讯云 COS v4 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="阿里云Ubuntu18.04搭建seafile服务器">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云Ubuntu18.04搭建seafile服务器"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="阿里云Ubuntu18.04搭建seafile服务器">阿里云Ubuntu18.04搭建seafile服务器</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-09 08:57:07"><i class="far fa-calendar-alt"></i>2020-07-09</time></div><div class="content">
+
+
+11111
+利用脚本一键安装seaflie及其依赖环境
+这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。
+
+文档地址：https://github.com/haiwen/seafile-server-installer-cn
+安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并做好准备（如果安装失败需要还原到替换）。
+切换成root账号（sudo -i）
+获取安装脚本
+适用于Seafile 7.1.x及更高版本
+Ubuntu 18.04（64位）：
+1wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http
+
+运行安装脚本Ubuntu 16.04 / 18.04（64bit）：
+1bash seafile-server-ubuntu-amd64-http 7.1.4
+
+
+脚本启动您 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/" title="记录一下Markdown用法">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记录一下Markdown用法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/" title="记录一下Markdown用法">记录一下Markdown用法</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-07 08:47:48"><i class="far fa-calendar-alt"></i>2020-07-07</time></div><div class="content">关于Markdown的用法
+
+
+Markdown语言
+Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
+Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md, .markdown
+
+
+编辑器​        使用Typora编辑器来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。是一款很优秀的跨平台编辑器。
+
+
+
+Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。
+
+Typora 官网：https://typora.io/
+
+演示实例本文作者：[李芬芳](https://virony-cn.web.app/ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" title="在hexo博客上添加本地图片">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在hexo博客上添加本地图片"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" title="在hexo博客上添加本地图片">在hexo博客上添加本地图片</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-06 16:00:52"><i class="far fa-calendar-alt"></i>2020-07-06</time></div><div class="content">测试一下图片
+本站使用了GitHub+gitee作为图库
+
+
+
+测试成功
+
+
+)
+![](https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/2020-07-02 16-27-23 的屏幕截图.png)
+
+
+
+
+码云图床：
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">usg-cn</div><div class="author-info__description">记录一切</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">12</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">18</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/07/15/python-aruco/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="python下使用aruco标记进进行三维定位" alt="python下使用aruco标记进进行三维定位"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/15/python-aruco/" title="python下使用aruco标记进进行三维定位">python下使用aruco标记进进行三维定位</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-15 08:51:43">2020-07-15</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="git的使用firebase+github pagse同时提交博客" alt="git的使用firebase+github pagse同时提交博客"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git的使用firebase+github pagse同时提交博客">git的使用firebase+github pagse同时提交博客</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-14 14:58:34">2020-07-14</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/13/google/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Hexo博客收录百度和谷歌2020.7.14更新" alt="Hexo博客收录百度和谷歌2020.7.14更新"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/13/google/" title="Hexo博客收录百度和谷歌2020.7.14更新">Hexo博客收录百度和谷歌2020.7.14更新</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-13 22:36:25">2020-07-13</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="博客加速" alt="博客加速"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" title="博客加速">博客加速</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-13 13:52:02">2020-07-13</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/13/qrde/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="基于opencv4.0 pyzbar和python实现二维码实时检测+定位" alt="基于opencv4.0 pyzbar和python实现二维码实时检测+定位"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/13/qrde/" title="基于opencv4.0 pyzbar和python实现二维码实时检测+定位">基于opencv4.0 pyzbar和python实现二维码实时检测+定位</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-13 09:53:35">2020-07-13</time></div></a></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/firebase/" style="font-size: 16px; color: #999">firebase</a> <a href="/tags/git/" style="font-size: 16px; color: #999">git</a> <a href="/tags/google/" style="font-size: 16px; color: #999">google</a> <a href="/tags/hexo/" style="font-size: 22px; color: #99a9bf">hexo</a> <a href="/tags/markdonw/" style="font-size: 16px; color: #999">markdonw</a> <a href="/tags/markdown/" style="font-size: 16px; color: #999">markdown</a> <a href="/tags/next/" style="font-size: 16px; color: #999">next</a> <a href="/tags/opencv/" style="font-size: 18px; color: #999ea6">opencv</a> <a href="/tags/python/" style="font-size: 16px; color: #999">python</a> <a href="/tags/qrcode%EF%BC%8Cwork/" style="font-size: 16px; color: #999">qrcode，work</a> <a href="/tags/seafile/" style="font-size: 16px; color: #999">seafile</a> <a href="/tags/ubuntu/" style="font-size: 16px; color: #999">ubuntu</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20px; color: #99a4b2">博客</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/" style="font-size: 16px; color: #999">博客加速</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 16px; color: #999">图床</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 16px; color: #999">文件同步服务器</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 16px; color: #999">日常</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 16px; color: #999">阿里云</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">12</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">12</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By usg-cn</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
+if (subtitleEffect) { 
+  var typed = new Typed("#subtitle", {
+    strings: "今日事&#44;今日畢,Never put off till tomorrow what you can do today".split(","),
+    startDelay: 300,
+    typeSpeed: 150,
+    loop: true,
+    backSpeed: 50
+  })
+} else {
+  document.getElementById("subtitle").innerHTML = '今日事&#44;今日畢'
+}</script></body></html>
