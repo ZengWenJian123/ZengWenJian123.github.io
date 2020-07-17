@@ -292,20 +292,6 @@
       </tags>
   </entry>
   <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客加速</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python下使用aruco标记进进行三维定位</title>
     <url>/2020/07/15/python-aruco/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715114612.png" alt=""></p>
@@ -416,34 +402,17 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
-    <url>/2020/07/13/qrde/</url>
-    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
 <a id="more"></a>
 
-<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
-<p>环境准备：</p>
-<ul>
-<li>opencv4.0（3.0）</li>
-<li>python3任意版本</li>
-<li>pyzbar</li>
-</ul>
-<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
-<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
-<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
-<hr>
-<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
 ]]></content>
       <tags>
-        <tag>opencv</tag>
-        <tag>python</tag>
-        <tag>qrcode，work</tag>
+        <tag>博客加速</tag>
       </tags>
   </entry>
   <entry>
@@ -778,6 +747,178 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下博客的由来</title>
+    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
+<a id="more"></a>
+
+
+
+<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
+<p>免费的托管方案提供了：</p>
+<ul>
+<li>1G的储存空间</li>
+<li>10G/月的流量超出后可以付费购买。</li>
+</ul>
+<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
+<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
+<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后，就有了如下的文件目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
+<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
+
+<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
+<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
+<p>同时，也可以运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
+<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
+<p>完整提交内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>只提交更改内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>这样在我的博客网站：<a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
+<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
+<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
+<p>使用Firebase有很多非常难得的好处：</p>
+<ul>
+<li>全球SSD CDN，速度比GitHub快。</li>
+<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
+<li>零配置的SSL，自动启动HTTPS。</li>
+<li>完美的中文文档支持。</li>
+</ul>
+<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
+<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></p>
+<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
+
+<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
+
+<p>登录后再切换到刚才生成的Hexo目录下，</p>
+<p>cd hexo/</p>
+<p>运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
+
+<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
+<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
+<p>然后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>大功告成了，接下来就是欣赏博客的时候了。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
+<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
+<li><code>hexo deploy</code>推送github部署博客</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
+<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
+</ul>
+<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
+<p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>把光标移到末尾按’i’键插入一行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
+<blockquote>
+<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署三连</p>
+</blockquote>
+<p>然后按’Esc’后按’:wq’保存退出</p>
+<p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
+<blockquote>
+<p>拓展：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
+
+<p>只执行构建和只部署更改</p>
+<blockquote>
+<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
+</blockquote>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
+<ul>
+<li>一键三连</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>firebase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
+    <url>/2020/07/13/qrde/</url>
+    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
+<a id="more"></a>
+
+<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
+<p>环境准备：</p>
+<ul>
+<li>opencv4.0（3.0）</li>
+<li>python3任意版本</li>
+<li>pyzbar</li>
+</ul>
+<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
+<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
+<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
+<hr>
+<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+        <tag>python</tag>
+        <tag>qrcode，work</tag>
       </tags>
   </entry>
   <entry>
@@ -1194,147 +1335,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录一下博客的由来</title>
-    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
-<a id="more"></a>
-
-
-
-<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
-<p>免费的托管方案提供了：</p>
-<ul>
-<li>1G的储存空间</li>
-<li>10G/月的流量超出后可以付费购买。</li>
-</ul>
-<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
-<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
-<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完成后，就有了如下的文件目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
-<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
-
-<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
-<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
-<p>同时，也可以运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
-<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
-<p>完整提交内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>只提交更改内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>这样在我的博客网站：<a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
-<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
-<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
-<p>使用Firebase有很多非常难得的好处：</p>
-<ul>
-<li>全球SSD CDN，速度比GitHub快。</li>
-<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
-<li>零配置的SSL，自动启动HTTPS。</li>
-<li>完美的中文文档支持。</li>
-</ul>
-<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
-<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
-<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></p>
-<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
-
-<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
-
-<p>登录后再切换到刚才生成的Hexo目录下，</p>
-<p>cd hexo/</p>
-<p>运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
-
-<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
-<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
-<p>然后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>大功告成了，接下来就是欣赏博客的时候了。</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
-<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
-<li><code>hexo deploy</code>推送github部署博客</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
-<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
-</ul>
-<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
-<p>首先打开你个人目录下的.bashrc隐藏文件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>把光标移到末尾按’i’键插入一行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
-<blockquote>
-<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署三连</p>
-</blockquote>
-<p>然后按’Esc’后按’:wq’保存退出</p>
-<p>最后在终端输入命令生效刚刚的更改就完事了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
-<blockquote>
-<p>拓展：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
-
-<p>只执行构建和只部署更改</p>
-<blockquote>
-<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
-</blockquote>
-</blockquote>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
-<ul>
-<li>一键三连</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>firebase</tag>
       </tags>
   </entry>
   <entry>
