@@ -54,11 +54,11 @@
     
     
     
+      <category term="hexo" scheme="https://usg-cn.web.app/tags/hexo/"/>
+    
       <category term="博客" scheme="https://usg-cn.web.app/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="git" scheme="https://usg-cn.web.app/tags/git/"/>
-    
-      <category term="hexo" scheme="https://usg-cn.web.app/tags/hexo/"/>
     
   </entry>
   
@@ -80,9 +80,9 @@
     
     
     
-      <category term="博客" scheme="https://usg-cn.web.app/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="hexo" scheme="https://usg-cn.web.app/tags/hexo/"/>
+    
+      <category term="博客" scheme="https://usg-cn.web.app/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="google" scheme="https://usg-cn.web.app/tags/google/"/>
     
@@ -290,9 +290,9 @@
     
     
     
-      <category term="博客" scheme="https://usg-cn.web.app/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="hexo" scheme="https://usg-cn.web.app/tags/hexo/"/>
+    
+      <category term="博客" scheme="https://usg-cn.web.app/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="firebase" scheme="https://usg-cn.web.app/tags/firebase/"/>
     
