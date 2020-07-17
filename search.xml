@@ -450,6 +450,7 @@ Python: cv.aruco.DICT_APRILTAG_16h5
     <title>在hexo博客上添加本地图片</title>
     <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试一下图片</p>
+<p>本站使用了GitHub+gitee作为图库</p>
 <a id="more"></a>
 
 <p><img data-src="notebook-2666360_1920.jpg" alt="notebook-2666360_1920"></p>
