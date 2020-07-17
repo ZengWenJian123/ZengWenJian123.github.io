@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>感谢永远有歌，把心境道破</title>
-    <url>/2020/07/13/eason/</url>
-    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
-<a id="more"></a>
-
-<p>youtube地址：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
-<p>致敬这场疫情中默默奉献的那些人</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git的使用firebase+github pagse同时提交博客</title>
     <url>/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
@@ -127,6 +110,23 @@
       </tags>
   </entry>
   <entry>
+    <title>感谢永远有歌，把心境道破</title>
+    <url>/2020/07/13/eason/</url>
+    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
+<a id="more"></a>
+
+<p>youtube地址：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
+<p>致敬这场疫情中默默奉献的那些人</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
     <url>/2020/07/13/google/</url>
     <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
@@ -204,105 +204,6 @@
         <tag>博客</tag>
         <tag>hexo</tag>
         <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo优雅地使用图床</title>
-    <url>/2020/07/10/hexo-pic/</url>
-    <content><![CDATA[<p>其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……</p>
-<p>等到了工作的时候，来到东阳光刚刚入职那会师姐就发来一个用Markdown写的教程文档，我眼前一亮，居然文档可以那么优美简洁，加上学生时代早有接触我打起了重拾Markdown的信心，随后便疯狂地爱上了这种<strong>“轻量级标记语言”</strong>。</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710101818.png" alt=""></p>
-<p>那么怎么解决图片的问题呢？经过简单的查找之后我找到了<code>PicGo</code>+<code>Github(cdn)</code>的强强组合，这样的组合即简单易用又稳定可靠访问速度还比较快，不用担心图片会被删掉。</p>
-<h1 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h1><p>PicGo的主页：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
-<p><strong>PicGo：一个有用的快速上传图片并获取图片URL链接的工具</strong></p>
-<p>PicGo本体支持如下图床：</p>
-<ul>
-<li><code>七牛图床</code> v1.0</li>
-<li><code>腾讯云 COS v4\v5 版本</code> v1.1和v1.5.0</li>
-<li><code>又拍云</code> v1.2.0</li>
-<li><code>GitHub</code> v1.5.0</li>
-<li><code>SM.MS V2</code> v2.3.0-beta.0</li>
-<li><code>阿里云 OSS</code> v1.6.0</li>
-<li><code>Imgur</code> v1.6.0</li>
-</ul>
-<p>PicGo的界面：</p>
-<p><img src= "/img/loading.gif" data-src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo-2.0.gif" alt="img"></p>
-<p><img src= "/img/loading.gif" data-src="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif" alt="picgo-menubar"></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710102357.png" alt="picgo的界面截图"></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710102504.png" alt=""></p>
-<p>利用这样的小插件的话可以让我们的Markdown文档轻易的插入图片，在线图片特别方便用于分享出去，芜湖，起飞了！</p>
-<p>安装教程：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
-<hr>
-<h1 id="GitHub图床"><a href="#GitHub图床" class="headerlink" title="GitHub图床"></a>GitHub图床</h1><p>GitHub想必大家都知道吧！<code>在线程序员交友平台</code>我们就是利用这个平台作为一个稳定可靠的图片保存位置。</p>
-<h2 id="1-登录GitHub创建Repository"><a href="#1-登录GitHub创建Repository" class="headerlink" title="1.登录GitHub创建Repository"></a>1.登录GitHub创建Repository</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103103.png" alt=""></p>
-<h2 id="2-设置Repository"><a href="#2-设置Repository" class="headerlink" title="2.设置Repository"></a>2.设置Repository</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103303.png" alt=""></p>
-<ul>
-<li>设置仓库名</li>
-<li>设置为Pubic（重要）如果设置为私人的话就看不到了</li>
-<li>创建仓库</li>
-</ul>
-<h2 id="3-生成一个Token"><a href="#3-生成一个Token" class="headerlink" title="3.生成一个Token"></a>3.生成一个Token</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103617.png" alt=""></p>
-<p>点开头像的<code>设定值</code></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103815.png" alt=""></p>
-<p>点开左侧最下面的<code>开发人员设定</code></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103921.png" alt=""></p>
-<p>点击个人访问令牌</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104043.png" alt=""></p>
-<p>创建新的<code>Token</code></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104124.png" alt=""></p>
-<p>填写描述，选择<code>repo</code>,然后点击<code>Generate token</code>按钮</p>
-<blockquote>
-<p>注意：这串token十分重要，记录下来只会显示一次，要好好保存，不能落入其他人手中喔！</p>
-</blockquote>
-<hr>
-<h1 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h1><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">下载相应的版本</a></p>
-<p>安装：不会装的看<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">文档</a></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104609.png" alt=""></p>
-<blockquote>
-<p>设定仓库名的时候，是按照“账户名/仓库名的格式填写”</p>
-<p>分支名统一填写“master”</p>
-<p>将之前的Token黏贴在这里</p>
-<p>存储的路径可以按照我这样子写，就会在repository下创建一个“img”文件夹</p>
-<p>自定义域名的作用是，在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上<code>https://raw.githubusercontent.com/用户名/RepositoryName/分支名，</code>，自定义域名需要按照这样去填写</p>
-<p>或者使用cdn加速：</p>
-<p><code>https://cdn.jsdelivr.net/gh/用户名/RepositoryName</code>来进行加速</p>
-</blockquote>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104922.png" alt=""></p>
-<p>这样之后就可以愉快地在文档中加入图片了，同时你的图片也可以在github仓库中查看到</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142404.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142534.png" alt=""></p>
-<hr>
-<h1 id="码云Gitee图床"><a href="#码云Gitee图床" class="headerlink" title="码云Gitee图床"></a>码云Gitee图床</h1><p>教程：<a href="https://cychan811.gitee.io/cychan811/2020/07/04/PicGo-gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener">地址</a></p>
-<p>码云官网：<a href="https://gitee.com/" target="_blank" rel="noopener">地址</a></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713212031.png" alt=""></p>
-<p>速度比GitHub更快而且还不会时不时出现无法提交的小bug，但是怎么说呢？码云gitee毕竟是国内的平台，论体量来说比GitHub小很多，也不排除什么时候突然就停止服务或者关闭api了，所以说这个还是用用就行了。<strong>不过速度是真的快，毕竟是本土化的服务器</strong></p>
-<h1 id="一些错误处理"><a href="#一些错误处理" class="headerlink" title="一些错误处理"></a>一些错误处理</h1><ul>
-<li>上传失败：首先检查上传或者剪贴板的东东是否是支持格式的图片，如果确认无误的话可能是PicGo的问题进入<code>PicGo设置</code> <code>设置Server</code>关闭再打开，如果还是不行重启软件可以解决大部分问题。</li>
-<li>最好打开<code>上传前重命名</code>功能，因为有时候可能因为某些图片是中文的，导致错误，打开后可以把图片设置为数字时间格式，这样方便很多。</li>
-<li>剩下的遇到再补充</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>图床</tag>
-        <tag>markdonw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客加速</tag>
       </tags>
   </entry>
   <entry>
@@ -417,6 +318,91 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
+    <title>Hexo优雅地使用图床</title>
+    <url>/2020/07/10/hexo-pic/</url>
+    <content><![CDATA[<p>其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……</p>
+<p>等到了工作的时候，来到东阳光刚刚入职那会师姐就发来一个用Markdown写的教程文档，我眼前一亮，居然文档可以那么优美简洁，加上学生时代早有接触我打起了重拾Markdown的信心，随后便疯狂地爱上了这种<strong>“轻量级标记语言”</strong>。</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710101818.png" alt=""></p>
+<p>那么怎么解决图片的问题呢？经过简单的查找之后我找到了<code>PicGo</code>+<code>Github(cdn)</code>的强强组合，这样的组合即简单易用又稳定可靠访问速度还比较快，不用担心图片会被删掉。</p>
+<h1 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h1><p>PicGo的主页：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
+<p><strong>PicGo：一个有用的快速上传图片并获取图片URL链接的工具</strong></p>
+<p>PicGo本体支持如下图床：</p>
+<ul>
+<li><code>七牛图床</code> v1.0</li>
+<li><code>腾讯云 COS v4\v5 版本</code> v1.1和v1.5.0</li>
+<li><code>又拍云</code> v1.2.0</li>
+<li><code>GitHub</code> v1.5.0</li>
+<li><code>SM.MS V2</code> v2.3.0-beta.0</li>
+<li><code>阿里云 OSS</code> v1.6.0</li>
+<li><code>Imgur</code> v1.6.0</li>
+</ul>
+<p>PicGo的界面：</p>
+<p><img src= "/img/loading.gif" data-src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo-2.0.gif" alt="img"></p>
+<p><img src= "/img/loading.gif" data-src="https://user-images.githubusercontent.com/12621342/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif" alt="picgo-menubar"></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710102357.png" alt="picgo的界面截图"></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710102504.png" alt=""></p>
+<p>利用这样的小插件的话可以让我们的Markdown文档轻易的插入图片，在线图片特别方便用于分享出去，芜湖，起飞了！</p>
+<p>安装教程：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
+<hr>
+<h1 id="GitHub图床"><a href="#GitHub图床" class="headerlink" title="GitHub图床"></a>GitHub图床</h1><p>GitHub想必大家都知道吧！<code>在线程序员交友平台</code>我们就是利用这个平台作为一个稳定可靠的图片保存位置。</p>
+<h2 id="1-登录GitHub创建Repository"><a href="#1-登录GitHub创建Repository" class="headerlink" title="1.登录GitHub创建Repository"></a>1.登录GitHub创建Repository</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103103.png" alt=""></p>
+<h2 id="2-设置Repository"><a href="#2-设置Repository" class="headerlink" title="2.设置Repository"></a>2.设置Repository</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103303.png" alt=""></p>
+<ul>
+<li>设置仓库名</li>
+<li>设置为Pubic（重要）如果设置为私人的话就看不到了</li>
+<li>创建仓库</li>
+</ul>
+<h2 id="3-生成一个Token"><a href="#3-生成一个Token" class="headerlink" title="3.生成一个Token"></a>3.生成一个Token</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103617.png" alt=""></p>
+<p>点开头像的<code>设定值</code></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103815.png" alt=""></p>
+<p>点开左侧最下面的<code>开发人员设定</code></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710103921.png" alt=""></p>
+<p>点击个人访问令牌</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104043.png" alt=""></p>
+<p>创建新的<code>Token</code></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104124.png" alt=""></p>
+<p>填写描述，选择<code>repo</code>,然后点击<code>Generate token</code>按钮</p>
+<blockquote>
+<p>注意：这串token十分重要，记录下来只会显示一次，要好好保存，不能落入其他人手中喔！</p>
+</blockquote>
+<hr>
+<h1 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h1><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">下载相应的版本</a></p>
+<p>安装：不会装的看<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">文档</a></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104609.png" alt=""></p>
+<blockquote>
+<p>设定仓库名的时候，是按照“账户名/仓库名的格式填写”</p>
+<p>分支名统一填写“master”</p>
+<p>将之前的Token黏贴在这里</p>
+<p>存储的路径可以按照我这样子写，就会在repository下创建一个“img”文件夹</p>
+<p>自定义域名的作用是，在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上<code>https://raw.githubusercontent.com/用户名/RepositoryName/分支名，</code>，自定义域名需要按照这样去填写</p>
+<p>或者使用cdn加速：</p>
+<p><code>https://cdn.jsdelivr.net/gh/用户名/RepositoryName</code>来进行加速</p>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710104922.png" alt=""></p>
+<p>这样之后就可以愉快地在文档中加入图片了，同时你的图片也可以在github仓库中查看到</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142404.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142534.png" alt=""></p>
+<hr>
+<h1 id="码云Gitee图床"><a href="#码云Gitee图床" class="headerlink" title="码云Gitee图床"></a>码云Gitee图床</h1><p>教程：<a href="https://cychan811.gitee.io/cychan811/2020/07/04/PicGo-gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener">地址</a></p>
+<p>码云官网：<a href="https://gitee.com/" target="_blank" rel="noopener">地址</a></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713212031.png" alt=""></p>
+<p>速度比GitHub更快而且还不会时不时出现无法提交的小bug，但是怎么说呢？码云gitee毕竟是国内的平台，论体量来说比GitHub小很多，也不排除什么时候突然就停止服务或者关闭api了，所以说这个还是用用就行了。<strong>不过速度是真的快，毕竟是本土化的服务器</strong></p>
+<h1 id="一些错误处理"><a href="#一些错误处理" class="headerlink" title="一些错误处理"></a>一些错误处理</h1><ul>
+<li>上传失败：首先检查上传或者剪贴板的东东是否是支持格式的图片，如果确认无误的话可能是PicGo的问题进入<code>PicGo设置</code> <code>设置Server</code>关闭再打开，如果还是不行重启软件可以解决大部分问题。</li>
+<li>最好打开<code>上传前重命名</code>功能，因为有时候可能因为某些图片是中文的，导致错误，打开后可以把图片设置为数字时间格式，这样方便很多。</li>
+<li>剩下的遇到再补充</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>图床</tag>
+        <tag>markdonw</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
     <url>/2020/07/13/qrde/</url>
     <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
@@ -445,6 +431,20 @@ Python: cv.aruco.DICT_APRILTAG_16h5
         <tag>opencv</tag>
         <tag>python</tag>
         <tag>qrcode，work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客加速</tag>
       </tags>
   </entry>
   <entry>
@@ -608,384 +608,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
         <tag>博客</tag>
         <tag>hexo</tag>
         <tag>firebase</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录一下Markdown用法</title>
-    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
-<a id="more"></a>
-
-<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
-</blockquote>
-<hr>
-<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
-<blockquote>
-<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
-</blockquote>
-<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
-<hr>
-<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
-<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
-<li><p>语法</p>
-<p>[TOC]</p>
-</li>
-</ul>
-<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>引用内容1</p>
-</blockquote>
-<blockquote>
-<p>引用内容2</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>引用内容3</p>
-</blockquote>
-</blockquote>
-<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><code>String str1 = &quot;hello&quot;;</code> </p>
-<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>效果</p>
-</li>
-<li><p>无序列表1</p>
-</li>
-<li><p>无序列表2</p>
-</li>
-<li><p>无序列表3</p>
-</li>
-</ul>
-<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-<li>多行无序列表1<ul>
-<li>多行无序列表2<ul>
-<li>多行无序列表3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>有序列表1</li>
-<li>有序列表2</li>
-<li>有序列表3</li>
-</ol>
-<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>多行有序列表1</li>
-<li>多行有序列表2<ol>
-<li>多行有序列表2-1</li>
-<li>多行有序列表2-2</li>
-</ol>
-</li>
-<li>多行有序列表3<ol>
-<li>多行有序列表3-1</li>
-<li>多行有序列表3-2</li>
-</ol>
-</li>
-</ol>
-<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>-[ ] 抽烟</p>
-<p>-[x] 喝酒</p>
-<p>-[ ] 烫头</p>
-<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">姓名</th>
-<th align="center">性别</th>
-<th align="center">年龄</th>
-<th align="center">手机号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">张三</td>
-<td align="center">男</td>
-<td align="center">21</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">李四</td>
-<td align="center">女</td>
-<td align="center">23</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">王五</td>
-<td align="center">男</td>
-<td align="center">25</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
-<li>语法1（本地图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>语法2（网络图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果2</li>
-</ul>
-<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
-<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
-<li>语法1（行内式链接）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果1</li>
-</ul>
-<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
-<ul>
-<li>语法2 （自动链接）</li>
-</ul>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果2</li>
-</ul>
-<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><em>斜体</em><br><em>斜体</em></p>
-<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><strong>加粗</strong><br><strong>加粗</strong></p>
-<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><u>下划线</u></p>
-<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><del>删除线</del></p>
-<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<hr>
-<hr>
-<hr>
-<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>Typora[^1]</p>
-<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果 </li>
-</ul>
-<p>$$<br>3^2 = 9<br>$$</p>
-<p>$$<br>3^{(3-1)}=9<br>$$</p>
-<p>$$<br>H_2SO_4<br>$$</p>
-<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>\ ` * _ { } [ ] () # + - . ! </p>
-<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
-
-<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
-<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
-<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
-<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<details>
-<summary>展开查看</summary>
-<pre><code>
-展开查看的内容
-</code></pre>
-</details>
-
-
-
-
-
-<hr>
-]]></content>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-<a id="more"></a>
-
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
       </tags>
   </entry>
   <entry>
@@ -1402,6 +1024,384 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+<a id="more"></a>
+
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+</blockquote>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下Markdown用法</title>
+    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
+<a id="more"></a>
+
+<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
+</blockquote>
+<hr>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
+<blockquote>
+<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
+</blockquote>
+<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
+<hr>
+<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
+<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
+<li><p>语法</p>
+<p>[TOC]</p>
+</li>
+</ul>
+<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引用内容1</p>
+</blockquote>
+<blockquote>
+<p>引用内容2</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>引用内容3</p>
+</blockquote>
+</blockquote>
+<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><code>String str1 = &quot;hello&quot;;</code> </p>
+<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>效果</p>
+</li>
+<li><p>无序列表1</p>
+</li>
+<li><p>无序列表2</p>
+</li>
+<li><p>无序列表3</p>
+</li>
+</ul>
+<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+<li>多行无序列表1<ul>
+<li>多行无序列表2<ul>
+<li>多行无序列表3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3</li>
+</ol>
+<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>多行有序列表1</li>
+<li>多行有序列表2<ol>
+<li>多行有序列表2-1</li>
+<li>多行有序列表2-2</li>
+</ol>
+</li>
+<li>多行有序列表3<ol>
+<li>多行有序列表3-1</li>
+<li>多行有序列表3-2</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>-[ ] 抽烟</p>
+<p>-[x] 喝酒</p>
+<p>-[ ] 烫头</p>
+<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">姓名</th>
+<th align="center">性别</th>
+<th align="center">年龄</th>
+<th align="center">手机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">张三</td>
+<td align="center">男</td>
+<td align="center">21</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">李四</td>
+<td align="center">女</td>
+<td align="center">23</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">王五</td>
+<td align="center">男</td>
+<td align="center">25</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
+<li>语法1（本地图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>语法2（网络图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
+<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
+<li>语法1（行内式链接）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果1</li>
+</ul>
+<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
+<ul>
+<li>语法2 （自动链接）</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><em>斜体</em><br><em>斜体</em></p>
+<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><strong>加粗</strong><br><strong>加粗</strong></p>
+<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><u>下划线</u></p>
+<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><del>删除线</del></p>
+<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>Typora[^1]</p>
+<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果 </li>
+</ul>
+<p>$$<br>3^2 = 9<br>$$</p>
+<p>$$<br>3^{(3-1)}=9<br>$$</p>
+<p>$$<br>H_2SO_4<br>$$</p>
+<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>\ ` * _ { } [ ] () # + - . ! </p>
+<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
+
+<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
+<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
+<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
+<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<details>
+<summary>展开查看</summary>
+<pre><code>
+展开查看的内容
+</code></pre>
+</details>
+
+
+
+
+
+<hr>
+]]></content>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
