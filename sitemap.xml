@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://usg-cn.web.app/tags/index.html</loc>
+    
+    <lastmod>2020-07-18T08:34:32.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://usg-cn.web.app/photos/index.html</loc>
+    
+    <lastmod>2020-07-18T08:33:58.795Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://usg-cn.web.app/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2020-07-18T06:06:55.827Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://usg-cn.web.app/link/index.html</loc>
     
     <lastmod>2020-07-18T01:13:23.942Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://usg-cn.web.app/photos/index.html</loc>
-    
-    <lastmod>2020-07-17T23:40:53.855Z</lastmod>
     
   </url>
   
@@ -110,13 +117,6 @@
     <loc>https://usg-cn.web.app/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</loc>
     
     <lastmod>2020-07-13T07:19:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://usg-cn.web.app/tags/index.html</loc>
-    
-    <lastmod>2020-07-10T01:42:21.000Z</lastmod>
     
   </url>
   
