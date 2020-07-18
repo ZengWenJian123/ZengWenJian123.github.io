@@ -18,86 +18,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
-    <url>/2020/07/13/google/</url>
-    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
-<a id="more"></a>
-
-<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
-<p>百度的没有，谷歌已经收录了</p>
-<blockquote>
-<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
-</blockquote>
-<p>站点还没有被收录就继续下列步骤</p>
-<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
-<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
-</blockquote>
-<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-
-<p>在博客目录的_config.yml中添加如下代码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-
-<p>编译你的博客</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
-<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml">https://usg-cn.web.app/sitemap.xml</a></p>
-<p><a href="https://usg-cn.web.app/baidusitemap.xml">https://usg-cn.web.app/baidusitemap.xml</a></p>
-<p>看到如下画面就证明已经成功了</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
-<hr>
-<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
-<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
-<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
-</ul>
-<blockquote>
-<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
-</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
-</blockquote>
-<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
-<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
-<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
-<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
-<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
-<hr>
-<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
-<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
-<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
-<p>所有都完成了</p>
-<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
-<p>完成收录谷歌了～</p>
-<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
-<p>未完待续～～～～</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客</tag>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git的使用firebase+github pagse同时提交博客</title>
     <url>/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
@@ -201,9 +121,89 @@
 <p>这两个blog将会同时更新</p>
 ]]></content>
       <tags>
-        <tag>hexo</tag>
         <tag>博客</tag>
         <tag>git</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
+    <url>/2020/07/13/google/</url>
+    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
+<a id="more"></a>
+
+<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
+<p>百度的没有，谷歌已经收录了</p>
+<blockquote>
+<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
+</blockquote>
+<p>站点还没有被收录就继续下列步骤</p>
+<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
+<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
+</blockquote>
+<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>在博客目录的_config.yml中添加如下代码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>编译你的博客</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
+<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml">https://usg-cn.web.app/sitemap.xml</a></p>
+<p><a href="https://usg-cn.web.app/baidusitemap.xml">https://usg-cn.web.app/baidusitemap.xml</a></p>
+<p>看到如下画面就证明已经成功了</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
+<hr>
+<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
+<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
+<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
+</ul>
+<blockquote>
+<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
+</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
+</blockquote>
+<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
+<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
+<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
+<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
+<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
+<hr>
+<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
+<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
+<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
+<p>所有都完成了</p>
+<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
+<p>完成收录谷歌了～</p>
+<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
+<p>未完待续～～～～</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>google</tag>
       </tags>
   </entry>
   <entry>
@@ -289,37 +289,6 @@
         <tag>next</tag>
         <tag>图床</tag>
         <tag>markdonw</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
-    <url>/2020/07/13/qrde/</url>
-    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
-<a id="more"></a>
-
-<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
-<p>环境准备：</p>
-<ul>
-<li>opencv4.0（3.0）</li>
-<li>python3任意版本</li>
-<li>pyzbar</li>
-</ul>
-<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
-<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
-<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
-<hr>
-<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
-]]></content>
-      <tags>
-        <tag>opencv</tag>
-        <tag>python</tag>
-        <tag>qrcode，work</tag>
       </tags>
   </entry>
   <entry>
@@ -433,6 +402,20 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客加速</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在hexo博客上添加本地图片</title>
     <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试一下图片</p>
@@ -455,17 +438,345 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
   </entry>
   <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
+    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
+    <url>/2020/07/13/qrde/</url>
+    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
 <a id="more"></a>
 
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
+<p>环境准备：</p>
+<ul>
+<li>opencv4.0（3.0）</li>
+<li>python3任意版本</li>
+<li>pyzbar</li>
+</ul>
+<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
+<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
+<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
+<hr>
+<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
 ]]></content>
       <tags>
-        <tag>博客加速</tag>
+        <tag>opencv</tag>
+        <tag>python</tag>
+        <tag>qrcode，work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下Markdown用法</title>
+    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
+<a id="more"></a>
+
+<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
+</blockquote>
+<hr>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
+<blockquote>
+<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
+</blockquote>
+<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
+<hr>
+<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
+<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
+<li><p>语法</p>
+<p>[TOC]</p>
+</li>
+</ul>
+<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引用内容1</p>
+</blockquote>
+<blockquote>
+<p>引用内容2</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>引用内容3</p>
+</blockquote>
+</blockquote>
+<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><code>String str1 = &quot;hello&quot;;</code> </p>
+<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>效果</p>
+</li>
+<li><p>无序列表1</p>
+</li>
+<li><p>无序列表2</p>
+</li>
+<li><p>无序列表3</p>
+</li>
+</ul>
+<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+<li>多行无序列表1<ul>
+<li>多行无序列表2<ul>
+<li>多行无序列表3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3</li>
+</ol>
+<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>多行有序列表1</li>
+<li>多行有序列表2<ol>
+<li>多行有序列表2-1</li>
+<li>多行有序列表2-2</li>
+</ol>
+</li>
+<li>多行有序列表3<ol>
+<li>多行有序列表3-1</li>
+<li>多行有序列表3-2</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>-[ ] 抽烟</p>
+<p>-[x] 喝酒</p>
+<p>-[ ] 烫头</p>
+<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">姓名</th>
+<th align="center">性别</th>
+<th align="center">年龄</th>
+<th align="center">手机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">张三</td>
+<td align="center">男</td>
+<td align="center">21</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">李四</td>
+<td align="center">女</td>
+<td align="center">23</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">王五</td>
+<td align="center">男</td>
+<td align="center">25</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
+<li>语法1（本地图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>语法2（网络图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
+<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
+<li>语法1（行内式链接）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果1</li>
+</ul>
+<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
+<ul>
+<li>语法2 （自动链接）</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><em>斜体</em><br><em>斜体</em></p>
+<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><strong>加粗</strong><br><strong>加粗</strong></p>
+<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><u>下划线</u></p>
+<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><del>删除线</del></p>
+<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>Typora[^1]</p>
+<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果 </li>
+</ul>
+<p>$$<br>3^2 = 9<br>$$</p>
+<p>$$<br>3^{(3-1)}=9<br>$$</p>
+<p>$$<br>H_2SO_4<br>$$</p>
+<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>\ ` * _ { } [ ] () # + - . ! </p>
+<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
+
+<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
+<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
+<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
+<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<details>
+<summary>展开查看</summary>
+<pre><code>
+展开查看的内容
+</code></pre>
+</details>
+
+
+
+
+<hr>
+]]></content>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -604,75 +915,9 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 </ul>
 ]]></content>
       <tags>
-        <tag>hexo</tag>
         <tag>博客</tag>
+        <tag>hexo</tag>
         <tag>firebase</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-<a id="more"></a>
-
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
       </tags>
   </entry>
   <entry>
@@ -1092,314 +1337,69 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>记录一下Markdown用法</title>
-    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
 <a id="more"></a>
 
-<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
 </blockquote>
-<hr>
-<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
-<blockquote>
-<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
-</blockquote>
-<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
-<hr>
-<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
-<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
-<li><p>语法</p>
-<p>[TOC]</p>
-</li>
-</ul>
-<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>引用内容1</p>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
 </blockquote>
-<blockquote>
-<p>引用内容2</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>引用内容3</p>
-</blockquote>
-</blockquote>
-<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><code>String str1 = &quot;hello&quot;;</code> </p>
-<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>效果</p>
-</li>
-<li><p>无序列表1</p>
-</li>
-<li><p>无序列表2</p>
-</li>
-<li><p>无序列表3</p>
 </li>
 </ul>
-<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-<li>多行无序列表1<ul>
-<li>多行无序列表2<ul>
-<li>多行无序列表3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>有序列表1</li>
-<li>有序列表2</li>
-<li>有序列表3</li>
-</ol>
-<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>多行有序列表1</li>
-<li>多行有序列表2<ol>
-<li>多行有序列表2-1</li>
-<li>多行有序列表2-2</li>
-</ol>
-</li>
-<li>多行有序列表3<ol>
-<li>多行有序列表3-1</li>
-<li>多行有序列表3-2</li>
-</ol>
-</li>
-</ol>
-<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>-[ ] 抽烟</p>
-<p>-[x] 喝酒</p>
-<p>-[ ] 烫头</p>
-<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">姓名</th>
-<th align="center">性别</th>
-<th align="center">年龄</th>
-<th align="center">手机号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">张三</td>
-<td align="center">男</td>
-<td align="center">21</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">李四</td>
-<td align="center">女</td>
-<td align="center">23</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">王五</td>
-<td align="center">男</td>
-<td align="center">25</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
-<li>语法1（本地图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>语法2（网络图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果2</li>
-</ul>
-<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
-<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
-<li>语法1（行内式链接）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果1</li>
-</ul>
-<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
-<ul>
-<li>语法2 （自动链接）</li>
-</ul>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果2</li>
-</ul>
-<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><em>斜体</em><br><em>斜体</em></p>
-<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><strong>加粗</strong><br><strong>加粗</strong></p>
-<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><u>下划线</u></p>
-<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><del>删除线</del></p>
-<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<hr>
-<hr>
-<hr>
-<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>Typora[^1]</p>
-<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果 </li>
-</ul>
-<p>$$<br>3^2 = 9<br>$$</p>
-<p>$$<br>3^{(3-1)}=9<br>$$</p>
-<p>$$<br>H_2SO_4<br>$$</p>
-<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>\ ` * _ { } [ ] () # + - . ! </p>
-<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
-
-<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
-<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
-<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
-<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<details>
-<summary>展开查看</summary>
-<pre><code>
-展开查看的内容
-</code></pre>
-</details>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
 
 
 
 
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
 <hr>
 ]]></content>
       <tags>
-        <tag>markdown</tag>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
 </search>
