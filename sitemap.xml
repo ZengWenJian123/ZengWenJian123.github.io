@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://usg-cn.web.app/2020/07/15/python-aruco/</loc>
+    
+    <lastmod>2020-07-18T03:58:12.296Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://usg-cn.web.app/about/index.html</loc>
     
     <lastmod>2020-07-18T02:38:29.311Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>https://usg-cn.web.app/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2020-07-17T16:56:08.767Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://usg-cn.web.app/2020/07/15/python-aruco/</loc>
-    
-    <lastmod>2020-07-17T16:34:25.386Z</lastmod>
     
   </url>
   
