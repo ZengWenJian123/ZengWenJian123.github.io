@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>感谢永远有歌，把心境道破</title>
+    <url>/2020/07/13/eason/</url>
+    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
+<a id="more"></a>
+
+<p>youtube地址：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
+<p>致敬这场疫情中默默奉献的那些人</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git的使用firebase+github pagse同时提交博客</title>
     <url>/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
@@ -93,7 +110,7 @@
 <thead>
 <tr>
 <th>firebase 托管</th>
-<th><a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></th>
+<th><a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -107,86 +124,6 @@
         <tag>博客</tag>
         <tag>git</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
-    <url>/2020/07/13/google/</url>
-    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
-<a id="more"></a>
-
-<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
-<p>百度的没有，谷歌已经收录了</p>
-<blockquote>
-<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
-</blockquote>
-<p>站点还没有被收录就继续下列步骤</p>
-<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
-<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
-</blockquote>
-<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-
-<p>在博客目录的_config.yml中添加如下代码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-
-<p>编译你的博客</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
-<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml">https://usg-cn.web.app/sitemap.xml</a></p>
-<p><a href="https://usg-cn.web.app/baidusitemap.xml">https://usg-cn.web.app/baidusitemap.xml</a></p>
-<p>看到如下画面就证明已经成功了</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
-<hr>
-<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
-<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
-<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
-</ul>
-<blockquote>
-<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
-</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
-</blockquote>
-<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
-<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
-<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
-<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
-<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
-<hr>
-<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
-<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
-<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
-<p>所有都完成了</p>
-<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
-<p>完成收录谷歌了～</p>
-<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
-<p>未完待续～～～～</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>google</tag>
       </tags>
   </entry>
   <entry>
@@ -272,6 +209,86 @@
         <tag>next</tag>
         <tag>图床</tag>
         <tag>markdonw</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
+    <url>/2020/07/13/google/</url>
+    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
+<a id="more"></a>
+
+<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
+<p>百度的没有，谷歌已经收录了</p>
+<blockquote>
+<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
+</blockquote>
+<p>站点还没有被收录就继续下列步骤</p>
+<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
+<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
+</blockquote>
+<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>在博客目录的_config.yml中添加如下代码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>编译你的博客</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
+<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/sitemap.xml</a></p>
+<p><a href="https://usg-cn.web.app/baidusitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/baidusitemap.xml</a></p>
+<p>看到如下画面就证明已经成功了</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
+<hr>
+<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
+<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
+<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
+</ul>
+<blockquote>
+<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
+</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
+</blockquote>
+<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
+<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
+<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
+<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
+<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
+<hr>
+<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
+<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
+<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
+<p>所有都完成了</p>
+<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
+<p>完成收录谷歌了～</p>
+<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
+<p>未完待续～～～～</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>google</tag>
       </tags>
   </entry>
   <entry>
@@ -385,23 +402,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>感谢永远有歌，把心境道破</title>
-    <url>/2020/07/13/eason/</url>
-    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
-<a id="more"></a>
-
-<p>youtube地址：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
-<p>致敬这场疫情中默默奉献的那些人</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
     <url>/2020/07/13/qrde/</url>
     <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
@@ -467,147 +467,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713110117.png" alt=""></p>
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112422.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112423.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112424.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112425.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112426.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112427.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112428.png" alt=""></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>记录一下博客的由来</title>
-    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
-<a id="more"></a>
-
-
-
-<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
-<p>免费的托管方案提供了：</p>
-<ul>
-<li>1G的储存空间</li>
-<li>10G/月的流量超出后可以付费购买。</li>
-</ul>
-<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
-<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
-<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完成后，就有了如下的文件目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
-<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
-
-<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
-<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
-<p>同时，也可以运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
-<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
-<p>完整提交内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>只提交更改内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>这样在我的博客网站：<a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
-<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
-<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
-<p>使用Firebase有很多非常难得的好处：</p>
-<ul>
-<li>全球SSD CDN，速度比GitHub快。</li>
-<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
-<li>零配置的SSL，自动启动HTTPS。</li>
-<li>完美的中文文档支持。</li>
-</ul>
-<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
-<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
-<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/">https://usg-cn.web.app/</a></p>
-<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
-
-<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
-
-<p>登录后再切换到刚才生成的Hexo目录下，</p>
-<p>cd hexo/</p>
-<p>运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
-
-<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
-<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
-<p>然后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>大功告成了，接下来就是欣赏博客的时候了。</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
-<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
-<li><code>hexo deploy</code>推送github部署博客</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
-<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
-</ul>
-<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
-<p>首先打开你个人目录下的.bashrc隐藏文件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>把光标移到末尾按’i’键插入一行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
-<blockquote>
-<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署三连</p>
-</blockquote>
-<p>然后按’Esc’后按’:wq’保存退出</p>
-<p>最后在终端输入命令生效刚刚的更改就完事了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
-<blockquote>
-<p>拓展：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
-
-<p>只执行构建和只部署更改</p>
-<blockquote>
-<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
-</blockquote>
-</blockquote>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
-<ul>
-<li>一键三连</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>firebase</tag>
-      </tags>
   </entry>
   <entry>
     <title>记录一下Markdown用法</title>
@@ -921,71 +780,144 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+    <title>记录一下博客的由来</title>
+    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
 <a id="more"></a>
 
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
 
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
+<p>免费的托管方案提供了：</p>
 <ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+<li>1G的储存空间</li>
+<li>10G/月的流量超出后可以付费购买。</li>
 </ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
+<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
+<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后，就有了如下的文件目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
+<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
+
+<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
+<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
+<p>同时，也可以运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
+<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
+<p>完整提交内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>只提交更改内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>这样在我的博客网站：<a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
+<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
+<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
+<p>使用Firebase有很多非常难得的好处：</p>
+<ul>
+<li>全球SSD CDN，速度比GitHub快。</li>
+<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
+<li>零配置的SSL，自动启动HTTPS。</li>
+<li>完美的中文文档支持。</li>
+</ul>
+<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
+<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></p>
+<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
+
+<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
+
+<p>登录后再切换到刚才生成的Hexo目录下，</p>
+<p>cd hexo/</p>
+<p>运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
+
+<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
+<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
+<p>然后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>大功告成了，接下来就是欣赏博客的时候了。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
+<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
+<li><code>hexo deploy</code>推送github部署博客</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
+<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
+</ul>
+<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
+<p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>把光标移到末尾按’i’键插入一行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
+<blockquote>
+<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署三连</p>
 </blockquote>
-</li>
+<p>然后按’Esc’后按’:wq’保存退出</p>
+<p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
+<blockquote>
+<p>拓展：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
+
+<p>只执行构建和只部署更改</p>
+<blockquote>
+<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
+</blockquote>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
+<ul>
+<li>一键三连</li>
 </ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>firebase</tag>
       </tags>
   </entry>
   <entry>
@@ -1402,6 +1334,74 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+<a id="more"></a>
+
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+</blockquote>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<hr>
+<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
 </search>
