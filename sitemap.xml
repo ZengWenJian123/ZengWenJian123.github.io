@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.dgut.top/music/index.html</loc>
+    
+    <lastmod>2020-07-19T10:44:40.566Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.dgut.top/link/index.html</loc>
     
-    <lastmod>2020-07-19T10:28:38.611Z</lastmod>
+    <lastmod>2020-07-19T10:36:46.365Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
     
     <lastmod>2020-07-18T03:58:12.296Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.dgut.top/music/index.html</loc>
-    
-    <lastmod>2020-07-17T23:40:29.622Z</lastmod>
     
   </url>
   
