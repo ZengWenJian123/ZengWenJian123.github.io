@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
+    
+    <lastmod>2020-07-22T02:51:44.475Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.dgut.top/2020/07/20/opencv-biaoding/</loc>
     
-    <lastmod>2020-07-22T00:43:04.729Z</lastmod>
+    <lastmod>2020-07-22T01:37:06.560Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>https://blog.dgut.top/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2020-07-18T06:06:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
-    
-    <lastmod>2020-07-18T03:58:12.000Z</lastmod>
     
   </url>
   
