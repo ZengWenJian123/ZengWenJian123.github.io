@@ -207,70 +207,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python利用opencv进行相机标定(完全版)</title>
-    <url>/2020/07/20/opencv-biaoding/</url>
-    <content><![CDATA[<p>今天的低价单孔摄像机(照相机)会给图像带来很多畸变。畸变主要有两种:径向畸变和切想畸变。如下图所示,用红色直线将棋盘的两个边标注出来,但是你会发现棋盘的边界并不和红线重合。所有我们认为应该是直线的也都凸出来了。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160250.png" alt=""></p>
-<p>在 3D 相关应用中,必须要先校正这些畸变。为了找到这些纠正参数,我们必须要提供一些包含明显图案模式的样本图片(比如说棋盘)。我们可以在上面找到一些特殊点(如棋盘的四个角点)。我们起到这些特殊点在图片中的位置以及它们的真是位置。有了这些信息,我们就可以使用数学方法求解畸变系数。这就是整个故事的摘要了。为了得到更好的结果,我们至少需要 10 个这样的图<br>案模式。</p>
-<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><h2 id="拍摄棋盘图"><a href="#拍摄棋盘图" class="headerlink" title="拍摄棋盘图"></a>拍摄棋盘图</h2><p>首先打印下图：<a href="http://120.79.182.159:8000/f/9ad20d5debfb4aa68898/?dl=1" target="_blank" rel="noopener">下载</a> 也可直接保存</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160635.png" alt=""></p>
-<p>将其固定到一个平面上，使用相机从不同角度，不同位置拍摄（10-20）张标定图。类似这样的：</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160922.png" alt=""></p>
-<p>python调用opencv相机拍照代码（例）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    (grabbed, img) = camera.read()</span><br><span class="line">    cv2.imshow(<span class="string">'img'</span>,img)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'j'</span>):  <span class="comment"># 按j保存一张图片</span></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        u = str(i)</span><br><span class="line">        firename=str(<span class="string">'./img'</span>+u+<span class="string">'.jpg'</span>)</span><br><span class="line">        cv2.imwrite(firename, img)</span><br><span class="line">        print(<span class="string">'写入：'</span>,firename)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>按<code>j</code>拍摄图片，将会按照顺序批量保存，按<code>q</code>退出程序。</p>
-<hr>
-<h2 id="寻找棋盘图并且标定-检视标定后结果"><a href="#寻找棋盘图并且标定-检视标定后结果" class="headerlink" title="寻找棋盘图并且标定+检视标定后结果"></a>寻找棋盘图并且标定+检视标定后结果</h2><h3 id="利用opencv寻找棋盘"><a href="#利用opencv寻找棋盘" class="headerlink" title="利用opencv寻找棋盘"></a>利用opencv寻找棋盘</h3><p>为了找到棋盘的图案,我们要使用函数 cv2.findChessboardCorners()。我们还需要传入图案的类型,比如说 8x8 的格子或 5x5 的格子等。在本例中我们使用的9×6 的格子。(通常情况下棋盘都是 8x8 或者 7x7)。它会返回角点,如果得到图像的话返回值类型(Retval)就会是 True。这些角点会按顺序排列(从左到右,从上到下)</p>
-<blockquote>
-<p>这个函数可能不会找出所有图像中应有的图案。所以一个好的方法是编写代码,启动摄像机并在每一帧中检查是否有应有的图案。在我们获得图案之后我们要找到角点并把它们保存成一个列表。在读取下一帧图像之前要设置一定的间隔,这样我们就有足够的时间调整棋盘的方向。继续这个过程直到我们得到足够多好的图案。就算是我们举得这个例子,在所有的 14 幅图像中也不知道有几幅是好的。所以我们要读取每一张图像从其中找到好的能用的。</p>
-</blockquote>
-<blockquote>
-<p>除 了 使 用 棋 盘 之 外, 我 们 还 可 以 使 用 环 形 格 子, 但 是 要 使 用 函 数<br>cv2.findCirclesGrid() 来找图案。据说使用环形格子只需要很少的图像<br>就可以了。</p>
-</blockquote>
-<p>在找到这些角点之后我们可以使用函数 cv2.cornerSubPix() 增加准确度。我们使用函数 cv2.drawChessboardCorners() 绘制图案。所有的这些步骤都被包含在下面的代码中了:</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720161939.png" alt=""></p>
-<h3 id="标定"><a href="#标定" class="headerlink" title="标定"></a>标定</h3><p>在得到了这些对象点和图像点之后,我们已经准备好来做摄像机标定了。我们要使用的函数是 cv2.calibrateCamera()。它会返回摄像机矩阵,畸变系数,旋转和变换向量等。</p>
-<h3 id="畸变矫正"><a href="#畸变矫正" class="headerlink" title="畸变矫正"></a>畸变矫正</h3><p>现在我们找到我们想要的东西了,我们可以找到一幅图像来对他进行校正了。OpenCV 提供了两种方法,我们都学习一下。不过在那之前我们可以使用从函数 cv2.getOptimalNewCameraMatrix() 得到的自由缩放系数对摄像机矩阵进行优化。如果缩放系数 alpha = 0,返回的非畸变图像会带有最少量的不想要的像素。它甚至有可能在图像角点去除一些像素。如果 alpha = 1,所有的像素都会被返回,还有一些黑图像。它还会返回一个 ROI 图像,我们可以用来对结果进行裁剪。</p>
-<p>函数:cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),<code>1</code>,(w,h))中参数<code>1</code>是个坑,</p>
-<p>官方文档给的参数是<code>1</code>但是标定后的结果是一个球形的视角，我查了好久资料最后咨询了大佬才发现这个坑</p>
-<p>这里我们使用cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),<code>0</code>,(w,h))参数设置为<code>0</code></p>
-<h3 id="畸变到非畸变"><a href="#畸变到非畸变" class="headerlink" title="畸变到非畸变"></a>畸变到非畸变</h3><p>下面代码中</p>
-<ul>
-<li><p>dst1图像使用的是 cv2.undistort() 这是最简单的方法。只需使用这个函数和上边得到的 ROI 对结果进行裁剪</p>
-</li>
-<li><p>dst2图像使用的是remapping 这应该属于“曲线救国”了。首先我们要找到从畸变图像到非畸变图像的映射方程。再使用重映射方程。(代码中有详细用法)</p>
-</li>
-</ul>
-<p>两种效果可以自行对比看看</p>
-<p>纠正前后对比:</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163140.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163139.png" alt=""></p>
-<h3 id="反向投影误差"><a href="#反向投影误差" class="headerlink" title="反向投影误差"></a>反向投影误差</h3><p>我们可以利用反向投影误差对我们找到的参数的准确性进行估计。得到的结果越接近 0 越好。有了内部参数,畸变参数和旋转变换矩阵,我们就可以使用 cv2.projectPoints() 将对象点转换到图像点。然后就可以计算变换得到图像与角点检测算法的绝对差了。然后我们计算所有标定图像的误差平均值。(但是本文不需要,所以没有将其写入)</p>
-<h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><p>需要的库:<code>opencv-python</code> <code>numpy</code> <code>glob</code> </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 找棋盘格角点</span></span><br><span class="line"><span class="comment"># 设置寻找亚像素角点的参数，采用的停止准则是最大循环次数30和最大误差容限0.001</span></span><br><span class="line">criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, <span class="number">30</span>, <span class="number">0.001</span>) <span class="comment"># 阈值</span></span><br><span class="line"><span class="comment">#棋盘格模板规格</span></span><br><span class="line">w = <span class="number">9</span>   <span class="comment"># 10 - 1</span></span><br><span class="line">h = <span class="number">6</span>   <span class="comment"># 7  - 1</span></span><br><span class="line"><span class="comment"># 世界坐标系中的棋盘格点,例如(0,0,0), (1,0,0), (2,0,0) ....,(8,5,0)，去掉Z坐标，记为二维矩阵</span></span><br><span class="line">objp = np.zeros((w*h,<span class="number">3</span>), np.float32)</span><br><span class="line">objp[:,:<span class="number">2</span>] = np.mgrid[<span class="number">0</span>:w,<span class="number">0</span>:h].T.reshape(<span class="number">-1</span>,<span class="number">2</span>)</span><br><span class="line">objp = objp*<span class="number">18.1</span>  <span class="comment"># 18.1 mm</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 储存棋盘格角点的世界坐标和图像坐标对</span></span><br><span class="line">objpoints = [] <span class="comment"># 在世界坐标系中的三维点</span></span><br><span class="line">imgpoints = [] <span class="comment"># 在图像平面的二维点</span></span><br><span class="line"><span class="comment">#加载pic文件夹下所有的jpg图像</span></span><br><span class="line">images = glob.glob(<span class="string">'./*.jpg'</span>)  <span class="comment">#   拍摄的十几张棋盘图片所在目录</span></span><br><span class="line"></span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> fname <span class="keyword">in</span> images:</span><br><span class="line"></span><br><span class="line">    img = cv2.imread(fname)</span><br><span class="line">    <span class="comment"># 获取画面中心点</span></span><br><span class="line">    <span class="comment">#获取图像的长宽</span></span><br><span class="line">    h1, w1 = img.shape[<span class="number">0</span>], img.shape[<span class="number">1</span>]</span><br><span class="line">    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)</span><br><span class="line">    u, v = img.shape[:<span class="number">2</span>]</span><br><span class="line">    <span class="comment"># 找到棋盘格角点</span></span><br><span class="line">    ret, corners = cv2.findChessboardCorners(gray, (w,h),<span class="literal">None</span>)</span><br><span class="line">    <span class="comment"># 如果找到足够点对，将其存储起来</span></span><br><span class="line">    <span class="keyword">if</span> ret == <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"i:"</span>, i)</span><br><span class="line">        i = i+<span class="number">1</span></span><br><span class="line">        <span class="comment"># 在原角点的基础上寻找亚像素角点</span></span><br><span class="line">        cv2.cornerSubPix(gray,corners,(<span class="number">11</span>,<span class="number">11</span>),(<span class="number">-1</span>,<span class="number">-1</span>),criteria)</span><br><span class="line">        <span class="comment">#追加进入世界三维点和平面二维点中</span></span><br><span class="line">        objpoints.append(objp)</span><br><span class="line">        imgpoints.append(corners)</span><br><span class="line">        <span class="comment"># 将角点在图像上显示</span></span><br><span class="line">        cv2.drawChessboardCorners(img, (w,h), corners, ret)</span><br><span class="line">        cv2.namedWindow(<span class="string">'findCorners'</span>, cv2.WINDOW_NORMAL)</span><br><span class="line">        cv2.resizeWindow(<span class="string">'findCorners'</span>, <span class="number">640</span>, <span class="number">480</span>)</span><br><span class="line">        cv2.imshow(<span class="string">'findCorners'</span>,img)</span><br><span class="line">        cv2.waitKey(<span class="number">200</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br><span class="line"><span class="comment">#%% 标定</span></span><br><span class="line">print(<span class="string">'正在计算'</span>)</span><br><span class="line"><span class="comment">#标定</span></span><br><span class="line">ret, mtx, dist, rvecs, tvecs = \</span><br><span class="line">    cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::<span class="number">-1</span>], <span class="literal">None</span>, <span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">"ret:"</span>,ret  )</span><br><span class="line">print(<span class="string">"mtx:\n"</span>,mtx)      <span class="comment"># 内参数矩阵</span></span><br><span class="line">print(<span class="string">"dist畸变值:\n"</span>,dist   )   <span class="comment"># 畸变系数   distortion cofficients = (k_1,k_2,p_1,p_2,k_3)</span></span><br><span class="line">print(<span class="string">"rvecs旋转（向量）外参:\n"</span>,rvecs)   <span class="comment"># 旋转向量  # 外参数</span></span><br><span class="line">print(<span class="string">"tvecs平移（向量）外参:\n"</span>,tvecs  )  <span class="comment"># 平移向量  # 外参数</span></span><br><span class="line">newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), <span class="number">0</span>, (u, v))</span><br><span class="line">print(<span class="string">'newcameramtx外参'</span>,newcameramtx)</span><br><span class="line"><span class="comment">#打开摄像机</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    h1, w1 = frame.shape[:<span class="number">2</span>]</span><br><span class="line">    newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), <span class="number">0</span>, (u, v))</span><br><span class="line">    <span class="comment"># 纠正畸变</span></span><br><span class="line">    dst1 = cv2.undistort(frame, mtx, dist, <span class="literal">None</span>, newcameramtx)</span><br><span class="line">    <span class="comment">#dst2 = cv2.undistort(frame, mtx, dist, None, newcameramtx)</span></span><br><span class="line">    mapx,mapy=cv2.initUndistortRectifyMap(mtx,dist,<span class="literal">None</span>,newcameramtx,(w1,h1),<span class="number">5</span>)</span><br><span class="line">    dst2=cv2.remap(frame,mapx,mapy,cv2.INTER_LINEAR)</span><br><span class="line">    <span class="comment"># 裁剪图像，输出纠正畸变以后的图片</span></span><br><span class="line">    x, y, w1, h1 = roi</span><br><span class="line">    dst1 = dst1[y:y + h1, x:x + w1]</span><br><span class="line"></span><br><span class="line">    <span class="comment">#cv2.imshow('frame',dst2)</span></span><br><span class="line">    <span class="comment">#cv2.imshow('dst1',dst1)</span></span><br><span class="line">    cv2.imshow(<span class="string">'dst2'</span>, dst2)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"../u4/frame.jpg"</span>, dst1)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>代码放到图片相同的文件夹直接运行即可</p>
-<h1 id="效果对比"><a href="#效果对比" class="headerlink" title="效果对比"></a>效果对比</h1><p>纠正前后:</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163313.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163314.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163140.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163139.png" alt=""></p>
-<p>相机标定完成~</p>
-<div class="note success">
-            <p>success 标定完成的参数:</p>
-          </div>
-
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>手头上这个相机镜头标定参数</span></div>
-    <div class="hide-content"><p>每个相机摄像头的情况都不同按需使用</p><p>dist=np.array(([[-0.58650416 , 0.59103816, -0.00443272 , 0.00357844 ,-0.27203275]]))<br>newcameramtx=np.array([[189.076828   ,  0.    ,     361.20126638]<br> ,[  0 ,2.01627296e+04 ,4.52759577e+02]<br> ,[0, 0, 1]])<br>mtx=np.array([[398.12724231  , 0.      ,   304.35638757],<br> [  0.       ,  345.38259888, 282.49861858],<br> [  0.,           0.,           1.        ]])<br>ret: 1.2796736596876943<br>rvecs旋转（向量）外参:<br> [array([[-0.1273159 ],<br>       [ 0.14990368],<br>       [-0.03444583]]), array([[-0.09406134],<br>       [ 0.00311094],<br>       [ 0.03877124]]), array([[ 0.46123299],<br>       [ 0.13606529],<br>       [-0.10644641]]), array([[-0.21371843],<br>       [ 0.19346393],<br>       [ 0.05795452]]), array([[-0.06136152],<br>       [-0.05609094],<br>       [-0.10779057]]), array([[-0.12671277],<br>       [ 0.19181691],<br>       [-0.01144501]]), array([[-0.10065723],<br>       [ 0.11067488],<br>       [-0.00420227]]), array([[-0.25254906],<br>       [ 0.05724545],<br>       [ 0.06326385]]), array([[ 0.06929893],<br>       [ 0.16462152],<br>       [-0.09935668]]), array([[ 0.32955811],<br>       [ 0.22348145],<br>       [-0.08321155]]), array([[ 0.0963841 ],<br>       [-0.05720288],<br>       [ 0.00220535]]), array([[-0.0885636 ],<br>       [-0.03092561],<br>       [ 0.03529275]]), array([[ 0.03313787],<br>       [-0.05300994],<br>       [-0.03433814]]), array([[-0.22302867],<br>       [ 0.18819738],<br>       [-0.03371187]]), array([[-0.19460224],<br>       [ 0.1036492 ],<br>       [ 0.03301566]]), array([[-0.27115415],<br>       [ 0.18957621],<br>       [-0.04709229]]), array([[-0.12627705],<br>       [ 0.0753438 ],<br>       [ 0.0761791 ]]), array([[ 0.15356268],<br>       [-0.02614756],<br>       [ 0.02406217]]), array([[ 0.69316168],<br>       [ 0.19622708],<br>       [-0.18706069]]), array([[-0.09555645],<br>       [ 0.02551495],<br>       [ 0.02218898]]), array([[-0.08255654],<br>       [-0.07209258],<br>       [ 0.04271465]]), array([[ 0.08770757],<br>       [-0.02304098],<br>       [-0.05008243]]), array([[ 0.58513697],<br>       [-0.00604693],<br>       [-0.1598063 ]]), array([[-0.07233849],<br>       [-0.04780769],<br>       [-0.06191515]]), array([[ 0.09651254],<br>       [ 0.02579441],<br>       [-0.00947478]]), array([[ 0.03501638],<br>       [-0.02501282],<br>       [-0.07304343]]), array([[-0.10470468],<br>       [ 0.21112561],<br>       [-0.0983761 ]]), array([[-0.12674786],<br>       [ 0.1432598 ],<br>       [-0.01007719]]), array([[-0.11004829],<br>       [ 0.06968173],<br>       [ 0.05585313]]), array([[-0.41743998],<br>       [ 0.17304611],<br>       [ 0.03084559]]), array([[-0.10236722],<br>       [ 0.01277654],<br>       [-0.03390285]]), array([[0.22726439],<br>       [0.14038084],<br>       [0.01124049]]), array([[-0.15304123],<br>       [ 0.04465005],<br>       [ 0.06240299]])]<br>tvecs平移（向量）外参:<br> [array([[145.08681235],<br>       [-76.17106891],<br>       [699.69778255]]), array([[-183.67717477],<br>       [-163.96393688],<br>       [ 688.85439168]]), array([[104.0920611 ],<br>       [ 23.92271463],<br>       [965.22859587]]), array([[ 15.24948656],<br>       [-54.85109955],<br>       [795.39600843]]), array([[ 198.06011875],<br>       [-175.91815396],<br>       [ 719.52217088]]), array([[  44.04717785],<br>       [-108.51372353],<br>       [ 788.45975705]]), array([[ -26.16828067],<br>       [-188.47275832],<br>       [ 771.99690841]]), array([[-139.14245711],<br>       [-124.82244434],<br>       [ 644.34844619]]), array([[ 95.41419669],<br>       [-22.10474336],<br>       [747.43156932]]), array([[-16.25541066],<br>       [-60.23640891],<br>       [677.13919736]]), array([[-220.34618611],<br>       [ -12.6889694 ],<br>       [ 708.18042632]]), array([[-205.93499674],<br>       [ -95.59986207],<br>       [ 709.15135801]]), array([[253.32869421],<br>       [-65.19615285],<br>       [793.36052372]]), array([[  8.6811058 ],<br>       [-18.70531877],<br>       [786.28091437]]), array([[-135.91340565],<br>       [ -41.83864798],<br>       [ 734.08050232]]), array([[-10.36373957],<br>       [-74.3822385 ],<br>       [775.58055384]]), array([[-181.85146859],<br>       [-162.51644736],<br>       [ 686.77992674]]), array([[-152.68145934],<br>       [ -45.11437087],<br>       [ 742.99524497]]), array([[  72.01815541],<br>       [-174.95234447],<br>       [ 954.17455852]]), array([[-180.90841277],<br>       [-186.78922299],<br>       [ 694.5911876 ]]), array([[-213.22423756],<br>       [-180.87955611],<br>       [ 668.22586979]]), array([[220.45960743],<br>       [ -3.88665195],<br>       [782.2584453 ]]), array([[-118.59571239],<br>       [ -51.01586357],<br>       [ 905.16719607]]), array([[ 213.87203907],<br>       [-198.38786649],<br>       [ 766.26267678]]), array([[197.15909792],<br>       [-11.90335064],<br>       [831.47489862]]), array([[220.76484713],<br>       [-60.95718003],<br>       [760.66883997]]), array([[117.86186858],<br>       [-64.75570632],<br>       [768.97222101]]), array([[ -39.59646337],<br>       [-165.78421993],<br>       [ 736.04088074]]), array([[-123.20719029],<br>       [-164.0644578 ],<br>       [ 743.43485414]]), array([[-19.65524135],<br>       [-69.18741504],<br>       [690.47472849]]), array([[-203.72891175],<br>       [ -20.1545843 ],<br>       [ 718.13434244]]), array([[ 40.16988244],<br>       [-68.66550898],<br>       [795.54461358]]), array([[-104.02162409],<br>       [-101.3265982 ],<br>       [ 762.41231116]])]<br>newcameramtx外参 [[578.70690918   0.         286.56697375]<br> [  0.         768.62420654 341.06051709]<br> [  0.           0.           1.        ]]</p></div></div>
-
-
-
-]]></content>
-      <tags>
-        <tag>opencv</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo优雅地使用图床</title>
     <url>/2020/07/10/hexo-pic/</url>
     <content><![CDATA[<p>其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……</p>
@@ -356,6 +292,70 @@
       </tags>
   </entry>
   <entry>
+    <title>python利用opencv进行相机标定(完全版)</title>
+    <url>/2020/07/20/opencv-biaoding/</url>
+    <content><![CDATA[<p>今天的低价单孔摄像机(照相机)会给图像带来很多畸变。畸变主要有两种:径向畸变和切想畸变。如下图所示,用红色直线将棋盘的两个边标注出来,但是你会发现棋盘的边界并不和红线重合。所有我们认为应该是直线的也都凸出来了。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160250.png" alt=""></p>
+<p>在 3D 相关应用中,必须要先校正这些畸变。为了找到这些纠正参数,我们必须要提供一些包含明显图案模式的样本图片(比如说棋盘)。我们可以在上面找到一些特殊点(如棋盘的四个角点)。我们起到这些特殊点在图片中的位置以及它们的真是位置。有了这些信息,我们就可以使用数学方法求解畸变系数。这就是整个故事的摘要了。为了得到更好的结果,我们至少需要 10 个这样的图<br>案模式。</p>
+<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><h2 id="拍摄棋盘图"><a href="#拍摄棋盘图" class="headerlink" title="拍摄棋盘图"></a>拍摄棋盘图</h2><p>首先打印下图：<a href="http://120.79.182.159:8000/f/9ad20d5debfb4aa68898/?dl=1" target="_blank" rel="noopener">下载</a> 也可直接保存</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160635.png" alt=""></p>
+<p>将其固定到一个平面上，使用相机从不同角度，不同位置拍摄（10-20）张标定图。类似这样的：</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720160922.png" alt=""></p>
+<p>python调用opencv相机拍照代码（例）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    (grabbed, img) = camera.read()</span><br><span class="line">    cv2.imshow(<span class="string">'img'</span>,img)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'j'</span>):  <span class="comment"># 按j保存一张图片</span></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        u = str(i)</span><br><span class="line">        firename=str(<span class="string">'./img'</span>+u+<span class="string">'.jpg'</span>)</span><br><span class="line">        cv2.imwrite(firename, img)</span><br><span class="line">        print(<span class="string">'写入：'</span>,firename)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>按<code>j</code>拍摄图片，将会按照顺序批量保存，按<code>q</code>退出程序。</p>
+<hr>
+<h2 id="寻找棋盘图并且标定-检视标定后结果"><a href="#寻找棋盘图并且标定-检视标定后结果" class="headerlink" title="寻找棋盘图并且标定+检视标定后结果"></a>寻找棋盘图并且标定+检视标定后结果</h2><h3 id="利用opencv寻找棋盘"><a href="#利用opencv寻找棋盘" class="headerlink" title="利用opencv寻找棋盘"></a>利用opencv寻找棋盘</h3><p>为了找到棋盘的图案,我们要使用函数 cv2.findChessboardCorners()。我们还需要传入图案的类型,比如说 8x8 的格子或 5x5 的格子等。在本例中我们使用的9×6 的格子。(通常情况下棋盘都是 8x8 或者 7x7)。它会返回角点,如果得到图像的话返回值类型(Retval)就会是 True。这些角点会按顺序排列(从左到右,从上到下)</p>
+<blockquote>
+<p>这个函数可能不会找出所有图像中应有的图案。所以一个好的方法是编写代码,启动摄像机并在每一帧中检查是否有应有的图案。在我们获得图案之后我们要找到角点并把它们保存成一个列表。在读取下一帧图像之前要设置一定的间隔,这样我们就有足够的时间调整棋盘的方向。继续这个过程直到我们得到足够多好的图案。就算是我们举得这个例子,在所有的 14 幅图像中也不知道有几幅是好的。所以我们要读取每一张图像从其中找到好的能用的。</p>
+</blockquote>
+<blockquote>
+<p>除 了 使 用 棋 盘 之 外, 我 们 还 可 以 使 用 环 形 格 子, 但 是 要 使 用 函 数<br>cv2.findCirclesGrid() 来找图案。据说使用环形格子只需要很少的图像<br>就可以了。</p>
+</blockquote>
+<p>在找到这些角点之后我们可以使用函数 cv2.cornerSubPix() 增加准确度。我们使用函数 cv2.drawChessboardCorners() 绘制图案。所有的这些步骤都被包含在下面的代码中了:</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720161939.png" alt=""></p>
+<h3 id="标定"><a href="#标定" class="headerlink" title="标定"></a>标定</h3><p>在得到了这些对象点和图像点之后,我们已经准备好来做摄像机标定了。我们要使用的函数是 cv2.calibrateCamera()。它会返回摄像机矩阵,畸变系数,旋转和变换向量等。</p>
+<h3 id="畸变矫正"><a href="#畸变矫正" class="headerlink" title="畸变矫正"></a>畸变矫正</h3><p>现在我们找到我们想要的东西了,我们可以找到一幅图像来对他进行校正了。OpenCV 提供了两种方法,我们都学习一下。不过在那之前我们可以使用从函数 cv2.getOptimalNewCameraMatrix() 得到的自由缩放系数对摄像机矩阵进行优化。如果缩放系数 alpha = 0,返回的非畸变图像会带有最少量的不想要的像素。它甚至有可能在图像角点去除一些像素。如果 alpha = 1,所有的像素都会被返回,还有一些黑图像。它还会返回一个 ROI 图像,我们可以用来对结果进行裁剪。</p>
+<p>函数:cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),<code>1</code>,(w,h))中参数<code>1</code>是个坑,</p>
+<p>官方文档给的参数是<code>1</code>但是标定后的结果是一个球形的视角，我查了好久资料最后咨询了大佬才发现这个坑</p>
+<p>这里我们使用cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),<code>0</code>,(w,h))参数设置为<code>0</code></p>
+<h3 id="畸变到非畸变"><a href="#畸变到非畸变" class="headerlink" title="畸变到非畸变"></a>畸变到非畸变</h3><p>下面代码中</p>
+<ul>
+<li><p>dst1图像使用的是 cv2.undistort() 这是最简单的方法。只需使用这个函数和上边得到的 ROI 对结果进行裁剪</p>
+</li>
+<li><p>dst2图像使用的是remapping 这应该属于“曲线救国”了。首先我们要找到从畸变图像到非畸变图像的映射方程。再使用重映射方程。(代码中有详细用法)</p>
+</li>
+</ul>
+<p>两种效果可以自行对比看看</p>
+<p>纠正前后对比:</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163140.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163139.png" alt=""></p>
+<h3 id="反向投影误差"><a href="#反向投影误差" class="headerlink" title="反向投影误差"></a>反向投影误差</h3><p>我们可以利用反向投影误差对我们找到的参数的准确性进行估计。得到的结果越接近 0 越好。有了内部参数,畸变参数和旋转变换矩阵,我们就可以使用 cv2.projectPoints() 将对象点转换到图像点。然后就可以计算变换得到图像与角点检测算法的绝对差了。然后我们计算所有标定图像的误差平均值。(但是本文不需要,所以没有将其写入)</p>
+<h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><p>需要的库:<code>opencv-python</code> <code>numpy</code> <code>glob</code> </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 找棋盘格角点</span></span><br><span class="line"><span class="comment"># 设置寻找亚像素角点的参数，采用的停止准则是最大循环次数30和最大误差容限0.001</span></span><br><span class="line">criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, <span class="number">30</span>, <span class="number">0.001</span>) <span class="comment"># 阈值</span></span><br><span class="line"><span class="comment">#棋盘格模板规格</span></span><br><span class="line">w = <span class="number">9</span>   <span class="comment"># 10 - 1</span></span><br><span class="line">h = <span class="number">6</span>   <span class="comment"># 7  - 1</span></span><br><span class="line"><span class="comment"># 世界坐标系中的棋盘格点,例如(0,0,0), (1,0,0), (2,0,0) ....,(8,5,0)，去掉Z坐标，记为二维矩阵</span></span><br><span class="line">objp = np.zeros((w*h,<span class="number">3</span>), np.float32)</span><br><span class="line">objp[:,:<span class="number">2</span>] = np.mgrid[<span class="number">0</span>:w,<span class="number">0</span>:h].T.reshape(<span class="number">-1</span>,<span class="number">2</span>)</span><br><span class="line">objp = objp*<span class="number">18.1</span>  <span class="comment"># 18.1 mm</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 储存棋盘格角点的世界坐标和图像坐标对</span></span><br><span class="line">objpoints = [] <span class="comment"># 在世界坐标系中的三维点</span></span><br><span class="line">imgpoints = [] <span class="comment"># 在图像平面的二维点</span></span><br><span class="line"><span class="comment">#加载pic文件夹下所有的jpg图像</span></span><br><span class="line">images = glob.glob(<span class="string">'./*.jpg'</span>)  <span class="comment">#   拍摄的十几张棋盘图片所在目录</span></span><br><span class="line"></span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> fname <span class="keyword">in</span> images:</span><br><span class="line"></span><br><span class="line">    img = cv2.imread(fname)</span><br><span class="line">    <span class="comment"># 获取画面中心点</span></span><br><span class="line">    <span class="comment">#获取图像的长宽</span></span><br><span class="line">    h1, w1 = img.shape[<span class="number">0</span>], img.shape[<span class="number">1</span>]</span><br><span class="line">    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)</span><br><span class="line">    u, v = img.shape[:<span class="number">2</span>]</span><br><span class="line">    <span class="comment"># 找到棋盘格角点</span></span><br><span class="line">    ret, corners = cv2.findChessboardCorners(gray, (w,h),<span class="literal">None</span>)</span><br><span class="line">    <span class="comment"># 如果找到足够点对，将其存储起来</span></span><br><span class="line">    <span class="keyword">if</span> ret == <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"i:"</span>, i)</span><br><span class="line">        i = i+<span class="number">1</span></span><br><span class="line">        <span class="comment"># 在原角点的基础上寻找亚像素角点</span></span><br><span class="line">        cv2.cornerSubPix(gray,corners,(<span class="number">11</span>,<span class="number">11</span>),(<span class="number">-1</span>,<span class="number">-1</span>),criteria)</span><br><span class="line">        <span class="comment">#追加进入世界三维点和平面二维点中</span></span><br><span class="line">        objpoints.append(objp)</span><br><span class="line">        imgpoints.append(corners)</span><br><span class="line">        <span class="comment"># 将角点在图像上显示</span></span><br><span class="line">        cv2.drawChessboardCorners(img, (w,h), corners, ret)</span><br><span class="line">        cv2.namedWindow(<span class="string">'findCorners'</span>, cv2.WINDOW_NORMAL)</span><br><span class="line">        cv2.resizeWindow(<span class="string">'findCorners'</span>, <span class="number">640</span>, <span class="number">480</span>)</span><br><span class="line">        cv2.imshow(<span class="string">'findCorners'</span>,img)</span><br><span class="line">        cv2.waitKey(<span class="number">200</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br><span class="line"><span class="comment">#%% 标定</span></span><br><span class="line">print(<span class="string">'正在计算'</span>)</span><br><span class="line"><span class="comment">#标定</span></span><br><span class="line">ret, mtx, dist, rvecs, tvecs = \</span><br><span class="line">    cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::<span class="number">-1</span>], <span class="literal">None</span>, <span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">"ret:"</span>,ret  )</span><br><span class="line">print(<span class="string">"mtx:\n"</span>,mtx)      <span class="comment"># 内参数矩阵</span></span><br><span class="line">print(<span class="string">"dist畸变值:\n"</span>,dist   )   <span class="comment"># 畸变系数   distortion cofficients = (k_1,k_2,p_1,p_2,k_3)</span></span><br><span class="line">print(<span class="string">"rvecs旋转（向量）外参:\n"</span>,rvecs)   <span class="comment"># 旋转向量  # 外参数</span></span><br><span class="line">print(<span class="string">"tvecs平移（向量）外参:\n"</span>,tvecs  )  <span class="comment"># 平移向量  # 外参数</span></span><br><span class="line">newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), <span class="number">0</span>, (u, v))</span><br><span class="line">print(<span class="string">'newcameramtx外参'</span>,newcameramtx)</span><br><span class="line"><span class="comment">#打开摄像机</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    h1, w1 = frame.shape[:<span class="number">2</span>]</span><br><span class="line">    newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), <span class="number">0</span>, (u, v))</span><br><span class="line">    <span class="comment"># 纠正畸变</span></span><br><span class="line">    dst1 = cv2.undistort(frame, mtx, dist, <span class="literal">None</span>, newcameramtx)</span><br><span class="line">    <span class="comment">#dst2 = cv2.undistort(frame, mtx, dist, None, newcameramtx)</span></span><br><span class="line">    mapx,mapy=cv2.initUndistortRectifyMap(mtx,dist,<span class="literal">None</span>,newcameramtx,(w1,h1),<span class="number">5</span>)</span><br><span class="line">    dst2=cv2.remap(frame,mapx,mapy,cv2.INTER_LINEAR)</span><br><span class="line">    <span class="comment"># 裁剪图像，输出纠正畸变以后的图片</span></span><br><span class="line">    x, y, w1, h1 = roi</span><br><span class="line">    dst1 = dst1[y:y + h1, x:x + w1]</span><br><span class="line"></span><br><span class="line">    <span class="comment">#cv2.imshow('frame',dst2)</span></span><br><span class="line">    <span class="comment">#cv2.imshow('dst1',dst1)</span></span><br><span class="line">    cv2.imshow(<span class="string">'dst2'</span>, dst2)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"../u4/frame.jpg"</span>, dst1)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>代码放到图片相同的文件夹直接运行即可</p>
+<h1 id="效果对比"><a href="#效果对比" class="headerlink" title="效果对比"></a>效果对比</h1><p>纠正前后:</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163313.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163314.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163140.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200720163139.png" alt=""></p>
+<p>相机标定完成~</p>
+<div class="note success">
+            <p>success 标定完成的参数:</p>
+          </div>
+
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>手头上这个相机镜头标定参数</span></div>
+    <div class="hide-content"><p>每个相机摄像头的情况都不同按需使用</p><p>dist=np.array(([[-0.58650416 , 0.59103816, -0.00443272 , 0.00357844 ,-0.27203275]]))<br>newcameramtx=np.array([[189.076828   ,  0.    ,     361.20126638]<br> ,[  0 ,2.01627296e+04 ,4.52759577e+02]<br> ,[0, 0, 1]])<br>mtx=np.array([[398.12724231  , 0.      ,   304.35638757],<br> [  0.       ,  345.38259888, 282.49861858],<br> [  0.,           0.,           1.        ]])<br>ret: 1.2796736596876943<br>rvecs旋转（向量）外参:<br> [array([[-0.1273159 ],<br>       [ 0.14990368],<br>       [-0.03444583]]), array([[-0.09406134],<br>       [ 0.00311094],<br>       [ 0.03877124]]), array([[ 0.46123299],<br>       [ 0.13606529],<br>       [-0.10644641]]), array([[-0.21371843],<br>       [ 0.19346393],<br>       [ 0.05795452]]), array([[-0.06136152],<br>       [-0.05609094],<br>       [-0.10779057]]), array([[-0.12671277],<br>       [ 0.19181691],<br>       [-0.01144501]]), array([[-0.10065723],<br>       [ 0.11067488],<br>       [-0.00420227]]), array([[-0.25254906],<br>       [ 0.05724545],<br>       [ 0.06326385]]), array([[ 0.06929893],<br>       [ 0.16462152],<br>       [-0.09935668]]), array([[ 0.32955811],<br>       [ 0.22348145],<br>       [-0.08321155]]), array([[ 0.0963841 ],<br>       [-0.05720288],<br>       [ 0.00220535]]), array([[-0.0885636 ],<br>       [-0.03092561],<br>       [ 0.03529275]]), array([[ 0.03313787],<br>       [-0.05300994],<br>       [-0.03433814]]), array([[-0.22302867],<br>       [ 0.18819738],<br>       [-0.03371187]]), array([[-0.19460224],<br>       [ 0.1036492 ],<br>       [ 0.03301566]]), array([[-0.27115415],<br>       [ 0.18957621],<br>       [-0.04709229]]), array([[-0.12627705],<br>       [ 0.0753438 ],<br>       [ 0.0761791 ]]), array([[ 0.15356268],<br>       [-0.02614756],<br>       [ 0.02406217]]), array([[ 0.69316168],<br>       [ 0.19622708],<br>       [-0.18706069]]), array([[-0.09555645],<br>       [ 0.02551495],<br>       [ 0.02218898]]), array([[-0.08255654],<br>       [-0.07209258],<br>       [ 0.04271465]]), array([[ 0.08770757],<br>       [-0.02304098],<br>       [-0.05008243]]), array([[ 0.58513697],<br>       [-0.00604693],<br>       [-0.1598063 ]]), array([[-0.07233849],<br>       [-0.04780769],<br>       [-0.06191515]]), array([[ 0.09651254],<br>       [ 0.02579441],<br>       [-0.00947478]]), array([[ 0.03501638],<br>       [-0.02501282],<br>       [-0.07304343]]), array([[-0.10470468],<br>       [ 0.21112561],<br>       [-0.0983761 ]]), array([[-0.12674786],<br>       [ 0.1432598 ],<br>       [-0.01007719]]), array([[-0.11004829],<br>       [ 0.06968173],<br>       [ 0.05585313]]), array([[-0.41743998],<br>       [ 0.17304611],<br>       [ 0.03084559]]), array([[-0.10236722],<br>       [ 0.01277654],<br>       [-0.03390285]]), array([[0.22726439],<br>       [0.14038084],<br>       [0.01124049]]), array([[-0.15304123],<br>       [ 0.04465005],<br>       [ 0.06240299]])]<br>tvecs平移（向量）外参:<br> [array([[145.08681235],<br>       [-76.17106891],<br>       [699.69778255]]), array([[-183.67717477],<br>       [-163.96393688],<br>       [ 688.85439168]]), array([[104.0920611 ],<br>       [ 23.92271463],<br>       [965.22859587]]), array([[ 15.24948656],<br>       [-54.85109955],<br>       [795.39600843]]), array([[ 198.06011875],<br>       [-175.91815396],<br>       [ 719.52217088]]), array([[  44.04717785],<br>       [-108.51372353],<br>       [ 788.45975705]]), array([[ -26.16828067],<br>       [-188.47275832],<br>       [ 771.99690841]]), array([[-139.14245711],<br>       [-124.82244434],<br>       [ 644.34844619]]), array([[ 95.41419669],<br>       [-22.10474336],<br>       [747.43156932]]), array([[-16.25541066],<br>       [-60.23640891],<br>       [677.13919736]]), array([[-220.34618611],<br>       [ -12.6889694 ],<br>       [ 708.18042632]]), array([[-205.93499674],<br>       [ -95.59986207],<br>       [ 709.15135801]]), array([[253.32869421],<br>       [-65.19615285],<br>       [793.36052372]]), array([[  8.6811058 ],<br>       [-18.70531877],<br>       [786.28091437]]), array([[-135.91340565],<br>       [ -41.83864798],<br>       [ 734.08050232]]), array([[-10.36373957],<br>       [-74.3822385 ],<br>       [775.58055384]]), array([[-181.85146859],<br>       [-162.51644736],<br>       [ 686.77992674]]), array([[-152.68145934],<br>       [ -45.11437087],<br>       [ 742.99524497]]), array([[  72.01815541],<br>       [-174.95234447],<br>       [ 954.17455852]]), array([[-180.90841277],<br>       [-186.78922299],<br>       [ 694.5911876 ]]), array([[-213.22423756],<br>       [-180.87955611],<br>       [ 668.22586979]]), array([[220.45960743],<br>       [ -3.88665195],<br>       [782.2584453 ]]), array([[-118.59571239],<br>       [ -51.01586357],<br>       [ 905.16719607]]), array([[ 213.87203907],<br>       [-198.38786649],<br>       [ 766.26267678]]), array([[197.15909792],<br>       [-11.90335064],<br>       [831.47489862]]), array([[220.76484713],<br>       [-60.95718003],<br>       [760.66883997]]), array([[117.86186858],<br>       [-64.75570632],<br>       [768.97222101]]), array([[ -39.59646337],<br>       [-165.78421993],<br>       [ 736.04088074]]), array([[-123.20719029],<br>       [-164.0644578 ],<br>       [ 743.43485414]]), array([[-19.65524135],<br>       [-69.18741504],<br>       [690.47472849]]), array([[-203.72891175],<br>       [ -20.1545843 ],<br>       [ 718.13434244]]), array([[ 40.16988244],<br>       [-68.66550898],<br>       [795.54461358]]), array([[-104.02162409],<br>       [-101.3265982 ],<br>       [ 762.41231116]])]<br>newcameramtx外参 [[578.70690918   0.         286.56697375]<br> [  0.         768.62420654 341.06051709]<br> [  0.           0.           1.        ]]</p></div></div>
+
+
+
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python下使用aruco标记进进行三维定位</title>
     <url>/2020/07/15/python-aruco/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715114612.png" alt=""></p>
@@ -371,7 +371,7 @@
 <h1 id="ArUco标记生成器"><a href="#ArUco标记生成器" class="headerlink" title="ArUco标记生成器"></a>ArUco标记生成器</h1><p>在线aruco标记生成器：<a href="https://chev.me/arucogen/" target="_blank" rel="noopener">https://chev.me/arucogen/</a></p>
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715093013.png" alt=""></p>
 <h1 id="在OpenCV中生成ArUco标记"><a href="#在OpenCV中生成ArUco标记" class="headerlink" title="在OpenCV中生成ArUco标记"></a>在OpenCV中生成ArUco标记</h1><h2 id="opencv-python生成aruco标记"><a href="#opencv-python生成aruco标记" class="headerlink" title="opencv-python生成aruco标记"></a>opencv-python生成aruco标记</h2><p>确定好我们需要的字典后，就可以通过API<code>drawMarker()</code>来绘制出aruco标记，其参数含义如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line">markerImage = cv2.aruco.drawMarker(dictionary, <span class="number">22</span>, <span class="number">200</span>, markerImage, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">cv2.imwrite(<span class="string">"marker22.png"</span>, markerImage);</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line">markerImage = cv2.aruco.drawMarker(dictionary, <span class="number">22</span>, <span class="number">200</span>, markerImage, <span class="number">1</span>)</span><br><span class="line">cv2.imwrite(<span class="string">"marker22.png"</span>, markerImage)</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>opencv的aruco模块共有25个预定义的标记词典。每个词典中所有的Aruco标记均包含相同数量的块或位(例如4×4、5×5、6×6或7×7)，且每个词典中Aruco标记的数量固定(例如50、100、250或1000)。</p>
@@ -515,6 +515,32 @@ Python: cv.aruco.DICT_APRILTAG_16h5
         <tag>opencv</tag>
         <tag>python</tag>
         <tag>qrcode，work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是ArUco标记</title>
+    <url>/2020/07/22/whatisaruco/</url>
+    <content><![CDATA[<h1 id="什么是ArUco"><a href="#什么是ArUco" class="headerlink" title="什么是ArUco"></a>什么是ArUco</h1><p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200716104740.png" alt=""></p>
+<p>ArUco 是由<a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">RafaelMuñoz</a>和Sergio Garrido开发的用于检测方形基准标记的流行库，其在许多计算机视觉应用程序中，姿势估计非常重要：机器人导航，增强现实等等。该过程基于发现真实环境中的3d点与其2d图像投影之间的对应关系。这通常是一个困难的步骤，因此通常使用合成或基准标记来简化操作。</p>
+<p>使用ArUco记号通常是一个常用的途径之一。这标记的主要优势是单个记号就提供了获取相机姿态的足够对应信息。同时，记号的内部二进制编码使得标记在错误检查和修正等方面保持一定的稳定性。</p>
+<hr>
+<h2 id="Aruco模块"><a href="#Aruco模块" class="headerlink" title="Aruco模块"></a>Aruco模块</h2><p>Aruco模块主要基于 <a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">ArUco library</a>,是一个二维码识别中被广泛使用的库。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715091518.png" alt=""></p>
+<p>一个ArUco标记外围都有一组黑色边框，同时内部有着确定该标记ID的二维矩阵组合而成。黑色的边框能加速标记在图像中的检测速度，内部的二维编码能唯一识别该标记，同时进行错误检测和错误修复。标记的大小确定了内部矩阵的大小，上图是一个6×6大小的标记带有36bits的信息。而这些信息储存在不标记字典中。</p>
+<h2 id="标记字典"><a href="#标记字典" class="headerlink" title="标记字典"></a>标记字典</h2><p>每个ArUco标签的id都由标记在字典记录，例如上图这个6×6标签的id是22组合的结果存放在<code>cv2.aruco.DICT_6X6_250</code>字典中，标记字典是一组被用来进行特殊应用的标记，它大大简化了每个marker二维码列表。字典的主要属性就是字典的大小和标志的大小。aruco模块中包含了一些已经预先定义好不同大小和数量的字典集<br>有些人可能会想到，一个marker的id是从二维码中获取得到并转换成一个10进制的数值。然而，这对于高位marker由于有着太高的bits来实现这种管理是不实际的，因此marker的id简化在了所属的字典序列中。<strong>Marker Creation</strong></p>
+<h2 id="生成ArUco标签"><a href="#生成ArUco标签" class="headerlink" title="生成ArUco标签"></a>生成ArUco标签</h2><p>在检测之前，往往我们需要打印一些marker放到我们的环境中。Marker图案我们能通过drawMarker函数产生：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line">markerImage = cv2.aruco.drawMarker(dictionary, <span class="number">22</span>, <span class="number">200</span>, markerImage, <span class="number">1</span>)</span><br><span class="line">cv2.imwrite(<span class="string">"marker22.png"</span>, markerImage)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>cv2.aruco.Dictionary_get()</code>函数会加载<code>cv2.aruco.DICT_6X6_250</code>包含250个标记的字典，其中每个标记都是6×6位二进制模式</p>
+<p><code>cv2.aruco.drawMarker(dictionary, 22, 200, markerImage, 1)</code>中的第二个参数<code>22</code>是aruco的标记id（0～249），第三个参数决定生成的标记的大小，在上面的示例中，它将生成<code>200×200</code>像素的图像，第四个参数表示将要存储aruco标记的对象(上面的<code>markerImage</code>），最后，第五个参数是边界宽度参数，它决定应将多少位（块）作为边界添加到生成的二进制图案中。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+        <tag>python</tag>
+        <tag>aruco</tag>
+        <tag>机器视觉</tag>
       </tags>
   </entry>
   <entry>
@@ -1006,74 +1032,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-<a id="more"></a>
-
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录学习Ubuntu的指令</title>
     <url>/2020/07/03/%E8%AE%B0%E5%BD%95%E5%AD%A6%E4%B9%A0Ubuntu%E7%9A%84%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Linux指令"><a href="#Linux指令" class="headerlink" title="Linux指令"></a>Linux指令</h1><p><img src= "/img/loading.gif" data-src="https://cdn.pixabay.com/photo/2018/04/23/14/43/ubuntu-3344434_960_720.png" alt="Ubuntu, Desktop, Operating System, Computer, Office"></p>
@@ -1487,6 +1445,74 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+<a id="more"></a>
+
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+</blockquote>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<hr>
+<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
 </search>
