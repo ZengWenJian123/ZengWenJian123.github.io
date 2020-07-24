@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.dgut.top/2020/07/20/opencv-biaoding/</loc>
-    <lastmod>2020-07-23</lastmod>
-  </url>  <url>
     <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
+    <lastmod>2020-07-24</lastmod>
+  </url>  <url>
+    <loc>https://blog.dgut.top/2020/07/20/opencv-biaoding/</loc>
     <lastmod>2020-07-23</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/22/whatisaruco/</loc>
