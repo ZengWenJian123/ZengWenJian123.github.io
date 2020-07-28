@@ -136,11 +136,11 @@
     
     
     
+      <category term="hexo" scheme="https://blog.dgut.top/tags/hexo/"/>
+    
       <category term="博客" scheme="https://blog.dgut.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="git" scheme="https://blog.dgut.top/tags/git/"/>
-    
-      <category term="hexo" scheme="https://blog.dgut.top/tags/hexo/"/>
     
   </entry>
   
@@ -162,9 +162,9 @@
     
     
     
-      <category term="博客" scheme="https://blog.dgut.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="hexo" scheme="https://blog.dgut.top/tags/hexo/"/>
+    
+      <category term="博客" scheme="https://blog.dgut.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="google" scheme="https://blog.dgut.top/tags/google/"/>
     
@@ -372,9 +372,9 @@
     
     
     
-      <category term="博客" scheme="https://blog.dgut.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="hexo" scheme="https://blog.dgut.top/tags/hexo/"/>
+    
+      <category term="博客" scheme="https://blog.dgut.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="firebase" scheme="https://blog.dgut.top/tags/firebase/"/>
     
