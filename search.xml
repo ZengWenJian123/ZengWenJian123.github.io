@@ -292,6 +292,22 @@
       </tags>
   </entry>
   <entry>
+    <title>你多久没有仰望夜空了</title>
+    <url>/2020/07/28/night-thinks/</url>
+    <content><![CDATA[<p>你多久没有仰望夜空了？</p>
+<p>对夜视仪的一些看法：</p>
+<p>（以下为全彩色夜视仪的实际效果）</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134952.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134919.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135034.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142354.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142355.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142356.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142357.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135053.jpg" alt=""></p>
+]]></content>
+      <tags>
+        <tag>game</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python利用opencv进行相机标定(完全版)</title>
     <url>/2020/07/20/opencv-biaoding/</url>
     <content><![CDATA[<p>今天的低价单孔摄像机(照相机)会给图像带来很多畸变。畸变主要有两种:径向畸变和切想畸变。如下图所示,用红色直线将棋盘的两个边标注出来,但是你会发现棋盘的边界并不和红线重合。所有我们认为应该是直线的也都凸出来了。</p>
@@ -553,6 +569,20 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客加速</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在hexo博客上添加本地图片</title>
     <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试一下图片</p>
@@ -573,20 +603,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713110117.png" alt=""></p>
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112422.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112423.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112424.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112425.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112426.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112427.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112428.png" alt=""></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客加速</tag>
-      </tags>
   </entry>
   <entry>
     <title>记录一下Markdown用法</title>
