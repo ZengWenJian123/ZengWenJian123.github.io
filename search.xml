@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>感谢永远有歌，把心境道破</title>
+    <url>/2020/07/13/eason/</url>
+    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
+<a id="more"></a>
+
+<p>youtube地址：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
+<p>致敬这场疫情中默默奉献的那些人</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git的使用firebase+github pagse同时提交博客</title>
     <url>/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714154834.png" alt=""></p>
@@ -110,120 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>感谢永远有歌，把心境道破</title>
-    <url>/2020/07/13/eason/</url>
-    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
-<a id="more"></a>
-
-<p>youtube地址：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
-<p>致敬这场疫情中默默奉献的那些人</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
-    <url>/2020/07/13/google/</url>
-    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
-<a id="more"></a>
-
-<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
-<p>百度的没有，谷歌已经收录了</p>
-<blockquote>
-<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
-</blockquote>
-<p>站点还没有被收录就继续下列步骤</p>
-<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
-<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
-</blockquote>
-<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-
-<p>在博客目录的_config.yml中添加如下代码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-
-<p>编译你的博客</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
-<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/sitemap.xml</a></p>
-<p><a href="https://usg-cn.web.app/baidusitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/baidusitemap.xml</a></p>
-<p>看到如下画面就证明已经成功了</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
-<hr>
-<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
-<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
-<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
-</ul>
-<blockquote>
-<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
-</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
-</blockquote>
-<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
-<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
-<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
-<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
-<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
-<hr>
-<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
-<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
-<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
-<p>所有都完成了</p>
-<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
-<p>完成收录谷歌了～</p>
-<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
-<p>未完待续～～～～</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你多久没有仰望夜空了</title>
-    <url>/2020/07/28/night-thinks/</url>
-    <content><![CDATA[<p>你多久没有仰望夜空了？</p>
-<p>对夜视仪的一些看法：</p>
-<p>（以下为全彩色夜视仪的实际效果）</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134952.jpg" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134919.jpg" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135034.jpg" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142354.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142355.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142356.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142357.jpg" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135053.jpg" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728162818.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>game</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo优雅地使用图床</title>
     <url>/2020/07/10/hexo-pic/</url>
     <content><![CDATA[<p>其实很早就接触了Markdown语法了，那是可以追溯到学生时代。在学校实验室的时候需要对一些新来的师弟师妹进行培训，就需要写一些教程文档，那时候就开始利用Markdown+Typora进行教程编写，但是苦于Markdown语法的特殊性使得图片的插入尤为困难，移动文档的时候往往图片会挂掉，这对于我来说就是十分不方便的，所以最后就不了了之，用回office作罢……</p>
@@ -309,6 +212,86 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客收录百度和谷歌2020.7.14更新</title>
+    <url>/2020/07/13/google/</url>
+    <content><![CDATA[<p>博客已经搭建成功了一段时间了，并且添加了一些博文，不过看到博客底部的访客人数还是感觉特别寒酸，为了使博客的曝光读提高，所以就考虑主动让百度或者谷歌等搜索引擎收录。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171218.png" alt=""></p>
+<a id="more"></a>
+
+<h1 id="首先确认站点是否已经被收录了"><a href="#首先确认站点是否已经被收录了" class="headerlink" title="首先确认站点是否已经被收录了"></a>首先确认站点是否已经被收录了</h1><p>我的博客地址为：<code>usg-cn.web.app</code>所以可以在百度和谷歌输入下面的格式来判断站点是否已经被收录了。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171516.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713171517.png" alt=""></p>
+<p>百度的没有，谷歌已经收录了</p>
+<blockquote>
+<p>研究了好久，总感觉百度的搜索蜘蛛效果比谷歌的差一点，新网站谷歌很快就收录了，百度要等好久。</p>
+</blockquote>
+<p>站点还没有被收录就继续下列步骤</p>
+<h1 id="安装扩展插件"><a href="#安装扩展插件" class="headerlink" title="安装扩展插件"></a>安装扩展插件</h1><blockquote>
+<p>站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。</p>
+</blockquote>
+<p>在你的hexo博客根目录，用下面2个命令分别安装谷歌、百度所对应的站点地图生成文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>在博客目录的_config.yml中添加如下代码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="comment"># sitemap</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>编译你的博客</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>然后你可以看到在你博客下的<code>public</code>目录下生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>文件，这样就大功告成了。<code>sitemap.xml</code>是提交给谷歌的、<code>baidusitemap.xml</code>是提交给百度的。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082740.png" alt=""></p>
+<p>部署后你分别访问<br><a href="https://usg-cn.web.app/sitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/sitemap.xml</a></p>
+<p><a href="https://usg-cn.web.app/baidusitemap.xml" target="_blank" rel="noopener">https://usg-cn.web.app/baidusitemap.xml</a></p>
+<p>看到如下画面就证明已经成功了</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083125.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083205.png" alt=""></p>
+<hr>
+<h1 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h1><ul>
+<li><a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">Google搜索引擎提交入口</a></li>
+<li><a href="https://link.jianshu.com/?t=http://www.baidu.com/search/url_submit.htm" target="_blank" rel="noopener">百度搜索引擎入口</a></li>
+</ul>
+<blockquote>
+<p><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title3" target="_blank" rel="noopener">为什么要验证网站</a>　　<br>站长平台推荐站长添加主站（您网站的链接也许会使用www 和非 www 两种网址，建议添加用户能够真实访问到的网址），添加并验证后，可证明您是该域名的拥有者，可以快捷批量添加子站点，查看所有子站数据，无需再一一验证您的子站点。<br><a href="https://link.jianshu.com?t=http://zhanzhang.baidu.com/college/courseinfo?id=267&page=1#h2_article_title13" target="_blank" rel="noopener">如何验证网站</a><br>首先如果您的网站已使用了百度统计，您可以使用统计账号登录平台，或者绑定站长平台与百度统计账号，站长平台支持您批量导入百度统计中的站点，您不需要再对网站进行验证。<br>百度站长平台为未使用百度统计的站点提供三种验证方式：<strong>文件验证、html标签验证、CNAME验证</strong>。<br>1.文件验证：您需要下载验证文件，将文件上传至您的服务器，放置于域名根目录下。<br>2.html标签验证：将html标签添加至网站首页html代码的<head>标签与<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
+</head>标签之间。<br>3.CNAME验证：您需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。<br>验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br>参考链接：<a href="https://www.jianshu.com/p/5e68f78c7791来源：简书" target="_blank" rel="noopener">https://www.jianshu.com/p/5e68f78c7791来源：简书</a></p>
+</blockquote>
+<h2 id="百度："><a href="#百度：" class="headerlink" title="百度："></a>百度：</h2><p>登录百度<a href="https://ziyuan.baidu.com/linksubmit/url" target="_blank" rel="noopener">资源搜索平台</a><code>用户中心</code> &gt; <code>站点管理</code>，点击<code>添加站点</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172043.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172059.png" alt=""></p>
+<p><code>站点领域</code>随便填一下就好，然后选择<code>文件验证</code>验证你的网站</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172447.png" alt=""></p>
+<p>下载红框中的<code>验证文件</code>将它拷贝到<code>hexo/themes/next/source</code>文件夹下</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713172723.png" alt=""></p>
+<p>然后更新部署网站，在你的<code>博客域名</code>+<code>/验证文件名</code>看看你不能访问，例如我输入的是这个：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//usg-cn.web.app/baidu_verify_DppfZ4udwW.html</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173031.png" alt=""></p>
+<p>就证明验证文件放的位置对了，就可以在验证百度站点了（等待10分钟即可认证完成）</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173131.png" alt=""></p>
+<hr>
+<h2 id="谷歌："><a href="#谷歌：" class="headerlink" title="谷歌："></a>谷歌：</h2><p>谷歌操作比较简单，就是向<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/tools" target="_blank" rel="noopener">Google站长工具</a>提交sitemap</p>
+<p>登录Google账号，添加了站点验证通过后，选择添加网址前缀：<code>https://usg-cn.web.app/</code></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082054.png" alt=""></p>
+<p>选择站点，之后在<code>索引</code>——<code>站点地图</code>中就能看到<code>添加/测试站点地图</code>，如下图：</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713173317.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714082345.png" alt=""></p>
+<p>所有都完成了</p>
+<p>接着等上一段时间：我是弄完就去睡觉了，在搜索引擎输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:usg-cn.web.app&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083449.png" alt=""></p>
+<p>完成收录谷歌了～</p>
+<p>百度的：一直显示抓取失败（这个问题困扰了我好久，一直没有解决）不知道是百度的问题还是我的问题，我浏览器一直可以访问到站点地图的，有知道的朋友在评论区讨论讨论！如果成功了再更新</p>
+<p>未完待续～～～～</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200714083611.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python利用opencv进行相机标定(完全版)</title>
     <url>/2020/07/20/opencv-biaoding/</url>
     <content><![CDATA[<p>今天的低价单孔摄像机(照相机)会给图像带来很多畸变。畸变主要有两种:径向畸变和切想畸变。如下图所示,用红色直线将棋盘的两个边标注出来,但是你会发现棋盘的边界并不和红线重合。所有我们认为应该是直线的也都凸出来了。</p>
@@ -376,46 +359,6 @@
 ]]></content>
       <tags>
         <tag>opencv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是ArUco标记</title>
-    <url>/2020/07/22/whatisaruco/</url>
-    <content><![CDATA[<h1 id="什么是ArUco"><a href="#什么是ArUco" class="headerlink" title="什么是ArUco"></a>什么是ArUco</h1><p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200716104740.png" alt=""></p>
-<p>ArUco 是由<a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">RafaelMuñoz</a>和Sergio Garrido开发的用于检测方形基准标记的流行库，其在许多计算机视觉应用程序中，姿势估计非常重要：机器人导航，增强现实等等。该过程基于发现真实环境中的3d点与其2d图像投影之间的对应关系。这通常是一个困难的步骤，因此通常使用合成或基准标记来简化操作。</p>
-<p>使用ArUco记号通常是一个常用的途径之一。这标记的主要优势是单个记号就提供了获取相机姿态的足够对应信息。同时，记号的内部二进制编码使得标记在错误检查和修正等方面保持一定的稳定性。</p>
-<hr>
-<h2 id="Aruco模块"><a href="#Aruco模块" class="headerlink" title="Aruco模块"></a>Aruco模块</h2><p>Aruco模块主要基于 <a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">ArUco library</a>,是一个二维码识别中被广泛使用的库。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715091518.png" alt=""></p>
-<p>一个ArUco标记外围都有一组黑色边框，同时内部有着确定该标记ID的二维矩阵组合而成。黑色的边框能加速标记在图像中的检测速度，内部的二维编码能唯一识别该标记，同时进行错误检测和错误修复。标记的大小确定了内部矩阵的大小，上图是一个6×6大小的标记带有36bits的信息。而这些信息储存在不标记字典中。</p>
-<h2 id="标记字典"><a href="#标记字典" class="headerlink" title="标记字典"></a>标记字典</h2><p>每个ArUco标签的id都由标记在字典记录，例如上图这个6×6标签的id是22组合的结果存放在<code>cv2.aruco.DICT_6X6_250</code>字典中，标记字典是一组被用来进行特殊应用的标记，它大大简化了每个marker二维码列表。字典的主要属性就是字典的大小和标志的大小。aruco模块中包含了一些已经预先定义好不同大小和数量的字典集<br>有些人可能会想到，一个marker的id是从二维码中获取得到并转换成一个10进制的数值。然而，这对于高位marker由于有着太高的bits来实现这种管理是不实际的，因此marker的id简化在了所属的字典序列中。<strong>Marker Creation</strong></p>
-<h2 id="生成ArUco标签"><a href="#生成ArUco标签" class="headerlink" title="生成ArUco标签"></a>生成ArUco标签</h2><p>在检测之前，往往我们需要打印一些marker放到我们的环境中。Marker图案我们能通过drawMarker函数产生：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line">markerImage = cv2.aruco.drawMarker(dictionary, <span class="number">22</span>, <span class="number">200</span>, markerImage, <span class="number">1</span>)</span><br><span class="line">cv2.imwrite(<span class="string">"marker22.png"</span>, markerImage)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>cv2.aruco.Dictionary_get()</code>函数会加载<code>cv2.aruco.DICT_6X6_250</code>包含250个标记的字典，其中每个标记都是6×6位二进制模式</p>
-<p><code>cv2.aruco.drawMarker(dictionary, 22, 200, markerImage, 1)</code>中的第二个参数<code>22</code>是aruco的标记id（0～249），第三个参数决定生成的标记的大小，在上面的示例中，它将生成<code>200×200</code>像素的图像，第四个参数表示将要存储aruco标记的对象(上面的<code>markerImage</code>），最后，第五个参数是边界宽度参数，它决定应将多少位（块）作为边界添加到生成的二进制图案中。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>opencv</tag>
-        <tag>aruco</tag>
-        <tag>python</tag>
-        <tag>机器视觉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客加速</title>
-    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p>博客加速</p>
-<p>利用cdn进行博客加速（TODO）</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>博客加速</tag>
       </tags>
   </entry>
   <entry>
@@ -584,144 +527,60 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>记录一下博客的由来</title>
-    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
-<a id="more"></a>
-
-
-
-<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
-<p>免费的托管方案提供了：</p>
-<ul>
-<li>1G的储存空间</li>
-<li>10G/月的流量超出后可以付费购买。</li>
-</ul>
-<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
-<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
-<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完成后，就有了如下的文件目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
-<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
-
-<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
-<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
-<p>同时，也可以运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
-<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
-<p>完整提交内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>只提交更改内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>这样在我的博客网站：<a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
-<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
-<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
-<p>使用Firebase有很多非常难得的好处：</p>
-<ul>
-<li>全球SSD CDN，速度比GitHub快。</li>
-<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
-<li>零配置的SSL，自动启动HTTPS。</li>
-<li>完美的中文文档支持。</li>
-</ul>
-<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
-<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
-<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></p>
-<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
-
-<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
-
-<p>登录后再切换到刚才生成的Hexo目录下，</p>
-<p>cd hexo/</p>
-<p>运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
-
-<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
-<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
-<p>然后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>大功告成了，接下来就是欣赏博客的时候了。</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
-<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
-<li><code>hexo deploy</code>推送github部署博客</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
-<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
-</ul>
-<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
-<p>首先打开你个人目录下的.bashrc隐藏文件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>把光标移到末尾按’i’键插入一行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
-<blockquote>
-<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署三连</p>
-</blockquote>
-<p>然后按’Esc’后按’:wq’保存退出</p>
-<p>最后在终端输入命令生效刚刚的更改就完事了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
-<blockquote>
-<p>拓展：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
-
-<p>只执行构建和只部署更改</p>
-<blockquote>
-<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
-</blockquote>
-</blockquote>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
-<ul>
-<li>一键三连</li>
-</ul>
+    <title>你多久没有仰望夜空了</title>
+    <url>/2020/07/28/night-thinks/</url>
+    <content><![CDATA[<p>你多久没有仰望夜空了？</p>
+<p>对夜视仪的一些看法：</p>
+<p>（以下为全彩色夜视仪的实际效果）</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134952.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728134919.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135034.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142354.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142355.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142356.jpg" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728142357.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728135053.jpg" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200728162818.png" alt=""></p>
 ]]></content>
       <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>firebase</tag>
+        <tag>game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是ArUco标记</title>
+    <url>/2020/07/22/whatisaruco/</url>
+    <content><![CDATA[<h1 id="什么是ArUco"><a href="#什么是ArUco" class="headerlink" title="什么是ArUco"></a>什么是ArUco</h1><p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200716104740.png" alt=""></p>
+<p>ArUco 是由<a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">RafaelMuñoz</a>和Sergio Garrido开发的用于检测方形基准标记的流行库，其在许多计算机视觉应用程序中，姿势估计非常重要：机器人导航，增强现实等等。该过程基于发现真实环境中的3d点与其2d图像投影之间的对应关系。这通常是一个困难的步骤，因此通常使用合成或基准标记来简化操作。</p>
+<p>使用ArUco记号通常是一个常用的途径之一。这标记的主要优势是单个记号就提供了获取相机姿态的足够对应信息。同时，记号的内部二进制编码使得标记在错误检查和修正等方面保持一定的稳定性。</p>
+<hr>
+<h2 id="Aruco模块"><a href="#Aruco模块" class="headerlink" title="Aruco模块"></a>Aruco模块</h2><p>Aruco模块主要基于 <a href="http://www.uco.es/investiga/grupos/ava/node/26" target="_blank" rel="noopener">ArUco library</a>,是一个二维码识别中被广泛使用的库。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200715091518.png" alt=""></p>
+<p>一个ArUco标记外围都有一组黑色边框，同时内部有着确定该标记ID的二维矩阵组合而成。黑色的边框能加速标记在图像中的检测速度，内部的二维编码能唯一识别该标记，同时进行错误检测和错误修复。标记的大小确定了内部矩阵的大小，上图是一个6×6大小的标记带有36bits的信息。而这些信息储存在不标记字典中。</p>
+<h2 id="标记字典"><a href="#标记字典" class="headerlink" title="标记字典"></a>标记字典</h2><p>每个ArUco标签的id都由标记在字典记录，例如上图这个6×6标签的id是22组合的结果存放在<code>cv2.aruco.DICT_6X6_250</code>字典中，标记字典是一组被用来进行特殊应用的标记，它大大简化了每个marker二维码列表。字典的主要属性就是字典的大小和标志的大小。aruco模块中包含了一些已经预先定义好不同大小和数量的字典集<br>有些人可能会想到，一个marker的id是从二维码中获取得到并转换成一个10进制的数值。然而，这对于高位marker由于有着太高的bits来实现这种管理是不实际的，因此marker的id简化在了所属的字典序列中。<strong>Marker Creation</strong></p>
+<h2 id="生成ArUco标签"><a href="#生成ArUco标签" class="headerlink" title="生成ArUco标签"></a>生成ArUco标签</h2><p>在检测之前，往往我们需要打印一些marker放到我们的环境中。Marker图案我们能通过drawMarker函数产生：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成aruco标记</span></span><br><span class="line"><span class="comment"># 加载预定义的字典</span></span><br><span class="line">dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_250)</span><br><span class="line"><span class="comment"># 生成标记</span></span><br><span class="line">markerImage = np.zeros((<span class="number">200</span>, <span class="number">200</span>), dtype=np.uint8)</span><br><span class="line">markerImage = cv2.aruco.drawMarker(dictionary, <span class="number">22</span>, <span class="number">200</span>, markerImage, <span class="number">1</span>)</span><br><span class="line">cv2.imwrite(<span class="string">"marker22.png"</span>, markerImage)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>cv2.aruco.Dictionary_get()</code>函数会加载<code>cv2.aruco.DICT_6X6_250</code>包含250个标记的字典，其中每个标记都是6×6位二进制模式</p>
+<p><code>cv2.aruco.drawMarker(dictionary, 22, 200, markerImage, 1)</code>中的第二个参数<code>22</code>是aruco的标记id（0～249），第三个参数决定生成的标记的大小，在上面的示例中，它将生成<code>200×200</code>像素的图像，第四个参数表示将要存储aruco标记的对象(上面的<code>markerImage</code>），最后，第五个参数是边界宽度参数，它决定应将多少位（块）作为边界添加到生成的二进制图案中。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+        <tag>python</tag>
+        <tag>aruco</tag>
+        <tag>机器视觉</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客加速</title>
+    <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p>博客加速</p>
+<p>利用cdn进行博客加速（TODO）</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135214.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713135318.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>博客加速</tag>
       </tags>
   </entry>
   <entry>
@@ -747,71 +606,314 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
   </entry>
   <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+    <title>记录一下Markdown用法</title>
+    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
 <a id="more"></a>
 
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
 </blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
+<hr>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
 <blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
 </blockquote>
+<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
+<hr>
+<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
+<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
+<li><p>语法</p>
+<p>[TOC]</p>
 </li>
 </ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
 
+<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>引用内容1</p>
+</blockquote>
+<blockquote>
+<p>引用内容2</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>引用内容3</p>
+</blockquote>
+</blockquote>
+<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+</ul>
+<p><code>String str1 = &quot;hello&quot;;</code> </p>
+<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
 
+<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>效果</p>
+</li>
+<li><p>无序列表1</p>
+</li>
+<li><p>无序列表2</p>
+</li>
+<li><p>无序列表3</p>
+</li>
+</ul>
+<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+<li>多行无序列表1<ul>
+<li>多行无序列表2<ul>
+<li>多行无序列表3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3</li>
+</ol>
+<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+</ul>
+<ol>
+<li>多行有序列表1</li>
+<li>多行有序列表2<ol>
+<li>多行有序列表2-1</li>
+<li>多行有序列表2-2</li>
+</ol>
+</li>
+<li>多行有序列表3<ol>
+<li>多行有序列表3-1</li>
+<li>多行有序列表3-2</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+</ul>
+<p>-[ ] 抽烟</p>
+<p>-[x] 喝酒</p>
+<p>-[ ] 烫头</p>
+<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
 
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">姓名</th>
+<th align="center">性别</th>
+<th align="center">年龄</th>
+<th align="center">手机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">张三</td>
+<td align="center">男</td>
+<td align="center">21</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">李四</td>
+<td align="center">女</td>
+<td align="center">23</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">王五</td>
+<td align="center">男</td>
+<td align="center">25</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
+<li>语法1（本地图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
 
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<ul>
+<li>语法2（网络图片）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
+<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
+<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
+<li>语法1（行内式链接）</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果1</li>
+</ul>
+<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
+<ul>
+<li>语法2 （自动链接）</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果2</li>
+</ul>
+<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><em>斜体</em><br><em>斜体</em></p>
+<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><strong>加粗</strong><br><strong>加粗</strong></p>
+<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><u>下划线</u></p>
+<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p><del>删除线</del></p>
+<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
 <hr>
-<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>效果</li>
+</ul>
+<p>Typora[^1]</p>
+<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果 </li>
+</ul>
+<p>$$<br>3^2 = 9<br>$$</p>
+<p>$$<br>3^{(3-1)}=9<br>$$</p>
+<p>$$<br>H_2SO_4<br>$$</p>
+<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>效果</li>
+</ul>
+<p>\ ` * _ { } [ ] () # + - . ! </p>
+<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
+
+<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
+<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
+<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
+<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<details>
+<summary>展开查看</summary>
+<pre><code>
+展开查看的内容
+</code></pre>
+</details>
+
+
+
+
+<h1 id="7-针对hexo的markdown"><a href="#7-针对hexo的markdown" class="headerlink" title="7.针对hexo的markdown"></a>7.针对hexo的markdown</h1><p>、<a href="https://demo.jerryc.me/posts/4aa8abbe/#tag-hide" target="_blank" rel="noopener">https://demo.jerryc.me/posts/4aa8abbe/#tag-hide</a></p>
 ]]></content>
       <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1315,314 +1417,212 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>记录一下Markdown用法</title>
-    <url>/2020/07/07/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BMarkdown%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="关于Markdown的用法"><a href="#关于Markdown的用法" class="headerlink" title="关于Markdown的用法"></a>关于Markdown的用法</h1><p><img src= "/img/loading.gif" data-src="https://www.runoob.com/wp-content/uploads/2019/03/md1.gif" alt="img"></p>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
 <a id="more"></a>
 
-<h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong></p>
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
 </blockquote>
-<hr>
-<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>​        使用<a href="https://typora.io/" target="_blank" rel="noopener">Typora编辑器</a>来书写Markdown语句，Typora 支持 MacOS 、Windows、Linux 平台，且包含多种主题，编辑后直接渲染出效果。支持导出HTML、PDF、Word、图片等多种类型文件。<strong>是一款很优秀的跨平台编辑器。</strong></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/image.png" alt="演示插入图片"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/fences.png" alt="img"></p>
-<blockquote>
-<p>Typora给您既是读者又是作家的无缝体验。它删除了预览窗口，模式切换器，降价源代码的语法符号以及所有其他不必要的干扰。相反，它提供了真正的实时预览功能，可帮助您专注于内容本身。</p>
-</blockquote>
-<p>Typora 官网：<a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a></p>
-<hr>
-<h1 id="演示实例"><a href="#演示实例" class="headerlink" title="演示实例"></a>演示实例</h1><p><strong>本文作者：[李芬芳</strong>](<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">https://virony-cn.web.app/</a>)</p>
-<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h1><h2 id="1-1-内容目录-toc"><a href="#1-1-内容目录-toc" class="headerlink" title="1.1 内容目录[toc]"></a>1.1 内容目录[toc]</h2><ul>
-<li><p>语法</p>
-<p>[TOC]</p>
-</li>
-</ul>
-<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#         一级标题  </span><br><span class="line">##        二级标题</span><br><span class="line">###       三级标题</span><br><span class="line">####      四级标题</span><br><span class="line">#####     五级标题</span><br><span class="line">######    六级标题</span><br></pre></td></tr></table></figure>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-3-引用"><a href="#1-3-引用" class="headerlink" title="1.3 引用"></a>1.3 引用</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容<span class="number">1</span></span><br><span class="line">&gt; 引用内容<span class="number">2</span></span><br><span class="line">&gt;&gt; 引用内容<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>引用内容1</p>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
 </blockquote>
-<blockquote>
-<p>引用内容2</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>引用内容3</p>
-</blockquote>
-</blockquote>
-<h1 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h1><h2 id="2-1-单行代码"><a href="#2-1-单行代码" class="headerlink" title="2.1 单行代码"></a>2.1 单行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">`<span class="keyword">String </span><span class="keyword">str1 </span>= <span class="string">"hello"</span><span class="comment">;`</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><code>String str1 = &quot;hello&quot;;</code> </p>
-<h2 id="2-2-多行代码"><a href="#2-2-多行代码" class="headerlink" title="2.2 多行代码"></a>2.2 多行代码</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker psint a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = a;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-无序列表"><a href="#3-1-无序列表" class="headerlink" title="3.1 无序列表"></a>3.1 无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">* 无序列表<span class="number">1</span></span><br><span class="line">+ 无序列表<span class="number">2</span></span><br><span class="line">- 无序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>效果</p>
-</li>
-<li><p>无序列表1</p>
-</li>
-<li><p>无序列表2</p>
-</li>
-<li><p>无序列表3</p>
 </li>
 </ul>
-<h2 id="3-2-多行无序列表"><a href="#3-2-多行无序列表" class="headerlink" title="3.2 多行无序列表"></a>3.2 多行无序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 多行无序列表1</span></span><br><span class="line"><span class="keyword">TAB</span> * 多行无序列表2</span><br><span class="line"><span class="keyword">TAB</span> <span class="keyword">TAB</span> * 多行无序列表3</span><br></pre></td></tr></table></figure>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-<li>多行无序列表1<ul>
-<li>多行无序列表2<ul>
-<li>多行无序列表3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-有序列表"><a href="#3-3-有序列表" class="headerlink" title="3.3 有序列表"></a>3.3 有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 有序列表<span class="number">2</span></span><br><span class="line"><span class="number">3.</span> 有序列表<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>有序列表1</li>
-<li>有序列表2</li>
-<li>有序列表3</li>
-</ol>
-<h2 id="3-4-多行有序列表"><a href="#3-4-多行有序列表" class="headerlink" title="3.4 多行有序列表"></a>3.4 多行有序列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 多行有序列表<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 多行有序列表<span class="number">2</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">2</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">2</span><span class="number">-2</span></span><br><span class="line"><span class="number">3.</span> 多行有序列表<span class="number">3</span></span><br><span class="line">	<span class="number">1.</span> 多行有序列表<span class="number">3</span><span class="number">-1</span></span><br><span class="line">	<span class="number">2.</span> 多行有序列表<span class="number">3</span><span class="number">-2</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<ol>
-<li>多行有序列表1</li>
-<li>多行有序列表2<ol>
-<li>多行有序列表2-1</li>
-<li>多行有序列表2-2</li>
-</ol>
-</li>
-<li>多行有序列表3<ol>
-<li>多行有序列表3-1</li>
-<li>多行有序列表3-2</li>
-</ol>
-</li>
-</ol>
-<h2 id="3-5-任务列表"><a href="#3-5-任务列表" class="headerlink" title="3.5 任务列表"></a>3.5 任务列表</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 抽烟</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[x]</span> 喝酒</span><br><span class="line"><span class="selector-tag">-</span><span class="selector-attr">[ ]</span> 烫头</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<p>-[ ] 抽烟</p>
-<p>-[x] 喝酒</p>
-<p>-[ ] 烫头</p>
-<h2 id="3-6-表格"><a href="#3-6-表格" class="headerlink" title="3.6 表格"></a>3.6 表格</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">姓名</span>|<span class="string">性别</span>|<span class="string">年龄</span>|<span class="string">手机号</span>|</span><br><span class="line">|<span class="string">张三</span>|<span class="string">男</span>|<span class="string">21</span>|<span class="string">18975346876</span>|</span><br><span class="line">|<span class="string">李四</span>|<span class="string">女</span>|<span class="string">23</span>|<span class="string">17789548964</span>|</span><br><span class="line">|<span class="string">王五</span>|<span class="string">男</span>|<span class="string">25</span>|<span class="string">15876513546</span>|</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">姓名</th>
-<th align="center">性别</th>
-<th align="center">年龄</th>
-<th align="center">手机号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">张三</td>
-<td align="center">男</td>
-<td align="center">21</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">李四</td>
-<td align="center">女</td>
-<td align="center">23</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">王五</td>
-<td align="center">男</td>
-<td align="center">25</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h1><h2 id="4-1-图片"><a href="#4-1-图片" class="headerlink" title="4.1 图片"></a>4.1 图片</h2><ul>
-<li>语法1（本地图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>语法2（网络图片）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">图片url</span>)</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果2</li>
-</ul>
-<p><img src= "/img/loading.gif" data-src="math.png" alt="figure1"></p>
-<p><img src= "/img/loading.gif" data-src="https://typora.io/img/new/diagram.png" alt="img"></p>
-<h2 id="4-2-超链接"><a href="#4-2-超链接" class="headerlink" title="4.2 超链接"></a>4.2 超链接</h2><ul>
-<li>语法1（行内式链接）</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">https://www.baidu.com/</span>]</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果1</li>
-</ul>
-<p>[百度][<a href="https://www.baidu.com/]" target="_blank" rel="noopener">https://www.baidu.com/]</a></p>
-<ul>
-<li>语法2 （自动链接）</li>
-</ul>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">&lt;<span class="string">https:</span><span class="comment">//github.com/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果2</li>
-</ul>
-<p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-斜体"><a href="#5-1-斜体" class="headerlink" title="5.1 斜体"></a>5.1 斜体</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">*斜体*</span><br><span class="line"><span class="literal">_</span>斜体<span class="literal">_</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<p><em>斜体</em><br><em>斜体</em></p>
-<h2 id="5-2-加粗"><a href="#5-2-加粗" class="headerlink" title="5.2 加粗"></a>5.2 加粗</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">__加粗__</span></span><br></pre></td></tr></table></figure>
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<p><strong>加粗</strong><br><strong>加粗</strong></p>
-<h2 id="5-3-下划线"><a href="#5-3-下划线" class="headerlink" title="5.3 下划线"></a>5.3 下划线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><u>下划线</u></p>
-<h2 id="5-4-删除线"><a href="#5-4-删除线" class="headerlink" title="5.4 删除线"></a>5.4 删除线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p><del>删除线</del></p>
-<h2 id="5-5-分隔线"><a href="#5-5-分隔线" class="headerlink" title="5.5 分隔线"></a>5.5 分隔线</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">___</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
 <hr>
-<hr>
-<hr>
-<h2 id="5-6-注脚"><a href="#5-6-注脚" class="headerlink" title="5.6 注脚"></a>5.6 注脚</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">Typora[^<span class="number">1</span>]</span><br><span class="line">[^<span class="number">1</span>]A markdown editor</span><br></pre></td></tr></table></figure>
+<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>效果</li>
-</ul>
-<p>Typora[^1]</p>
-<h2 id="5-7-上下标"><a href="#5-7-上下标" class="headerlink" title="5.7 上下标"></a>5.7 上下标</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$<span class="number">3</span>^<span class="number">2</span>=<span class="number">9</span>$</span><br><span class="line">$<span class="number">3</span>^&#123;(<span class="number">3</span><span class="number">-1</span>)&#125;=<span class="number">9</span>$</span><br><span class="line">$H_2SO_4$</span><br><span class="line">$H_&#123;<span class="number">2</span>SO_4&#125;$</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果 </li>
-</ul>
-<p>$$<br>3^2 = 9<br>$$</p>
-<p>$$<br>3^{(3-1)}=9<br>$$</p>
-<p>$$<br>H_2SO_4<br>$$</p>
-<h2 id="5-8-符号的输入"><a href="#5-8-符号的输入" class="headerlink" title="5.8 符号的输入"></a>5.8 符号的输入</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\\</span>   反斜线</span><br><span class="line"><span class="string">\`</span>   反引号</span><br><span class="line"><span class="string">\*</span>   星号</span><br><span class="line"><span class="string">\_</span>   底线</span><br><span class="line"><span class="string">\&#123;</span> <span class="string">\&#125;</span>  花括号</span><br><span class="line"><span class="string">\[</span> <span class="string">\]</span>  方括号</span><br><span class="line"><span class="string">\(</span> <span class="string">\)</span>  括弧</span><br><span class="line"><span class="string">\#</span>   井字号</span><br><span class="line"><span class="string">\+</span>   加号</span><br><span class="line"><span class="string">\-</span>   减号</span><br><span class="line"><span class="string">\.</span>   英文句点</span><br><span class="line"><span class="string">\!</span>   惊叹号</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>效果</li>
-</ul>
-<p>\ ` * _ { } [ ] () # + - . ! </p>
-<h2 id="5-9-特殊字符"><a href="#5-9-特殊字符" class="headerlink" title="5.9 特殊字符"></a>5.9 特殊字符</h2><ul>
-<li>语法</li>
-</ul>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta">&amp;copy;      版权      </span></span><br><span class="line"><span class="meta">&amp;reg;       注册商标</span></span><br><span class="line"><span class="meta">&amp;trade;     商标</span></span><br><span class="line"><span class="meta">&amp;nbsp;      空格</span></span><br><span class="line"><span class="meta">&amp;amp;       和号</span></span><br><span class="line"><span class="meta">&amp;quot;      引号</span></span><br><span class="line"><span class="meta">&amp;apos;      撇号</span></span><br><span class="line"><span class="meta">&amp;lt;        小于号</span></span><br><span class="line"><span class="meta">&amp;gt;        大于号</span></span><br><span class="line"><span class="meta">&amp;ne;        不等号</span></span><br><span class="line"><span class="meta">&amp;le;        小于等于</span></span><br><span class="line"><span class="meta">&amp;ge;        大于等于</span></span><br><span class="line"><span class="meta">&amp;cent;      分</span></span><br><span class="line"><span class="meta">&amp;pound;     磅</span></span><br><span class="line"><span class="meta">&amp;euro;      欧元</span></span><br><span class="line"><span class="meta">&amp;yen;       元</span></span><br><span class="line"><span class="meta">&amp;sect;      节</span></span><br><span class="line"><span class="meta">&amp;times;     乘号</span></span><br><span class="line"><span class="meta">&amp;divide;    除号</span></span><br><span class="line"><span class="meta">&amp;plusmn;    正负号</span></span><br></pre></td></tr></table></figure>
-
-<p>&copy;      版权<br>&reg;       注册商标<br>&trade;     商标<br>&nbsp;      空格<br>&amp;       和号<br>&quot;      引号<br>&apos;      撇号<br>&lt;        小于号<br>&gt;        大于号<br>&ne;        不等号<br>&le;        小于等于<br>&ge;        大于等于<br>&cent;      分<br>&pound;     磅<br>&euro;      欧元<br>&yen;       元<br>&sect;      节<br>&times;     乘号<br>&divide;    除号<br>&plusmn;    正负号</p>
-<h2 id="5-10-高亮文本"><a href="#5-10-高亮文本" class="headerlink" title="5.10 高亮文本"></a>5.10 高亮文本</h2><p>== 文本 ==<br>$$<br>lim_{x \to \infty} \ exp(-x)=0<br>$$<br>&lt;center&gt;这是要居中的文本内容&lt;/center&gt;</p>
-<p>本文作者：<a href="https://virony-cn.web.app/" target="_blank" rel="noopener">李芬芳</a></p>
-<h1 id="6-拓展"><a href="#6-拓展" class="headerlink" title="6.拓展"></a>6.拓展</h1><p>利用html实现展开查看：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开查看&lt;/summary&gt;</span><br><span class="line">&lt;pre&gt;&lt;code&gt;</span><br><span class="line">这里填入内容</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<details>
-<summary>展开查看</summary>
-<pre><code>
-展开查看的内容
-</code></pre>
-</details>
-
-
-
-
-<h1 id="7-针对hexo的markdown"><a href="#7-针对hexo的markdown" class="headerlink" title="7.针对hexo的markdown"></a>7.针对hexo的markdown</h1><p>、<a href="https://demo.jerryc.me/posts/4aa8abbe/#tag-hide" target="_blank" rel="noopener">https://demo.jerryc.me/posts/4aa8abbe/#tag-hide</a></p>
 ]]></content>
       <tags>
-        <tag>markdown</tag>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下博客的由来</title>
+    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
+<a id="more"></a>
+
+
+
+<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
+<p>免费的托管方案提供了：</p>
+<ul>
+<li>1G的储存空间</li>
+<li>10G/月的流量超出后可以付费购买。</li>
+</ul>
+<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
+<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
+<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后，就有了如下的文件目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
+<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
+
+<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
+<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
+<p>同时，也可以运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
+<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
+<p>完整提交内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>只提交更改内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>这样在我的博客网站：<a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
+<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
+<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
+<p>使用Firebase有很多非常难得的好处：</p>
+<ul>
+<li>全球SSD CDN，速度比GitHub快。</li>
+<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
+<li>零配置的SSL，自动启动HTTPS。</li>
+<li>完美的中文文档支持。</li>
+</ul>
+<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
+<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></p>
+<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
+
+<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
+
+<p>登录后再切换到刚才生成的Hexo目录下，</p>
+<p>cd hexo/</p>
+<p>运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
+
+<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
+<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
+<p>然后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>大功告成了，接下来就是欣赏博客的时候了。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
+<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
+<li><code>hexo deploy</code>推送github部署博客</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
+<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
+</ul>
+<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
+<p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>把光标移到末尾按’i’键插入一行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
+<blockquote>
+<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署三连</p>
+</blockquote>
+<p>然后按’Esc’后按’:wq’保存退出</p>
+<p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
+<blockquote>
+<p>拓展：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
+
+<p>只执行构建和只部署更改</p>
+<blockquote>
+<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
+</blockquote>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
+<ul>
+<li>一键三连</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>firebase</tag>
       </tags>
   </entry>
 </search>
