@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.dgut.top/2020/07/30/small-car/</loc>
+    
+    <lastmod>2020-08-06T09:11:28.783Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
     
-    <lastmod>2020-08-05T07:27:53.391Z</lastmod>
+    <lastmod>2020-08-05T07:55:32.449Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
     
     <lastmod>2020-08-05T06:17:57.356Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.dgut.top/2020/07/30/small-car/</loc>
-    
-    <lastmod>2020-08-03T01:36:26.097Z</lastmod>
     
   </url>
   
