@@ -946,6 +946,21 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200812144658.png" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200812152218.jpg" alt=""></p>
 <h2 id="To-do"><a href="#To-do" class="headerlink" title="To do"></a>To do</h2><p>获取角度</p>
 <p>rvec是以弧度表示的欧拉角。需要先使用cv2.Rodrigues将rvec转换为矩阵。然后将矩阵转换为欧拉角，rvec是一个指向向量，向量的长度（以弧度为单位）对应于垂直于该指向向量的平面中的旋转弧度。</p>
+<p><code>rvec</code>是Rodrigues旋转向量或<a href="https://en.wikipedia.org/wiki/Axis–angle_representation" target="_blank" rel="noopener">轴角表示</a></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200812162254.png" alt=""></p>
+<p><code>rvec</code>和<code>tvec</code>代表什么？</p>
+<p>现在，<code>rvec</code>和<code>tvec</code>代表什么？</p>
+<p>它们允许将以一个坐标系表示的3D点转换为另一个坐标系。在这里，您可以将标签框架中表示的3D点转换为相机框架：</p>
+<p><img src= "/img/loading.gif" data-src="https://answers.opencv.org/upfiles/1562748098917871.png" alt="图片说明"></p>
+<p>因此，对于第一种情况，您应该具有（这里以标记X轴为例）：</p>
+<p><img src= "/img/loading.gif" data-src="https://answers.opencv.org/upfiles/15627482777940383.png" alt="图片说明"></p>
+<p>对于平凡的情况，您可以通过查看允许将标签的X轴，Y轴和Z轴转换为相机框架的值来恢复旋转矩阵。</p>
+<hr>
+<p>我认为，极少需要使用欧拉角，我不喜欢它们。为什么？</p>
+<p>首先，因为它们是<a href="https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix" target="_blank" rel="noopener">欧拉角的</a><strong>12种不同</strong> <a href="https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix" target="_blank" rel="noopener">表示/惯例</a>。所以首先您必须同意在与其他人/代码打交道时使用哪种欧拉约定。</p>
+<p>然后，<a href="https://en.wikipedia.org/wiki/Gimbal_lock" target="_blank" rel="noopener">云台锁定</a>。</p>
+<p>仅在必须能够解释旋转时才需要欧拉角。因此仅用于打印或作为用户输入（例如，在Blender中旋转CAD模型）。</p>
+<p>其余时间，应使用旋转矩阵或四元数表示来完成计算。</p>
 <hr>
 <p>利用aruco码可以直接估算姿态的特性，反算出相机姿态（尚未完成）</p>
 <p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200803112936.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200803112937.png" alt=""></p>
