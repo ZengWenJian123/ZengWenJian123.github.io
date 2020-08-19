@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
-    <lastmod>2020-08-12</lastmod>
+    <loc>https://blog.dgut.top/2020/08/19/aruco-2d/</loc>
+    <lastmod>2020-08-19</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
-    <lastmod>2020-08-12</lastmod>
+    <lastmod>2020-08-19</lastmod>
+  </url>  <url>
+    <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
+    <lastmod>2020-08-19</lastmod>
+  </url>  <url>
+    <loc>https://blog.dgut.top/2020/08/17/learn-matplotlib/</loc>
+    <lastmod>2020-08-17</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/30/small-car/</loc>
     <lastmod>2020-08-06</lastmod>
@@ -18,9 +24,6 @@
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/20/opencv-biaoding/</loc>
     <lastmod>2020-07-23</lastmod>
-  </url>  <url>
-    <loc>https://blog.dgut.top/2020/07/22/whatisaruco/</loc>
-    <lastmod>2020-07-22</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2020-07-19</lastmod>
