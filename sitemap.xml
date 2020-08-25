@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.dgut.top/2020/08/25/docker/</loc>
+    
+    <lastmod>2020-08-25T06:17:33.773Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.dgut.top/2020/08/19/aruco-2d/</loc>
     
-    <lastmod>2020-08-19T01:50:46.797Z</lastmod>
+    <lastmod>2020-08-19T01:57:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/07/15/python-aruco/</loc>
     
-    <lastmod>2020-08-19T00:50:45.443Z</lastmod>
+    <lastmod>2020-08-19T00:50:45.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
     
-    <lastmod>2020-08-19T00:50:37.245Z</lastmod>
+    <lastmod>2020-08-19T00:50:37.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/08/17/learn-matplotlib/</loc>
     
-    <lastmod>2020-08-17T06:44:47.000Z</lastmod>
+    <lastmod>2020-08-17T06:44:47.696Z</lastmod>
     
   </url>
   
