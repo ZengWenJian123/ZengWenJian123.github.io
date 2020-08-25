@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.dgut.top/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2020-08-25</lastmod>
+  </url>  <url>
     <loc>https://blog.dgut.top/2020/08/25/docker/</loc>
     <lastmod>2020-08-25</lastmod>
   </url>  <url>
@@ -50,9 +53,6 @@
     <lastmod>2020-07-17</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-07-17</lastmod>
-  </url>  <url>
-    <loc>https://blog.dgut.top/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-07-17</lastmod>
   </url>  <url>
     <loc>https://blog.dgut.top/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</loc>

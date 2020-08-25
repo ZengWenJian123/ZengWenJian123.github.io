@@ -1,3 +1,4 @@
+https://blog.dgut.top/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/
 https://blog.dgut.top/2020/08/25/docker/
 https://blog.dgut.top/2020/08/19/aruco-2d/
 https://blog.dgut.top/2020/07/15/python-aruco/
@@ -7,4 +8,3 @@ https://blog.dgut.top/2020/07/30/small-car/
 https://blog.dgut.top/2020/07/28/night-thinks/
 https://blog.dgut.top/2020/07/03/%E8%AE%B0%E5%BD%95%E5%AD%A6%E4%B9%A0Ubuntu%E7%9A%84%E6%8C%87%E4%BB%A4/
 https://blog.dgut.top/2020/07/20/opencv-biaoding/
-https://blog.dgut.top/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/
