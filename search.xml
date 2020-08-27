@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>基于ArUco的距离角度定位</title>
-    <url>/2020/08/19/aruco-2d/</url>
-    <content><![CDATA[<h1 id="基于ArUco的距离角度定位"><a href="#基于ArUco的距离角度定位" class="headerlink" title="基于ArUco的距离角度定位"></a>基于ArUco的距离角度定位</h1><blockquote>
-<p>利用aruco.estimatePoseSingleMarkers(）函数返回找到的aurco标签的rvec旋转矩阵、tvec位移矩阵进行换算，找出aurco相对于相机cam的距离和角度，实现利用aurco进行定位</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> cv2.aruco <span class="keyword">as</span> aruco</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="comment">#加载鱼眼镜头的yaml标定文件，检测aruco并且估算与标签之间的距离,获取偏航，俯仰，滚动</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#加载相机纠正参数</span></span><br><span class="line">cv_file = cv2.FileStorage(<span class="string">"yuyan.yaml"</span>, cv2.FILE_STORAGE_READ)</span><br><span class="line">camera_matrix = cv_file.getNode(<span class="string">"camera_matrix"</span>).mat()</span><br><span class="line">dist_matrix = cv_file.getNode(<span class="string">"dist_coeff"</span>).mat()</span><br><span class="line">cv_file.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#默认cam参数</span></span><br><span class="line"><span class="comment"># dist=np.array(([[-0.58650416 , 0.59103816, -0.00443272 , 0.00357844 ,-0.27203275]]))</span></span><br><span class="line"><span class="comment"># newcameramtx=np.array([[189.076828   ,  0.    ,     361.20126638]</span></span><br><span class="line"><span class="comment">#  ,[  0 ,2.01627296e+04 ,4.52759577e+02]</span></span><br><span class="line"><span class="comment">#  ,[0, 0, 1]])</span></span><br><span class="line"><span class="comment"># mtx=np.array([[398.12724231  , 0.      ,   304.35638757],</span></span><br><span class="line"><span class="comment">#  [  0.       ,  345.38259888, 282.49861858],</span></span><br><span class="line"><span class="comment">#  [  0.,           0.,           1.        ]])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))</span></span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)</span></span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)</span></span><br><span class="line"></span><br><span class="line">font = cv2.FONT_HERSHEY_SIMPLEX <span class="comment">#font for displaying text (below)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#num = 0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    h1, w1 = frame.shape[:<span class="number">2</span>]</span><br><span class="line">    <span class="comment"># 读取摄像头画面</span></span><br><span class="line">    <span class="comment"># 纠正畸变</span></span><br><span class="line">    newcameramtx, roi = cv2.getOptimalNewCameraMatrix(camera_matrix, dist_matrix, (h1, w1), <span class="number">0</span>, (h1, w1))</span><br><span class="line">    dst1 = cv2.undistort(frame, camera_matrix, dist_matrix, <span class="literal">None</span>, newcameramtx)</span><br><span class="line">    x, y, w1, h1 = roi</span><br><span class="line">    dst1 = dst1[y:y + h1, x:x + w1]</span><br><span class="line">    frame=dst1</span><br><span class="line"></span><br><span class="line">    <span class="comment">#灰度化，检测aruco标签，所用字典为6×6——250</span></span><br><span class="line">    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)</span><br><span class="line">    parameters =  aruco.DetectorParameters_create()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#使用aruco.detectMarkers()函数可以检测到marker，返回ID和标志板的4个角点坐标</span></span><br><span class="line">    corners, ids, rejectedImgPoints = aruco.detectMarkers(gray,aruco_dict,parameters=parameters)</span><br><span class="line"></span><br><span class="line"><span class="comment">#    如果找不打id</span></span><br><span class="line">    <span class="keyword">if</span> ids <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="comment">#获取aruco返回的rvec旋转矩阵、tvec位移矩阵</span></span><br><span class="line">        rvec, tvec, _ = aruco.estimatePoseSingleMarkers(corners, <span class="number">0.05</span>, camera_matrix, dist_matrix)</span><br><span class="line">        <span class="comment"># 估计每个标记的姿态并返回值rvet和tvec ---不同</span></span><br><span class="line">        <span class="comment">#rvec为旋转矩阵，tvec为位移矩阵</span></span><br><span class="line">        <span class="comment"># from camera coeficcients</span></span><br><span class="line">        (rvec-tvec).any() <span class="comment"># get rid of that nasty numpy value array error</span></span><br><span class="line">        <span class="comment">#print(rvec)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">#在画面上 标注auruco标签的各轴</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(rvec.shape[<span class="number">0</span>]):</span><br><span class="line">            aruco.drawAxis(frame, camera_matrix, dist_matrix, rvec[i, :, :], tvec[i, :, :], <span class="number">0.03</span>)</span><br><span class="line">            aruco.drawDetectedMarkers(frame, corners,ids)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 显示id标记 #####</span></span><br><span class="line">        cv2.putText(frame, <span class="string">"Id: "</span> + str(ids), (<span class="number">0</span>,<span class="number">64</span>), font, <span class="number">1</span>, (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),<span class="number">2</span>,cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 角度估计 #####</span></span><br><span class="line">        <span class="comment">#print(rvec)</span></span><br><span class="line">        <span class="comment">#考虑Z轴（蓝色）的角度</span></span><br><span class="line">        <span class="comment">#本来正确的计算方式如下，但是由于蜜汁相机标定的问题，实测偏航角度能最大达到104°所以现在×90/104这个系数作为最终角度</span></span><br><span class="line">        deg=rvec[<span class="number">0</span>][<span class="number">0</span>][<span class="number">2</span>]/math.pi*<span class="number">180</span></span><br><span class="line">        <span class="comment">#deg=rvec[0][0][2]/math.pi*180*90/104</span></span><br><span class="line">        <span class="comment"># 旋转矩阵到欧拉角</span></span><br><span class="line">        R=np.zeros((<span class="number">3</span>,<span class="number">3</span>),dtype=np.float64)</span><br><span class="line">        cv2.Rodrigues(rvec,R)</span><br><span class="line">        sy=math.sqrt(R[<span class="number">0</span>,<span class="number">0</span>] * R[<span class="number">0</span>,<span class="number">0</span>] +  R[<span class="number">1</span>,<span class="number">0</span>] * R[<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line">        singular=sy&lt; <span class="number">1e-6</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> singular:<span class="comment">#偏航，俯仰，滚动</span></span><br><span class="line">            x = math.atan2(R[<span class="number">2</span>, <span class="number">1</span>], R[<span class="number">2</span>, <span class="number">2</span>])</span><br><span class="line">            y = math.atan2(-R[<span class="number">2</span>, <span class="number">0</span>], sy)</span><br><span class="line">            z = math.atan2(R[<span class="number">1</span>, <span class="number">0</span>], R[<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x = math.atan2(-R[<span class="number">1</span>, <span class="number">2</span>], R[<span class="number">1</span>, <span class="number">1</span>])</span><br><span class="line">            y = math.atan2(-R[<span class="number">2</span>, <span class="number">0</span>], sy)</span><br><span class="line">            z = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 偏航，俯仰，滚动换成角度</span></span><br><span class="line">        rx = x * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line">        ry = y * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line">        rz = z * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line"></span><br><span class="line">        cv2.putText(frame,<span class="string">'deg_z:'</span>+str(ry)+str(<span class="string">'deg'</span>),(<span class="number">0</span>, <span class="number">140</span>), font, <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>,</span><br><span class="line">                    cv2.LINE_AA)</span><br><span class="line">        <span class="comment">#print("偏航，俯仰，滚动",rx,ry,rz)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 距离估计 #####</span></span><br><span class="line">        distance = ((tvec[<span class="number">0</span>][<span class="number">0</span>][<span class="number">2</span>] + <span class="number">0.02</span>) * <span class="number">0.0254</span>) * <span class="number">100</span>  <span class="comment"># 单位是米</span></span><br><span class="line">        <span class="comment">#distance = (tvec[0][0][2]) * 100  # 单位是米</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 显示距离</span></span><br><span class="line">        cv2.putText(frame, <span class="string">'distance:'</span> + str(round(distance, <span class="number">4</span>)) + str(<span class="string">'m'</span>), (<span class="number">0</span>, <span class="number">110</span>), font, <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>,</span><br><span class="line">                    cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line">        <span class="comment">####真实坐标换算####（to do）</span></span><br><span class="line">        <span class="comment"># print('rvec:',rvec,'tvec:',tvec)</span></span><br><span class="line">        <span class="comment"># # new_tvec=np.array([[-0.01361995],[-0.01003278],[0.62165339]])</span></span><br><span class="line">        <span class="comment"># # 将相机坐标转换为真实坐标</span></span><br><span class="line">        <span class="comment"># r_matrix, d = cv2.Rodrigues(rvec)</span></span><br><span class="line">        <span class="comment"># r_matrix = -np.linalg.inv(r_matrix)  # 相机旋转矩阵</span></span><br><span class="line">        <span class="comment"># c_matrix = np.dot(r_matrix, tvec)  # 相机位置矩阵</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment">##### DRAW "NO IDS" #####</span></span><br><span class="line">        cv2.putText(frame, <span class="string">"No Ids"</span>, (<span class="number">0</span>,<span class="number">64</span>), font, <span class="number">1</span>, (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),<span class="number">2</span>,cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示结果画面</span></span><br><span class="line">    cv2.imshow(<span class="string">"frame"</span>,frame)</span><br><span class="line"></span><br><span class="line">    key = cv2.waitKey(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> key == <span class="number">27</span>:         <span class="comment"># 按esc键退出</span></span><br><span class="line">        print(<span class="string">'esc break...'</span>)</span><br><span class="line">        cap.release()</span><br><span class="line">        cv2.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> key == ord(<span class="string">' '</span>):   <span class="comment"># 按空格键保存</span></span><br><span class="line"><span class="comment">#        num = num + 1</span></span><br><span class="line"><span class="comment">#        filename = "frames_%s.jpg" % num  # 保存一张图像</span></span><br><span class="line">        filename = str(time.time())[:<span class="number">10</span>] + <span class="string">".jpg"</span></span><br><span class="line">        cv2.imwrite(filename, frame)</span><br></pre></td></tr></table></figure>
+    <title>感谢永远有歌，把心境道破</title>
+    <url>/2020/07/13/eason/</url>
+    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
+<a id="more"></a>
 
+<p>youtube地址：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
 
-
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200819094339.png" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200819094340.png" alt=""></p>
-<p>项目地址：<a href="https://github.com/ZengWenJian123/aruco_positioning_2D" target="_blank" rel="noopener">https://github.com/ZengWenJian123/aruco_positioning_2D</a></p>
-<p>博客地址：<a href="https://blog.dgut.top/2020/08/19/aruco-2d/">https://blog.dgut.top/2020/08/19/aruco-2d/</a></p>
-<p>csdn：<a href="https://blog.csdn.net/dgut_guangdian/article/details/108093643" target="_blank" rel="noopener">https://blog.csdn.net/dgut_guangdian/article/details/108093643</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
+<p>致敬这场疫情中默默奉献的那些人</p>
 ]]></content>
       <tags>
-        <tag>opencv</tag>
-        <tag>aruco</tag>
-        <tag>python</tag>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -82,20 +78,24 @@
       </tags>
   </entry>
   <entry>
-    <title>感谢永远有歌，把心境道破</title>
-    <url>/2020/07/13/eason/</url>
-    <content><![CDATA[<h2 id="7-11Eason-Live-is-so-much-better-with-Music"><a href="#7-11Eason-Live-is-so-much-better-with-Music" class="headerlink" title="7.11Eason Live is so much better with Music"></a>7.11Eason Live is so much better with Music</h2><h2 id="有-了-音-乐-生-活-更-美-好-，Eason"><a href="#有-了-音-乐-生-活-更-美-好-，Eason" class="headerlink" title="有 了 音 乐 生 活 更 美 好 ，Eason."></a>有 了 音 乐 生 活 更 美 好 ，Eason.</h2><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/MagiDrag0n/PicBed/img/Eason.jpg" alt="img"></p>
-<a id="more"></a>
+    <title>基于ArUco的距离角度定位</title>
+    <url>/2020/08/19/aruco-2d/</url>
+    <content><![CDATA[<h1 id="基于ArUco的距离角度定位"><a href="#基于ArUco的距离角度定位" class="headerlink" title="基于ArUco的距离角度定位"></a>基于ArUco的距离角度定位</h1><blockquote>
+<p>利用aruco.estimatePoseSingleMarkers(）函数返回找到的aurco标签的rvec旋转矩阵、tvec位移矩阵进行换算，找出aurco相对于相机cam的距离和角度，实现利用aurco进行定位</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> cv2.aruco <span class="keyword">as</span> aruco</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="comment">#加载鱼眼镜头的yaml标定文件，检测aruco并且估算与标签之间的距离,获取偏航，俯仰，滚动</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#加载相机纠正参数</span></span><br><span class="line">cv_file = cv2.FileStorage(<span class="string">"yuyan.yaml"</span>, cv2.FILE_STORAGE_READ)</span><br><span class="line">camera_matrix = cv_file.getNode(<span class="string">"camera_matrix"</span>).mat()</span><br><span class="line">dist_matrix = cv_file.getNode(<span class="string">"dist_coeff"</span>).mat()</span><br><span class="line">cv_file.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#默认cam参数</span></span><br><span class="line"><span class="comment"># dist=np.array(([[-0.58650416 , 0.59103816, -0.00443272 , 0.00357844 ,-0.27203275]]))</span></span><br><span class="line"><span class="comment"># newcameramtx=np.array([[189.076828   ,  0.    ,     361.20126638]</span></span><br><span class="line"><span class="comment">#  ,[  0 ,2.01627296e+04 ,4.52759577e+02]</span></span><br><span class="line"><span class="comment">#  ,[0, 0, 1]])</span></span><br><span class="line"><span class="comment"># mtx=np.array([[398.12724231  , 0.      ,   304.35638757],</span></span><br><span class="line"><span class="comment">#  [  0.       ,  345.38259888, 282.49861858],</span></span><br><span class="line"><span class="comment">#  [  0.,           0.,           1.        ]])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))</span></span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)</span></span><br><span class="line"><span class="comment"># cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)</span></span><br><span class="line"></span><br><span class="line">font = cv2.FONT_HERSHEY_SIMPLEX <span class="comment">#font for displaying text (below)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#num = 0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    h1, w1 = frame.shape[:<span class="number">2</span>]</span><br><span class="line">    <span class="comment"># 读取摄像头画面</span></span><br><span class="line">    <span class="comment"># 纠正畸变</span></span><br><span class="line">    newcameramtx, roi = cv2.getOptimalNewCameraMatrix(camera_matrix, dist_matrix, (h1, w1), <span class="number">0</span>, (h1, w1))</span><br><span class="line">    dst1 = cv2.undistort(frame, camera_matrix, dist_matrix, <span class="literal">None</span>, newcameramtx)</span><br><span class="line">    x, y, w1, h1 = roi</span><br><span class="line">    dst1 = dst1[y:y + h1, x:x + w1]</span><br><span class="line">    frame=dst1</span><br><span class="line"></span><br><span class="line">    <span class="comment">#灰度化，检测aruco标签，所用字典为6×6——250</span></span><br><span class="line">    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)</span><br><span class="line">    parameters =  aruco.DetectorParameters_create()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#使用aruco.detectMarkers()函数可以检测到marker，返回ID和标志板的4个角点坐标</span></span><br><span class="line">    corners, ids, rejectedImgPoints = aruco.detectMarkers(gray,aruco_dict,parameters=parameters)</span><br><span class="line"></span><br><span class="line"><span class="comment">#    如果找不打id</span></span><br><span class="line">    <span class="keyword">if</span> ids <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="comment">#获取aruco返回的rvec旋转矩阵、tvec位移矩阵</span></span><br><span class="line">        rvec, tvec, _ = aruco.estimatePoseSingleMarkers(corners, <span class="number">0.05</span>, camera_matrix, dist_matrix)</span><br><span class="line">        <span class="comment"># 估计每个标记的姿态并返回值rvet和tvec ---不同</span></span><br><span class="line">        <span class="comment">#rvec为旋转矩阵，tvec为位移矩阵</span></span><br><span class="line">        <span class="comment"># from camera coeficcients</span></span><br><span class="line">        (rvec-tvec).any() <span class="comment"># get rid of that nasty numpy value array error</span></span><br><span class="line">        <span class="comment">#print(rvec)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">#在画面上 标注auruco标签的各轴</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(rvec.shape[<span class="number">0</span>]):</span><br><span class="line">            aruco.drawAxis(frame, camera_matrix, dist_matrix, rvec[i, :, :], tvec[i, :, :], <span class="number">0.03</span>)</span><br><span class="line">            aruco.drawDetectedMarkers(frame, corners,ids)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 显示id标记 #####</span></span><br><span class="line">        cv2.putText(frame, <span class="string">"Id: "</span> + str(ids), (<span class="number">0</span>,<span class="number">64</span>), font, <span class="number">1</span>, (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),<span class="number">2</span>,cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 角度估计 #####</span></span><br><span class="line">        <span class="comment">#print(rvec)</span></span><br><span class="line">        <span class="comment">#考虑Z轴（蓝色）的角度</span></span><br><span class="line">        <span class="comment">#本来正确的计算方式如下，但是由于蜜汁相机标定的问题，实测偏航角度能最大达到104°所以现在×90/104这个系数作为最终角度</span></span><br><span class="line">        deg=rvec[<span class="number">0</span>][<span class="number">0</span>][<span class="number">2</span>]/math.pi*<span class="number">180</span></span><br><span class="line">        <span class="comment">#deg=rvec[0][0][2]/math.pi*180*90/104</span></span><br><span class="line">        <span class="comment"># 旋转矩阵到欧拉角</span></span><br><span class="line">        R=np.zeros((<span class="number">3</span>,<span class="number">3</span>),dtype=np.float64)</span><br><span class="line">        cv2.Rodrigues(rvec,R)</span><br><span class="line">        sy=math.sqrt(R[<span class="number">0</span>,<span class="number">0</span>] * R[<span class="number">0</span>,<span class="number">0</span>] +  R[<span class="number">1</span>,<span class="number">0</span>] * R[<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line">        singular=sy&lt; <span class="number">1e-6</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> singular:<span class="comment">#偏航，俯仰，滚动</span></span><br><span class="line">            x = math.atan2(R[<span class="number">2</span>, <span class="number">1</span>], R[<span class="number">2</span>, <span class="number">2</span>])</span><br><span class="line">            y = math.atan2(-R[<span class="number">2</span>, <span class="number">0</span>], sy)</span><br><span class="line">            z = math.atan2(R[<span class="number">1</span>, <span class="number">0</span>], R[<span class="number">0</span>, <span class="number">0</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x = math.atan2(-R[<span class="number">1</span>, <span class="number">2</span>], R[<span class="number">1</span>, <span class="number">1</span>])</span><br><span class="line">            y = math.atan2(-R[<span class="number">2</span>, <span class="number">0</span>], sy)</span><br><span class="line">            z = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 偏航，俯仰，滚动换成角度</span></span><br><span class="line">        rx = x * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line">        ry = y * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line">        rz = z * <span class="number">180.0</span> / <span class="number">3.141592653589793</span></span><br><span class="line"></span><br><span class="line">        cv2.putText(frame,<span class="string">'deg_z:'</span>+str(ry)+str(<span class="string">'deg'</span>),(<span class="number">0</span>, <span class="number">140</span>), font, <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>,</span><br><span class="line">                    cv2.LINE_AA)</span><br><span class="line">        <span class="comment">#print("偏航，俯仰，滚动",rx,ry,rz)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">###### 距离估计 #####</span></span><br><span class="line">        distance = ((tvec[<span class="number">0</span>][<span class="number">0</span>][<span class="number">2</span>] + <span class="number">0.02</span>) * <span class="number">0.0254</span>) * <span class="number">100</span>  <span class="comment"># 单位是米</span></span><br><span class="line">        <span class="comment">#distance = (tvec[0][0][2]) * 100  # 单位是米</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 显示距离</span></span><br><span class="line">        cv2.putText(frame, <span class="string">'distance:'</span> + str(round(distance, <span class="number">4</span>)) + str(<span class="string">'m'</span>), (<span class="number">0</span>, <span class="number">110</span>), font, <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>,</span><br><span class="line">                    cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line">        <span class="comment">####真实坐标换算####（to do）</span></span><br><span class="line">        <span class="comment"># print('rvec:',rvec,'tvec:',tvec)</span></span><br><span class="line">        <span class="comment"># # new_tvec=np.array([[-0.01361995],[-0.01003278],[0.62165339]])</span></span><br><span class="line">        <span class="comment"># # 将相机坐标转换为真实坐标</span></span><br><span class="line">        <span class="comment"># r_matrix, d = cv2.Rodrigues(rvec)</span></span><br><span class="line">        <span class="comment"># r_matrix = -np.linalg.inv(r_matrix)  # 相机旋转矩阵</span></span><br><span class="line">        <span class="comment"># c_matrix = np.dot(r_matrix, tvec)  # 相机位置矩阵</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment">##### DRAW "NO IDS" #####</span></span><br><span class="line">        cv2.putText(frame, <span class="string">"No Ids"</span>, (<span class="number">0</span>,<span class="number">64</span>), font, <span class="number">1</span>, (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),<span class="number">2</span>,cv2.LINE_AA)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 显示结果画面</span></span><br><span class="line">    cv2.imshow(<span class="string">"frame"</span>,frame)</span><br><span class="line"></span><br><span class="line">    key = cv2.waitKey(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> key == <span class="number">27</span>:         <span class="comment"># 按esc键退出</span></span><br><span class="line">        print(<span class="string">'esc break...'</span>)</span><br><span class="line">        cap.release()</span><br><span class="line">        cv2.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> key == ord(<span class="string">' '</span>):   <span class="comment"># 按空格键保存</span></span><br><span class="line"><span class="comment">#        num = num + 1</span></span><br><span class="line"><span class="comment">#        filename = "frames_%s.jpg" % num  # 保存一张图像</span></span><br><span class="line">        filename = str(time.time())[:<span class="number">10</span>] + <span class="string">".jpg"</span></span><br><span class="line">        cv2.imwrite(filename, frame)</span><br></pre></td></tr></table></figure>
 
-<p>youtube地址：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9KBBYv5neMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-> 今天最幸福的是就是跟早上起来陪陈奕迅看日出，下午陪陈奕迅看日落！
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src= "/img/loading.gif" data-src="https://pics7.baidu.com/feed/6159252dd42a2834ad1f72340f993cec15cebf03.jpeg?token=f80acdd8826a5aff8f7f729a63b40631" alt="img"></p>
-<p>致敬这场疫情中默默奉献的那些人</p>
+
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200819094339.png" alt=""><br><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200819094340.png" alt=""></p>
+<p>项目地址：<a href="https://github.com/ZengWenJian123/aruco_positioning_2D" target="_blank" rel="noopener">https://github.com/ZengWenJian123/aruco_positioning_2D</a></p>
+<p>博客地址：<a href="https://blog.dgut.top/2020/08/19/aruco-2d/">https://blog.dgut.top/2020/08/19/aruco-2d/</a></p>
+<p>csdn：<a href="https://blog.csdn.net/dgut_guangdian/article/details/108093643" target="_blank" rel="noopener">https://blog.csdn.net/dgut_guangdian/article/details/108093643</a></p>
 ]]></content>
       <tags>
-        <tag>日常</tag>
+        <tag>opencv</tag>
+        <tag>aruco</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -208,6 +208,27 @@
         <tag>博客</tag>
         <tag>git</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习matplotlib-python数据可视化</title>
+    <url>/2020/08/17/learn-matplotlib/</url>
+    <content><![CDATA[<h1 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><code>matplotlib</code>是<a href="https://zh.wikipedia.org/wiki/Python" target="_blank" rel="noopener">Python</a>编程语言及其数值数学扩展包 <a href="https://zh.wikipedia.org/wiki/NumPy" target="_blank" rel="noopener">NumPy</a>的可视化操作界面。它利用通用的<a href="https://zh.wikipedia.org/wiki/部件工具箱" target="_blank" rel="noopener">图形用户界面工具包</a>，如Tkinter, wxPython, <a href="https://zh.wikipedia.org/wiki/Qt" target="_blank" rel="noopener">Qt</a>或<a href="https://zh.wikipedia.org/wiki/GTK%2B" target="_blank" rel="noopener">GTK+</a>，向应用程序嵌入式绘图提供了<a href="https://zh.wikipedia.org/wiki/应用程序接口" target="_blank" rel="noopener">应用程序接口</a>（API）。此外，matplotlib还有一个基于图像处理库（如开放图形库OpenGL）的pylab接口，其设计与<a href="https://zh.wikipedia.org/wiki/MATLAB" target="_blank" rel="noopener">MATLAB</a>非常类似–尽管并不怎么好用<a href="https://zh.wikipedia.org/wiki/Wikipedia:列明来源" target="_blank" rel="noopener">[来源请求]</a>。SciPy就是用matplotlib进行图形绘制。</p>
+<p>matplotlib最初由John D. Hunter撰写，它拥有一个活跃的开发社区，并且根据BSD样式许可证分发。 在John D. Hunter2012年去世前不久，Michael Droettboom被提名为matplotlib的主要开发者。</p>
+<p>截至到2015年10月30日，matplotlib 1.5.x支持Python 2.7到3.5版本。Matplotlib 1.2是第一个支持Python 3.x的版本。Matplotlib 1.4是支持Python 2.6的最后一个版本。</p>
+<blockquote>
+<p>Matplotlib 可能是 Python 2D-绘图领域使用最广泛的套件。它能让使用者很轻松地将数据图形化，并且提供多样化的输出格式。这里将会探索 matplotlib 的常见用法。</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Matplotlib及其依赖项可作为轮包用于macOS，Windows和Linux发行版：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">python -m pip install -U pip</span><br><span class="line">python -m pip install -U matplotlib</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200817110828.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>matplotlib</tag>
       </tags>
   </entry>
   <entry>
@@ -389,6 +410,37 @@
 ]]></content>
       <tags>
         <tag>game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
+    <url>/2020/07/13/qrde/</url>
+    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
+<a id="more"></a>
+
+<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
+<p>环境准备：</p>
+<ul>
+<li>opencv4.0（3.0）</li>
+<li>python3任意版本</li>
+<li>pyzbar</li>
+</ul>
+<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
+<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
+<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
+<hr>
+<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+        <tag>python</tag>
+        <tag>qrcode，work</tag>
       </tags>
   </entry>
   <entry>
@@ -819,58 +871,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
-    <title>学习matplotlib-python数据可视化</title>
-    <url>/2020/08/17/learn-matplotlib/</url>
-    <content><![CDATA[<h1 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><code>matplotlib</code>是<a href="https://zh.wikipedia.org/wiki/Python" target="_blank" rel="noopener">Python</a>编程语言及其数值数学扩展包 <a href="https://zh.wikipedia.org/wiki/NumPy" target="_blank" rel="noopener">NumPy</a>的可视化操作界面。它利用通用的<a href="https://zh.wikipedia.org/wiki/部件工具箱" target="_blank" rel="noopener">图形用户界面工具包</a>，如Tkinter, wxPython, <a href="https://zh.wikipedia.org/wiki/Qt" target="_blank" rel="noopener">Qt</a>或<a href="https://zh.wikipedia.org/wiki/GTK%2B" target="_blank" rel="noopener">GTK+</a>，向应用程序嵌入式绘图提供了<a href="https://zh.wikipedia.org/wiki/应用程序接口" target="_blank" rel="noopener">应用程序接口</a>（API）。此外，matplotlib还有一个基于图像处理库（如开放图形库OpenGL）的pylab接口，其设计与<a href="https://zh.wikipedia.org/wiki/MATLAB" target="_blank" rel="noopener">MATLAB</a>非常类似–尽管并不怎么好用<a href="https://zh.wikipedia.org/wiki/Wikipedia:列明来源" target="_blank" rel="noopener">[来源请求]</a>。SciPy就是用matplotlib进行图形绘制。</p>
-<p>matplotlib最初由John D. Hunter撰写，它拥有一个活跃的开发社区，并且根据BSD样式许可证分发。 在John D. Hunter2012年去世前不久，Michael Droettboom被提名为matplotlib的主要开发者。</p>
-<p>截至到2015年10月30日，matplotlib 1.5.x支持Python 2.7到3.5版本。Matplotlib 1.2是第一个支持Python 3.x的版本。Matplotlib 1.4是支持Python 2.6的最后一个版本。</p>
-<blockquote>
-<p>Matplotlib 可能是 Python 2D-绘图领域使用最广泛的套件。它能让使用者很轻松地将数据图形化，并且提供多样化的输出格式。这里将会探索 matplotlib 的常见用法。</p>
-</blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Matplotlib及其依赖项可作为轮包用于macOS，Windows和Linux发行版：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">python -m pip install -U pip</span><br><span class="line">python -m pip install -U matplotlib</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200817110828.png" alt=""></p>
-]]></content>
-      <tags>
-        <tag>python</tag>
-        <tag>matplotlib</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于opencv4.0 pyzbar和python实现二维码实时检测+定位</title>
-    <url>/2020/07/13/qrde/</url>
-    <content><![CDATA[<h1 id="项目启动"><a href="#项目启动" class="headerlink" title="项目启动"></a>项目启动</h1><p>这是我入职以来第一个任务吧，要完成巡检机器人的一个视觉定位功能，目前想的是机器人通过摄像头检测到张贴在室内各个定点位置二维码，通过识别二维码内部的信息和定制二维码的大小，获取到机器人的位置。</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713114358.png" alt=""></p>
-<a id="more"></a>
-
-<p>（机器人现在还是冰山一脚，目前很多功能都没有实现，还处于项目的初级阶段）</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>opencv4.0版本也是发布了，以后应该都是用opencv4.0了，现在已经内置了二维码识别模块，但是在写这段代码的时候还是用的是3.0版本，利用了pyzbar模块进行解码</p>
-<p>环境准备：</p>
-<ul>
-<li>opencv4.0（3.0）</li>
-<li>python3任意版本</li>
-<li>pyzbar</li>
-</ul>
-<p>详情可以查看<a href="https://blog.csdn.net/dgut_guangdian/article/details/106860637" target="_blank" rel="noopener">我的csdn</a>里面的内容也差不多</p>
-<h1 id="初步效果"><a href="#初步效果" class="headerlink" title="初步效果"></a>初步效果</h1><p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200713100428.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/ef0bd27c920cd8184b333429fa86c461.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/PMNCHH/cdn@master/2020/07/13/dd5735262b51b1911dc4fb016865856a.png" alt=""></p>
-<p>这里的话是3个二维码都可以扫描出来，由于qrcode的信息是中文的所以打印在屏幕上会出错请使用<code>matplotlib</code>显示图像。正确信息可以从控制台查看。</p>
-<hr>
-<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">from</span> pyzbar <span class="keyword">import</span> pyzbar</span><br><span class="line"><span class="comment">#二维码动态识别</span></span><br><span class="line">camera=cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">camera.set(<span class="number">3</span>,<span class="number">1280</span>) <span class="comment">#设置分辨率</span></span><br><span class="line">camera.set(<span class="number">4</span>,<span class="number">768</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    (grabbed,frame)=camera.read()</span><br><span class="line">    <span class="comment">#获取画面中心点</span></span><br><span class="line">    h1,w1= frame.shape[<span class="number">0</span>],frame.shape[<span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 纠正畸变（这里把相机标定的代码去除了，各位自行标定吧）</span></span><br><span class="line">    dst = frame</span><br><span class="line"> </span><br><span class="line">    <span class="comment"># 扫描二维码</span></span><br><span class="line">    text = pyzbar.decode(dst)</span><br><span class="line">    <span class="keyword">for</span> texts <span class="keyword">in</span> text:</span><br><span class="line">        textdate = texts.data.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">        print(textdate)</span><br><span class="line">        (x, y, w, h) = texts.rect<span class="comment">#获取二维码的外接矩形顶点坐标</span></span><br><span class="line">        print(<span class="string">'识别内容:'</span>+textdate)</span><br><span class="line"> </span><br><span class="line">        <span class="comment"># 二维码中心坐标</span></span><br><span class="line">        cx = int(x + w / <span class="number">2</span>)</span><br><span class="line">        cy = int(y + h / <span class="number">2</span>)</span><br><span class="line">        cv2.circle(dst, (cx, cy), <span class="number">2</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">8</span>)  <span class="comment"># 做出中心坐标</span></span><br><span class="line">        print(<span class="string">'中间点坐标：'</span>,cx,cy)</span><br><span class="line">        coordinate=(cx,cy)</span><br><span class="line">        <span class="comment">#在画面左上角写出二维码中心位置</span></span><br><span class="line">        cv2.putText(dst,<span class="string">'QRcode_location'</span>+str(coordinate),(<span class="number">20</span>,<span class="number">20</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#画出画面中心与二维码中心的连接线</span></span><br><span class="line">        cv2.line(dst, (cx,cy),(int(w1/<span class="number">2</span>),int(h1/<span class="number">2</span>)), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 255, 255), 2)  # 做出外接矩形</span></span><br><span class="line">        <span class="comment">#二维码最小矩形</span></span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">0</span>], texts.polygon[<span class="number">1</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">1</span>], texts.polygon[<span class="number">2</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">2</span>], texts.polygon[<span class="number">3</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        cv2.line(dst, texts.polygon[<span class="number">3</span>], texts.polygon[<span class="number">0</span>], (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">        <span class="comment">#写出扫描内容</span></span><br><span class="line">        txt = <span class="string">'('</span> + texts.type + <span class="string">')  '</span> + textdate</span><br><span class="line">        cv2.putText(dst, txt, (x - <span class="number">10</span>, y - <span class="number">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span>, (<span class="number">0</span>, <span class="number">50</span>, <span class="number">255</span>), <span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    cv2.imshow(<span class="string">'dst'</span>,dst)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):  <span class="comment"># 按q保存一张图片</span></span><br><span class="line">        cv2.imwrite(<span class="string">"./frame.jpg"</span>, frame)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"> </span><br><span class="line">camera.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-<p>代码直接运行就行，适用于opencv3.x和4.x版本</p>
-]]></content>
-      <tags>
-        <tag>opencv</tag>
-        <tag>python</tag>
-        <tag>qrcode，work</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客加速</title>
     <url>/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</url>
     <content><![CDATA[<p>博客加速</p>
@@ -882,169 +882,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>博客加速</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在hexo博客上添加本地图片</title>
-    <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>测试一下图片</p>
-<p>本站使用了GitHub+gitee作为图库</p>
-<a id="more"></a>
-
-<p><img src= "/img/loading.gif" data-src="notebook-2666360_1920.jpg" alt="notebook-2666360_1920"></p>
-<p>测试成功</p>
-<p><img src= "/img/loading.gif" data-src="https://raw.githubusercontent.com/ZengWenJian123/picBed/master/img/google.JPG" alt="1"></p>
-<p><img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulKnx.jpg" alt="UulKnx.jpg"></p>
-<p><img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulKnx.jpg" alt="UulKnx.jpg">)<img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulRuq.png" alt="UulRuq.png"></p>
-<p>![](<a href="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/2020-07-02" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/2020-07-02</a> 16-27-23 的屏幕截图.png)</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092008.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092036.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092046.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp" alt=""></p>
-<p>码云图床：</p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713110117.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112422.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112423.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112424.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112425.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112426.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112427.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112428.png" alt=""></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>记录一下博客的由来</title>
-    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
-<a id="more"></a>
-
-
-
-<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
-<p>免费的托管方案提供了：</p>
-<ul>
-<li>1G的储存空间</li>
-<li>10G/月的流量超出后可以付费购买。</li>
-</ul>
-<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
-<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
-<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完成后，就有了如下的文件目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
-<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
-
-<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
-<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
-<p>同时，也可以运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
-<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
-<p>完整提交内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>只提交更改内容：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>这样在我的博客网站：<a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
-<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
-<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
-<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
-<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
-<p>使用Firebase有很多非常难得的好处：</p>
-<ul>
-<li>全球SSD CDN，速度比GitHub快。</li>
-<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
-<li>零配置的SSL，自动启动HTTPS。</li>
-<li>完美的中文文档支持。</li>
-</ul>
-<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
-<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
-<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></p>
-<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
-
-<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
-
-<p>登录后再切换到刚才生成的Hexo目录下，</p>
-<p>cd hexo/</p>
-<p>运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
-
-<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
-<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
-<p>然后运行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
-<p>大功告成了，接下来就是欣赏博客的时候了。</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
-<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
-<li><code>hexo deploy</code>推送github部署博客</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
-<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
-</ul>
-<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
-<p>首先打开你个人目录下的.bashrc隐藏文件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>把光标移到末尾按’i’键插入一行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
-<blockquote>
-<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署三连</p>
-</blockquote>
-<p>然后按’Esc’后按’:wq’保存退出</p>
-<p>最后在终端输入命令生效刚刚的更改就完事了</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
-<blockquote>
-<p>拓展：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
-
-<p>只执行构建和只部署更改</p>
-<blockquote>
-<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
-</blockquote>
-</blockquote>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
-<ul>
-<li>一键三连</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
-        <tag>firebase</tag>
       </tags>
   </entry>
   <entry>
@@ -1359,6 +1196,169 @@ Python: cv.aruco.DICT_APRILTAG_16h5
       </tags>
   </entry>
   <entry>
+    <title>在hexo博客上添加本地图片</title>
+    <url>/2020/07/06/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>测试一下图片</p>
+<p>本站使用了GitHub+gitee作为图库</p>
+<a id="more"></a>
+
+<p><img src= "/img/loading.gif" data-src="notebook-2666360_1920.jpg" alt="notebook-2666360_1920"></p>
+<p>测试成功</p>
+<p><img src= "/img/loading.gif" data-src="https://raw.githubusercontent.com/ZengWenJian123/picBed/master/img/google.JPG" alt="1"></p>
+<p><img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulKnx.jpg" alt="UulKnx.jpg"></p>
+<p><img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulKnx.jpg" alt="UulKnx.jpg">)<img src= "/img/loading.gif" data-src="https://s1.ax1x.com/2020/07/10/UulRuq.png" alt="UulRuq.png"></p>
+<p>![](<a href="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/2020-07-02" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/2020-07-02</a> 16-27-23 的屏幕截图.png)</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092008.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092036.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710092046.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710134727.webp" alt=""></p>
+<p>码云图床：</p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713110117.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112422.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112423.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112424.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112425.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112426.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112427.png" alt=""><br><img src= "/img/loading.gif" data-src="https://gitee.com/usg1024/imgshow/raw/master/img/20200713112428.png" alt=""></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>记录一下博客的由来</title>
+    <url>/2020/07/02/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>这个博客是于2020年7月2日创建的。使用的是hexo博客框架+firebase hosting 托管主机建立的。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-2.jpeg" alt="img"></p>
+<a id="more"></a>
+
+
+
+<p>因为之前自己也搭建过博客，但当时使用的是vps+wordpress的方案（不稳定，数据容易丢，而且要租用服务器自己托管网站）这段时间学习Linux的过程中偶然发现了谷歌的副<a href="https://firebase.google.com/" target="_blank" rel="noopener">firebase</a>平台（它是谷歌旗下一个<em>后端即服务(BaaS)</em>的平台，简单来说就是后端在云端，不用再担心数据库、认证、存储和扩张等，直接调用即可。）</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>目前Firebase提供了非常多的服务，这里我们用到了其中的<strong>托管</strong>。</p>
+<p>免费的托管方案提供了：</p>
+<ul>
+<li>1G的储存空间</li>
+<li>10G/月的流量超出后可以付费购买。</li>
+</ul>
+<p>总的来说得益于Google在世界各地的cdn加速，使得在firebase平台托管的网站能够免费地高速访问（比github pages快多了）</p>
+<p>现在博客正式上线了，这将记录我的一些学习记录。</p>
+<h2 id="2-博客运行的代码"><a href="#2-博客运行的代码" class="headerlink" title="2.博客运行的代码"></a>2.博客运行的代码</h2><h3 id="hexo部分"><a href="#hexo部分" class="headerlink" title="hexo部分"></a>hexo部分</h3><h4 id="1-安装npm、Node-js"><a href="#1-安装npm、Node-js" class="headerlink" title="1.安装npm、Node.js"></a>1.安装npm、Node.js</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt install -y nodejs nodejs-legacy npm</span><br><span class="line">sudo apt-get install -y npm</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-初始化文件夹"><a href="#2-初始化文件夹" class="headerlink" title="2.初始化文件夹"></a>2.初始化文件夹</h4><p>在一个空白的目录执行安装hexo博客的框架</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后，就有了如下的文件目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>_config.yml</code>为配置文件，<code>source</code>里存放所有的文章，<code>themes</code>文件夹可以配置不同的主题，大量的主题可以在官网上找到。</p>
+<h4 id="3-写作"><a href="#3-写作" class="headerlink" title="3.写作"></a>3.写作</h4><p>当一切准备就绪之后就可以兴建第一篇文章了，在hexo主目录下</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就会在<code>source/_posts</code>文件夹下生成一篇文章，比如运行了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new post 第一篇文章</span><br></pre></td></tr></table></figure>
+
+<p>就会在上述目录下找到一个名为<code>第一篇文章.md</code>的文件，然后就可以在里面用markdown写作了。这里推荐使用<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>作为markdown的写作工具</p>
+<h4 id="4-生成静态页面html文件"><a href="#4-生成静态页面html文件" class="headerlink" title="4.生成静态页面html文件"></a>4.生成静态页面html文件</h4><p>写作完成后，在根目录运行命令</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>就会将文章和主题打包在一起生成<code>HTML</code>文件，生成的文件会放在根目录的<code>public</code>文件夹下。网站运行所需的所有东西全都被放在这个文件夹下。</p>
+<p>同时，也可以运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会在本地启动服务器，可以通过<code>http://localhost:4000/</code>来预览效果。</p>
+<p>可以看到hexo的使用非常简单。更多详细的说明可以查看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>但是我这里firebase作为托管服务器，实际运行的时候无需启动本地服务器可以直接执行命令把hexo博客提交到firebase平台。</p>
+<p>完整提交内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>只提交更改内容：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy --only hosting</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>这样在我的博客网站：<a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a> 就可以看到修改后的结果了。</p>
+<h3 id="firebase部分"><a href="#firebase部分" class="headerlink" title="firebase部分"></a>firebase部分</h3><p><a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> ，谷歌的又一个神器，具体怎么神我就不多作介绍了，我们只用上了其中很小的一部分功能：托管。</p>
+<p><img src= "/img/loading.gif" data-src="https://images-1254006831.cos.ap-chengdu.myqcloud.com/firebase-overview.png" alt="img"></p>
+<p>关于<strong>托管</strong>，官方是这样介绍的：</p>
+<p>Firebase 托管为您的网页应用提供快速、安全的静态托管。<br>Firebase 托管是为开发者提供的生产级网页内容托管服务。 借助 Firebase 托管，您只需一条命令，便可轻松快捷地将网页应用和静态内容部署到全球内容分发网络。</p>
+<p>使用Firebase有很多非常难得的好处：</p>
+<ul>
+<li>全球SSD CDN，速度比GitHub快。</li>
+<li>一键回滚。Firebase托管使用一键式回滚提供完整的版本控制和管理。</li>
+<li>零配置的SSL，自动启动HTTPS。</li>
+<li>完美的中文文档支持。</li>
+</ul>
+<p>使用Firebase的体验非常好，虽然是谷歌的产品但是提供了非常完整的中文文档支持，而且写得非常简单易懂，同一个代码示例提供多种编程语言的版本，里面的很多功能都能快速上手。</p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><p>首先访问<a href="https://console.firebase.google.com/" target="_blank" rel="noopener">Firebase</a>创建一个项目。</p>
+<p>创建时<strong>项目ID</strong>要注意，它会被用在URL上，如果不想自己定义域名的话以后就会一直用这个ID来作为域名访问。比如ID是<code>usg-cn</code>，那么域名就会是<code>https://usg-cn.firebaseapp.com/</code> 和 <a href="https://usg-cn.web.app/" target="_blank" rel="noopener">https://usg-cn.web.app/</a></p>
+<h4 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h4><p>运行以下命令来安装Firebase（需预先安装<code>Node.js</code>）:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g firebase-tools</span><br></pre></td></tr></table></figure>
+
+<p>然后运行以下命令来登录，运行完后会弹出一个浏览器窗口：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase login</span><br></pre></td></tr></table></figure>
+
+<p>登录后再切换到刚才生成的Hexo目录下，</p>
+<p>cd hexo/</p>
+<p>运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase init</span><br></pre></td></tr></table></figure>
+
+<p>运行时会让选择要使用什么功能，因为我们使用过的是托管所以这里选择<code>Hosting</code>，然后会提示选择一个用作公共根目录的目录。这个目录就是放所有静态文件的地方，默认为<code>public</code>，<strong>名字刚好和Hexo生成的静态文件目录名字一样</strong>，所以无需更改。</p>
+<p>这个命令会在项目目录下创建一个<code>firebase.json</code>配置文件，可以通过它来自定义托管行为。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>最后，完全所有改动后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会让Hexo生成<code>public</code>文件夹，因为Firebase部署的就是public文件夹，<strong>所以要先运行Hexo。</strong></p>
+<p>然后运行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署就完成了，内容将部署至 Firebase项目的默认托管网址：project-id.firebaseapp.com</p>
+<p>大功告成了，接下来就是欣赏博客的时候了。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo clean</code>用于清除旧版本生成的静态文件（推送到远端的public文件）</li>
+<li><code>hexo generate</code>生成新的静态文件（public文件），生成这个文件是根据<code>/source</code>文件中的内容生成</li>
+<li><code>hexo deploy</code>推送github部署博客</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment"># 将静态博客页面部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment"># 查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hexo new</code>创建新的文章，创建的文章会在<code>source/_posts/</code>目录下，文章格式.md（Markdown格式），每次就可以直接编辑博客直接编辑这个文件就可以了，也可以把写好.md的文件直接拖到这个文件夹中</li>
+<li><code>hexo generate</code>生成静态页面，生成的文件都是在<code>public/</code>文件下，这个文件就是最后推送到github的文件</li>
+</ul>
+<h4 id="短命令"><a href="#短命令" class="headerlink" title="短命令"></a>短命令</h4><p>在ubuntu的环境下可以使用短命令来执行一键将静态博客页面部署到firebase</p>
+<p>首先打开你个人目录下的.bashrc隐藏文件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>把光标移到末尾按’i’键插入一行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gkd=<span class="string">'hexo clean &amp;&amp; hexo g &amp;&amp; firebase deploy'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-src="ubuntu.png" alt="ubuntu"></p>
+<blockquote>
+<p>‘gkd’（搞快点）就是短命令名，每当输入’gkd’将自动执行</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署三连</p>
+</blockquote>
+<p>然后按’Esc’后按’:wq’保存退出</p>
+<p>最后在终端输入命令生效刚刚的更改就完事了</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>这样就以后写blog就可以节省掉’部署三连’的时间了</p>
+<blockquote>
+<p>拓展：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> gql=<span class="string">'hexo g &amp;&amp; firebase deploy --only hosting'</span></span><br></pre></td></tr></table></figure>
+
+<p>只执行构建和只部署更改</p>
+<blockquote>
+<p>执行source ~/.bashrc生效更改后要重启终端才会生效</p>
+</blockquote>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710142114.png" alt=""></p>
+<ul>
+<li>一键三连</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+        <tag>hexo</tag>
+        <tag>firebase</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>室内定位</title>
     <url>/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</url>
     <content><![CDATA[<h1 id="室内定位"><a href="#室内定位" class="headerlink" title="室内定位"></a>室内定位</h1><p>机器人的室内定位由于卫星导航失效，主要利用机器人底盘 的<code>轮式光电编码器里程记</code>、<code>惯性测量模块</code>和<code>视觉传感器</code>进行定位。轮式里程计和惯性导航集成在机器人的底盘硬件部分，二者算法简单快速，但精度不高，容易受到环境的影响且存在严重的<code>误差累积</code>。同时机器人使用的是<a href="https://baike.baidu.com/item/%E9%BA%A6%E5%85%8B%E7%BA%B3%E5%A7%86%E8%BD%AE/3827219?fr=aladdin" target="_blank" rel="noopener">麦克纳姆轮</a>它们允许<strong>横盘走势</strong>、全方向移动但是可以被横向推着走，轮子上的横向<strong>小轮的运动姿态无法被编码器捕获</strong>，这样会加剧里程计的误差累计。</p>
@@ -1504,74 +1504,6 @@ Python: cv.aruco.DICT_APRILTAG_16h5
         <tag>opencv</tag>
         <tag>aruco</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
-    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
-<a id="more"></a>
-
-<p>11111</p>
-<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
-<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
-</blockquote>
-<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
-<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
-<p>切换成root账号（sudo -i）</p>
-<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
-<li><p>适用于Seafile 7.1.x及更高版本</p>
-<p>Ubuntu 18.04（64位）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
-<ul>
-<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
-<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
-</ul>
-<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
-<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
-<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
-<p>保存即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
-<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
-
-<p>登录即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
-<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
-<p>下载相应客户端即可</p>
-<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
-<hr>
-<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>seafile</tag>
-        <tag>文件同步服务器</tag>
-        <tag>阿里云</tag>
       </tags>
   </entry>
   <entry>
@@ -2072,6 +2004,74 @@ Python: cv.aruco.DICT_APRILTAG_16h5
 ]]></content>
       <tags>
         <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云Ubuntu18.04搭建seafile服务器</title>
+    <url>/2020/07/09/%E9%98%BF%E9%87%8C%E4%BA%91%E6%90%AD%E5%BB%BAseafile%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><img src= "/img/loading.gif" data-src="https://www.seafile.com/media/img/seafile-logo.png" alt="seafile logo"></p>
+<a id="more"></a>
+
+<p>11111</p>
+<h2 id="利用脚本一键安装seaflie及其依赖环境"><a href="#利用脚本一键安装seaflie及其依赖环境" class="headerlink" title="利用脚本一键安装seaflie及其依赖环境"></a>利用脚本一键安装seaflie及其依赖环境</h2><blockquote>
+<p>这里的安装脚本可以帮助您快速的安装好Seafile服务器，并配置好MariaDB，Memcached，WebDAV，Ngnix和启动自动启动脚本。</p>
+</blockquote>
+<p>文档地址：<a href="https://github.com/haiwen/seafile-server-installer-cn" target="_blank" rel="noopener">https://github.com/haiwen/seafile-server-installer-cn</a></p>
+<p>安装干净的Ubuntu 16.04 / 18.04或CentOS 7/8系统，并<strong>做好准备</strong>（如果安装失败需要还原到替换）。</p>
+<p>切换成root账号（sudo -i）</p>
+<h3 id="获取安装脚本"><a href="#获取安装脚本" class="headerlink" title="获取安装脚本"></a>获取安装脚本</h3><ul>
+<li><p>适用于Seafile 7.1.x及更高版本</p>
+<p>Ubuntu 18.04（64位）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/haiwen/seafile-server-installer-cn/master/seafile-server-7.1-ubuntu-amd64-http</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行安装脚本"><a href="#运行安装脚本" class="headerlink" title="运行安装脚本"></a>运行安装脚本</h3><p>Ubuntu 16.04 / 18.04（64bit）：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">bash seafile-server-ubuntu-amd64-http 7.1.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本启动您选择要安装的版本，按照提示进行选择即可：</p>
+<ul>
+<li>如果要安装专业版，需要先将下载好的专业版的包<code>seafile-pro-server_6.0.13_x86-64.tar.gz</code>放到<code>/opt/</code>目录下</li>
+<li>如果是安装开源版，安装脚本在执行过程中会检查<code>/opt</code>目录下是否有指定版本号的安装包，如果存在替换安装此包，否则会从Seafile网站下载。所以，为了避免因下载失败而导致安装中断，您可以提前下载好安装包放到<code>/opt/</code>目录下。</li>
+</ul>
+<p>该脚本运行完后会在命令行中打印配置信息和管理员账号密码，请仔细阅读。（您也可以查看安装日志<code>/opt/seafile/aio_seafile-server.log</code>），MySQL的root用户密码存储在<code>/root/.my.cnf</code>中； MySQL的seafile用户密码存储在<code>/opt/seafile.my.cnf</code>中。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="启动或者关闭服务"><a href="#启动或者关闭服务" class="headerlink" title="启动或者关闭服务"></a>启动或者关闭服务</h3><p>Ubuntu 16.04 / 18.04：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">service seafile-server stop</span><br><span class="line">service seafile-server start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="重置管理员账户和密码"><a href="#重置管理员账户和密码" class="headerlink" title="重置管理员账户和密码"></a>重置管理员账户和密码</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./reset-admin.sh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="开放阿里云安全组端口"><a href="#开放阿里云安全组端口" class="headerlink" title="开放阿里云安全组端口"></a>开放阿里云安全组端口</h3><p>浏览器登录<a href="https://homenew.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>-&gt;选择你的云服务器ECS-&gt;找到你的实例-&gt;选择本实例安全组-&gt;入方向</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141757.png" alt=""></p>
+<p>手动添加允许策略目的端口：’8000/8083’ 源：’0.0.0.0/0’备注seafile</p>
+<p>手动添加允许策略目的端口：’80’ 源：’0.0.0.0/0’备注seafile_hub</p>
+<p>保存即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141939.png" alt=""> </p>
+<h3 id="登录web管理端"><a href="#登录web管理端" class="headerlink" title="登录web管理端"></a>登录web管理端</h3><p>浏览器访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的云服务器ip:80</span><br></pre></td></tr></table></figure>
+
+<p>登录即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141543.png" alt=""> </p>
+<h3 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h3><p>访问seafile客户端下载网址：<a href="https://www.seafile.com/download/" target="_blank" rel="noopener">https://www.seafile.com/download/</a></p>
+<p>下载相应客户端即可</p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.jsdelivr.net/gh/ZengWenJian123/picBed/img/20200710141329.png" alt=""></p>
+<hr>
+<h1 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h1><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/seafile/seafile-server-latest</span><br><span class="line">./seafile.sh start</span><br><span class="line">./seahub.sh start</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>seafile</tag>
+        <tag>文件同步服务器</tag>
+        <tag>阿里云</tag>
       </tags>
   </entry>
 </search>
