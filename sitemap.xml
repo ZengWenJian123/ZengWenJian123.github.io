@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.dgut.top/2021/04/13/HEC2020/</loc>
+    
+    <lastmod>2021-04-13T02:47:30.026Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
+    
+    <lastmod>2020-11-09T06:00:30.760Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.dgut.top/2020/08/25/docker/</loc>
     
-    <lastmod>2020-08-31T06:30:42.095Z</lastmod>
+    <lastmod>2020-08-31T06:30:42.000Z</lastmod>
     
   </url>
   
@@ -18,7 +32,7 @@
   <url>
     <loc>https://blog.dgut.top/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2020-08-25T06:39:13.905Z</lastmod>
+    <lastmod>2020-08-25T06:39:13.000Z</lastmod>
     
   </url>
   
@@ -37,37 +51,30 @@
   </url>
   
   <url>
-    <loc>https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/</loc>
-    
-    <lastmod>2020-08-19T00:50:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.dgut.top/2020/08/17/learn-matplotlib/</loc>
     
-    <lastmod>2020-08-17T06:44:47.696Z</lastmod>
+    <lastmod>2020-08-17T06:44:47.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/07/30/small-car/</loc>
     
-    <lastmod>2020-08-06T09:11:28.783Z</lastmod>
+    <lastmod>2020-08-06T09:11:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/07/28/night-thinks/</loc>
     
-    <lastmod>2020-07-30T06:03:45.571Z</lastmod>
+    <lastmod>2020-07-30T06:03:45.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.dgut.top/2020/07/03/%E8%AE%B0%E5%BD%95%E5%AD%A6%E4%B9%A0Ubuntu%E7%9A%84%E6%8C%87%E4%BB%A4/</loc>
     
-    <lastmod>2020-07-28T00:36:09.919Z</lastmod>
+    <lastmod>2020-07-28T00:36:09.000Z</lastmod>
     
   </url>
   
@@ -81,7 +88,7 @@
   <url>
     <loc>https://blog.dgut.top/music/index.html</loc>
     
-    <lastmod>2020-07-22T00:34:41.601Z</lastmod>
+    <lastmod>2020-07-22T00:34:41.000Z</lastmod>
     
   </url>
   
@@ -172,7 +179,7 @@
   <url>
     <loc>https://blog.dgut.top/2020/07/13/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E9%80%9F/</loc>
     
-    <lastmod>2020-07-13T07:19:24.918Z</lastmod>
+    <lastmod>2020-07-13T07:19:24.000Z</lastmod>
     
   </url>
   
