@@ -1,3 +1,4 @@
+https://blog.dgut.top/2021/04/21/AD/
 https://blog.dgut.top/2021/04/14/3d-map/
 https://blog.dgut.top/2021/04/13/HEC2020/
 https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/
@@ -7,4 +8,3 @@ https://blog.dgut.top/2020/08/19/aruco-2d/
 https://blog.dgut.top/2020/07/15/python-aruco/
 https://blog.dgut.top/2020/08/17/learn-matplotlib/
 https://blog.dgut.top/2020/07/30/small-car/
-https://blog.dgut.top/2020/07/28/night-thinks/
