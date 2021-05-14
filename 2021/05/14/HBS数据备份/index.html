@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HBS数据备份 | usg的blog</title><meta name="description" content="HBS 3给你的NAS的数据做个备份随着数据越来越多，需要的空间也越来越大，同时为了高效地管理数据和兼顾数据的安全，我在去年年底在某鱼购入了一台有NAS品牌商生产的qnap 453b mini 这款NAS虽然是453d mini的上一代产品，但是它的性能和扩展性也足够了。但是NAS买回来没有第一时间用起来，而是在一角默默躺着吃灰。最近也是搬了新家才将其带到新家重新利用起来的。 现在NAS被"><meta name="author" content="usg-cn"><meta name="copyright" content="usg-cn"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://gitee.com/usg1024/imgshow/raw/master/img/20200718100829.png"><link rel="canonical" href="https://blog.dgut.top/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="HBS数据备份"><meta property="og:url" content="https://blog.dgut.top/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"><meta property="og:site_name" content="usg的blog"><meta property="og:description" content="HBS 3给你的NAS的数据做个备份随着数据越来越多，需要的空间也越来越大，同时为了高效地管理数据和兼顾数据的安全，我在去年年底在某鱼购入了一台有NAS品牌商生产的qnap 453b mini 这款NAS虽然是453d mini的上一代产品，但是它的性能和扩展性也足够了。但是NAS买回来没有第一时间用起来，而是在一角默默躺着吃灰。最近也是搬了新家才将其带到新家重新利用起来的。 现在NAS被"><meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="article:published_time" content="2021-05-14T02:27:03.000Z"><meta property="article:modified_time" content="2021-05-14T06:03:31.951Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="next" title="frp内网穿透" href="https://blog.dgut.top/2021/04/27/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fa5e8f3708368f09ac83e0c94e84daf7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-171773974-2', 'auto');
+ga('send', 'pageview');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/footbackground.css"><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="usg的blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://gitee.com/usg1024/imgshow/raw/master/img/20200718083716.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">25</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">27</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光机</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-video"></i><span> 照片</span></a></li><li><a class="site-page" href="https://opencv.apachecn.org/#/" target="_blank" rel="noopener"><i class="fa-fw fab fa-python"></i><span> opencv文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="https://ping.dgut.top" target="_blank" rel="noopener"><i class="fa-fw fas fa-server"></i><span> 服务器列表</span></a></div><div class="menus_item"><a class="site-page" href="http://yun.dgut.top/" target="_blank" rel="noopener"><i class="fa-fw fas fa-folder-open"></i><span> 文件服务器</span></a></div><div class="menus_item"><a class="site-page" href="https://yunusg.ddnsto.com/" target="_blank" rel="noopener"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 易有云</span></a></div><div class="menus_item"><a class="site-page" href="https://aruco.dgut.top/" target="_blank" rel="noopener"><i class="fa-fw fas fa-qrcode"></i><span> AR标签</span></a></div><div class="menus_item"><a class="site-page" href="/doc/"><i class="fa-fw fas fa-file-pdf"></i><span> 文档</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HBS-3给你的NAS的数据做个备份"><span class="toc-number">1.</span> <span class="toc-text">HBS 3给你的NAS的数据做个备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#威联通的数据安全备份管家：HBS3"><span class="toc-number">2.</span> <span class="toc-text">威联通的数据安全备份管家：HBS3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-HBS3安装"><span class="toc-number">3.</span> <span class="toc-text">1.HBS3安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-HBS3本地备份"><span class="toc-number">4.</span> <span class="toc-text">2.HBS3本地备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据恢复"><span class="toc-number">5.</span> <span class="toc-text">数据恢复</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">usg的blog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光机</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-video"></i><span> 照片</span></a></li><li><a class="site-page" href="https://opencv.apachecn.org/#/" target="_blank" rel="noopener"><i class="fa-fw fab fa-python"></i><span> opencv文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="https://ping.dgut.top" target="_blank" rel="noopener"><i class="fa-fw fas fa-server"></i><span> 服务器列表</span></a></div><div class="menus_item"><a class="site-page" href="http://yun.dgut.top/" target="_blank" rel="noopener"><i class="fa-fw fas fa-folder-open"></i><span> 文件服务器</span></a></div><div class="menus_item"><a class="site-page" href="https://yunusg.ddnsto.com/" target="_blank" rel="noopener"><i class="fa-fw fas fa-cloud-download-alt"></i><span> 易有云</span></a></div><div class="menus_item"><a class="site-page" href="https://aruco.dgut.top/" target="_blank" rel="noopener"><i class="fa-fw fas fa-qrcode"></i><span> AR标签</span></a></div><div class="menus_item"><a class="site-page" href="/doc/"><i class="fa-fw fas fa-file-pdf"></i><span> 文档</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">HBS数据备份</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2021-05-14 10:27:03"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2021-05-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2021-05-14 14:03:31"><i class="fas fa-history fa-fw"></i> 更新于 2021-05-14</span></time></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta__icon"></i><span>字数总计:</span><span class="word-count">1.8k</span><span class="post-meta__separator">|</span><i class="far fa-clock fa-fw post-meta__icon"></i><span>阅读时长: 5 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>评论数:</span><a href="/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514102750088.png" alt="image-20210514102750088"></p>
+<blockquote>
+</blockquote>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514102842412.png" alt="image-20210514102842412"></p>
+<h1 id="HBS-3给你的NAS的数据做个备份"><a href="#HBS-3给你的NAS的数据做个备份" class="headerlink" title="HBS 3给你的NAS的数据做个备份"></a>HBS 3给你的NAS的数据做个备份</h1><p>随着数据越来越多，需要的空间也越来越大，同时为了高效地管理数据和兼顾数据的安全，我在去年年底在某鱼购入了一台有NAS品牌商生产的<code>qnap 453b mini</code> 这款NAS虽然是<code>453d mini</code>的上一代产品，但是它的性能和扩展性也足够了。但是NAS买回来没有第一时间用起来，而是在一角默默躺着吃灰。最近也是搬了新家才将其带到新家重新利用起来的。</p>
+<p>现在NAS被我东拼西凑出3块硬盘分别是2块2T的希捷+1块1T的WD蓝盘，这2块2T的硬盘组成了一个4T的硬盘阵列，RAID1拥有2倍数的读取写入速度但是安全性也打了折扣–任何一块硬盘出故障了都会导致整个硬盘阵列数据全部丢失。这个4T的阵列中储存了很多我旅行、参观、生活、工作和家人们的照片，除此之外还有利用<code>Qsync</code>备份的工作文档，林林总总。反正现在就是担心这些珍贵数据的安全，提前做好重要数据资料的备份。</p>
+<p>毕竟..数据无价…..</p>
+<p>在查询了众多资料之后我找到了威联通套件中心的<code>HBS3备份与同步中心</code> 利用这个玩意就可以轻而易举地构建你的数据安全堡垒了！！</p>
+<h1 id="威联通的数据安全备份管家：HBS3"><a href="#威联通的数据安全备份管家：HBS3" class="headerlink" title="威联通的数据安全备份管家：HBS3"></a>威联通的数据安全备份管家：HBS3</h1><blockquote>
+<p>是数据备份和恢复的终极存储解决方案。HBS 将数据备份、恢复和同步功能融合到一个易于使用的紧凑界面中。HBS 可处理 QNAP NAS 设备、远程服务器和常见云存储提供商的数据，是灾难恢复计划的理想选择。</p>
+</blockquote>
+<p>HBS 3 是 Hybrid Backup sync 3 的缩写，意为混合型备份与同步中心，主要是将数据备份、复原、同步等功能整合到单一 QTS 应用中，让您可轻松将 QNAP NAS 中的数据备份或同步到另一台 QNAP NAS、远程<a href="https://www.smzdm.com/fenlei/fuwuqi/" target="_blank" rel="noopener">服务器</a>或云端备份空间中。重复数据删除 (QuDedup) 技术可加速多版本备份效率，节省带宽及存储空间。当意外发生时，HBS 3 更协助您迅速复原档案，万无一失。</p>
+<p>主要有三种方式：</p>
+<p>1、备份</p>
+<p>HBS 3 帮助您有效率地备份文件至本地端 NAS、外接装置 (USB 一键启动备份功能)、远程服务器或云端存储空间中；多版本备份机制，确保重要数据妥善保存，更可让您便利追踪修改纪录。</p>
+<p>2、还原</p>
+<p>当意外发生或资料遗失时，您可实时从本地端 NAS、外接装置、远程服务器或云端存储空间选择您想回复的档案版本迅速还原档案。</p>
+<p>3、同步</p>
+<p>您可选择将 QNAP NAS 上的档案单向同步至本地端 NAS 或外接装置；透过RTRR、Rsync、FTP、CIFS/SMB协议单向或双向同步远程NAS或服务器的档案；单向或双向同步云端空间的档案。</p>
+<p>（以上摘自官网）</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514104836792.png" alt="image-20210514104836792"></p>
+<p>(支持多平台备份–不过这里只用到本机备份)</p>
+<p>HBS3提供了一个全方位数据备份及灾害复原的计划，但是也强调了“没有一个备份计划是完美的”…</p>
+<p>目前广为接受的 3-2-1 备份策略：3 份副本、2 种不同备份媒体、1 个异地存储…</p>
+<p>多做一个备份当然多一份保障….</p>
+<h1 id="1-HBS3安装"><a href="#1-HBS3安装" class="headerlink" title="1.HBS3安装"></a>1.HBS3安装</h1><p>安装HBS3简直太简单了，打开套件中心找到<code>HBS3</code>就可以安装了，一路点NEXT，小伙伴们应该很快就能安装好了，这里我就不废话了。。。。</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514113750057.png" alt="image-20210514113750057"></p>
+<h1 id="2-HBS3本地备份"><a href="#2-HBS3本地备份" class="headerlink" title="2.HBS3本地备份"></a>2.HBS3本地备份</h1><p>这里我希望的是将4T的那个存储阵列中有需要的数据（大约500G）周期保存到那个1T的WD蓝盘，显然于冷备份，首先是打开HBS3套件，创建备份作业</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514114330481.png" alt="image-20210514114330481"></p>
+<p>在跳转后的选项卡中选择<code>新备份作业</code></p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514114631514.png" alt="image-20210514114631514"></p>
+<p>这里选择需要的文件夹，我选中了我的照片、视频和工作文件夹，选中后选择下一步</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514114735051.png" alt="image-20210514114735051"></p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514114836102.png" alt="image-20210514114836102"></p>
+<p>选择本地NAS，这里要根据你的喜好来，HBS3还提供了众多云服务选项，有阿里云（应该是对象存储）、腾讯云、Google drive、华为云、OneDrive等选择，应有尽有。小伙伴们按照需求选择即可。</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115021584.png" alt="image-20210514115021584"></p>
+<p>选择完本地NAS之后，接下来要选备份的目标文件夹了，我选择到那个蓝盘的备份目录。</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115127521.png" alt="image-20210514115127521"></p>
+<p>接下来就可以开始数据备份了，源文件夹和目标文件夹都选好了，检查一下，没有错误就点击右下角 下一步 ..</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115215817.png" alt="image-20210514115215817"></p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115319526.png" alt="image-20210514115319526"></p>
+<p>选择备份计划这里可以选择一个备份周期，我选择了每周三晚上3：00夜深人静的时候自己完成备份更新，这样就是只要我的照片或者数据更新了之后<code>HBS3</code>就会在每个星期三的晚上3：00把新的数据备份到蓝盘这个备份了。这个计划随时可以更改，好评！</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115819326.png" alt="image-20210514115819326"></p>
+<p>其中还有版本控制，这里我先不启用，小伙伴可以按需启动。</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514115918424.png" alt="image-20210514115918424"></p>
+<p>来到“规则”设置页面，在 “方式 ”里，这里我选择的是不应用筛选器….</p>
+<p>下面默认是勾选使用QuDedup，这个是去重复备份功能….默认设置就好…</p>
+<p>在策略里，可以选择是否加密备份….</p>
+<p>注意下来的“将删除的数据从目标中移除”一项，如果选择了，那么源文件夹里删除的文件，目标文件夹也会一并在备份中删除的哦…..去掉勾选就相当于增量备份（这样我的照片只负责增加）</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514120026602.png" alt="image-20210514120026602"></p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514120109637.png" alt="image-20210514120109637"></p>
+<p>现在就能在作业选项卡看到目前正在进行着的数据备份作业了</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514133409629.png" alt="image-20210514133409629"></p>
+<p>默默等待备份完成即可</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514134815719.png" alt="image-20210514134815719"></p>
+<p>在输出文件夹也就是我的WD蓝盘中会同步出现一个<code>.qdff</code>后缀的文件，这个就是威联通QTS系统中的备份文件，这个文件就是以后数据的恢复用的。</p>
+<h1 id="数据恢复"><a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h1><p>数据的恢复也相当简单，相当于备份的逆操作，只需在<code>HBS3</code>中选择恢复，选择到之前的备份，再设置好要恢复到的目录就可以了。</p>
+<p><img src= "/img/loading.gif" data-src="D:%5CSeafile%5Cweb%5Csource_posts%5CHBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD.assets%5Cimage-20210514134534418.png" alt="image-20210514134534418"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这是我的第一篇关于NAS的文章，虽然QTS和DSM系统都深度使用过，但是还是第一次详细地记录了整个操作的过程，发现网络上对QTS系统的教学不是很多，相关视频更是少之又少，希望能对大家起到帮助。</p>
+<p>威联通系统的<code>HBS3</code>备份中心的使用还是很简便的，整个过程下来没有遇到任何一点阻碍，虽然还有很多的功能比如说同步、恢复的功能没有实践过，（这些可以留到日后）。HBS3还是很强大的。</p>
+<p>好了今天先到这里了，日后再分享。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">usg-cn</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.dgut.top/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/">https://blog.dgut.top/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.dgut.top" target="_blank">usg的blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><button class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="https://gitee.com/usg1024/imgshow/raw/master/img/20200718164145.jpg" alt="wechat" onclick="window.open('https://gitee.com/usg1024/imgshow/raw/master/img/20200718164145.jpg')"/><div class="post-qr-code__desc">wechat</div></li><li class="reward-item"><img class="post-qr-code__img" src="https://gitee.com/usg1024/imgshow/raw/master/img/20200718164145.jpg" alt="alipay" onclick="window.open('https://gitee.com/usg1024/imgshow/raw/master/img/20200718164145.jpg')"/><div class="post-qr-code__desc">alipay</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/04/27/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"><img class="next-cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">frp内网穿透</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'lUhjt59cx7jdvUgjIQqTps0M-gzGzoHsz',
+  appKey: 'E2dYqBHfWKeVOdoB37SckJ48',
+  placeholder: '兄弟，来发评论吗~',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-CN',
+  recordIP: true,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By usg-cn</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="http://blog.dgut.top/">blog</a>!</div><div class="icp"><a href="http://www.beian.miit.gov.cn" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>粤ICP备20062375号-1</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script>if (document.getElementsByClassName('mermaid').length) {
+  loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',function () {
+    mermaid.initialize({
+      theme: 'default',
+  })
+})
+}</script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script></body></html>
