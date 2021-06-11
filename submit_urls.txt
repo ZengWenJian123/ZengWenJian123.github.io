@@ -1,3 +1,4 @@
+https://blog.dgut.top/2021/06/11/dji/
 https://blog.dgut.top/2021/05/14/HBS%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/
 https://blog.dgut.top/2021/04/27/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://blog.dgut.top/2020/08/03/%E8%A7%86%E8%A7%89%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D/
@@ -7,4 +8,3 @@ https://blog.dgut.top/2021/04/13/HEC2020/
 https://blog.dgut.top/2021/04/14/3d-map/
 https://blog.dgut.top/2020/08/25/docker/
 https://blog.dgut.top/2020/07/14/git%E7%9A%84%E4%BD%BF%E7%94%A8/
-https://blog.dgut.top/2020/08/19/aruco-2d/
